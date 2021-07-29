@@ -16,7 +16,6 @@ const calcTotalBill = () => {
     console.log(orderPricesArray);
 
     totalBill = orderPricesArray.reduce(function(acc, price) {
-        console.log("acc before adding is", acc);
         return acc += price
     }, 0)
 
@@ -24,6 +23,7 @@ const calcTotalBill = () => {
     displayTotalBill()
 }
 
+// Display the Total Bill to User
 const displayTotalBill = () => {
     totalBillBox.innerText = totalBill;
 }
@@ -43,7 +43,6 @@ fetch("/sampleData.json")
 
 // Event Handlers
 menuItemBtn.addEventListener("click", function() {
-    console.log("Button was clicked.");
     activeOrder.push(menuItemSelected)
     console.log(activeOrder);
 
