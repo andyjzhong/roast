@@ -4,31 +4,33 @@ body {
     padding: 0;
 }
 
-.container {
-    margin: 0 auto;
-}
-
 #main-container {
     padding: 0;
     margin: 0 auto;
 }
 
-.col-5 {
+#tab-section {
     background-color: lightyellow;
     height: 90vh;
 }
 
-.col-12 {
+#total-section {
     background-color: skyblue;
     height: 30vh;
+    padding: 0;
 }
 
 .tab-area {
     background-color: white;
-    height: 30vh;
+    height: 50vh;
 }
 
-.col-7 {
+#menu-section {
     background-color: pink;
     height: 90vh;
+}
+
+#menu-area {
+    background-color: lightgreen;
+    height: 80vh;
 }
