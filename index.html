@@ -19,10 +19,28 @@
 <body>
     <div id="main-container" class="row container-fluid">
         <!-- Tab Section -->
-        <section id="tab-section" class="col-5">Running Tab (5)
-            <br />
+        <section id="tab-section" class="col-5">
             <div class="tab-area">
-                Item
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Item</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Unit Cost</th>
+                            <th scope="col">Total Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Burger</td>
+                            <td>1</td>
+                            <td>$11.50</td>
+                            <td>$11.50</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <button type="button" class="btn btn-danger cancel-order">Cancel Order</button>
             <button type="button" class="btn btn-success send-order">Send Order</button>

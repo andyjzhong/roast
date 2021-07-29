@@ -29,11 +29,12 @@
 ## Time Frames
 | Task                       | Day 1       |
 | -------------------------- | ----------- |
-| Set Up Framework           | 1 hr        |
+| Set Up Framework & HTML    | 1.5 hr      |
 | Connecting to API & Render | 1 hr        |
 | Add Application Logic      | 4.5 hrs     |
 | Styling                    | 0 hrs       |
 | Responsive Styling         | 0 hrs       |
 | **MVP Total**              | **6.5 hrs** |
 | Stretch Goals              | 0 hrs       |
+| + Add Modal                | 0.5 hrs     |
 | **Project Total**          | 0 hrs       |
