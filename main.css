@@ -6,12 +6,21 @@ body {
 
 .container {
     margin: 0 auto;
+}
 
+#main-container {
+    padding: 0;
+    margin: 0 auto;
 }
 
 .col-5 {
     background-color: lightyellow;
-    height: 60vh;
+    height: 90vh;
+}
+
+.col-12 {
+    background-color: skyblue;
+    height: 30vh;
 }
 
 .tab-area {
