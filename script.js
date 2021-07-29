@@ -80,6 +80,7 @@ menuItemBtn.addEventListener("click", function() {
         <td>1</td>
         <td>$${menuItemSelected.price}</td>
         <td>$${menuItemSelected.price}</td>
+        <td><button class="btn btn-outline-danger btn-sm">Delete</button></td>
       `
 
     newItem.innerHTML = `${html}`;
