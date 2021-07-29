@@ -23,7 +23,7 @@
 - Create initial ReadMe file to keep track of progress each day.
 
 ![Initial Layout](https://i.imgur.com/eixEAK2.png)
-![Initial Layout](https://media.giphy.com/media/Q9OFZkrUj3jVHb9Is8/giphy.gif)
+![Initial Layout](https://media.giphy.com/media/xDddjFdHnXiMHm2eMD/giphy.gif)
 
 
 ## Time Frames
