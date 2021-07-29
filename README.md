@@ -11,11 +11,13 @@
 - Create initial ReadMe file to keep track of progress each day.
 - Very minor styling, enough to help identify div sizes.
 
+![Initial Layout](https://i.imgur.com/eixEAK2.png)
+
 ## Time Frames
 | Task                       | Day 1    |
 | -------------------------- | -------- |
 | Set Up Framework           | 1 hr     |
-| Connecting to API & Render | 1 hr     |
+| Connecting to API & Render | 0.5 hr   |
 | Add Application Logic      | 0.5 hrs  |
 | Styling                    | 0 hrs    |
 | Responsive Styling         | 0 hrs    |
