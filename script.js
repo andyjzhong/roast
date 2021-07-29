@@ -3,6 +3,7 @@
 console.warn("JS loaded.");
 
 const menuItemBtn = document.querySelector(".menu-item");
+const cancelOrderBtn = document.querySelector(".cancel-order");
 const totalBillBox = document.querySelector("#total-bill-box");
 const activeOrder = [];
 let totalBill = "0";
@@ -60,3 +61,5 @@ menuItemBtn.addEventListener("click", function() {
 
     calcTotalBill();
 })
+
+cancelOrderBtn.addEventListener("click", cancelOrder)
