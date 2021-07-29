@@ -4,6 +4,20 @@ console.warn("JS loaded.");
 
 const menuItemBtn = document.querySelector(".menu-item");
 const activeOrder = [];
+const totalBill = "0";
+
+const calcTotalBill = () => {
+    console.log("Made it inside calcTotalBill");
+    let orderPricesArray = activeOrder.map(function(food) {
+        return food.price;
+    });
+
+    console.log(orderPricesArray);
+
+    // activeOrder.reduce(function(acc, cur, i, arr) {
+    //     acc
+    // })
+}
 
 fetch("/sampleData.json")
 .then((res) => {
@@ -34,4 +48,6 @@ menuItemBtn.addEventListener("click", function() {
 
     newItem.innerHTML = `${html}`;
     document.querySelector(".tab-area").append(newItem)
+
+    calcTotalBill();
 })
