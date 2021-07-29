@@ -40,17 +40,17 @@ const cancelOrder = () => {
 
 // Fetch menu data
 async function getData() {
-    fetch("/sampleData.json")
-    .then((res) => {
-      return res.json();
-    })
-    .then(function(res) {
-        console.log("Retrieved data successfully.", res);
-        menuItemSelected = res.result.menus[0].menu_sections[0].menu_items[0]
-    })
-    .catch(function(err) {
-        console.log("Failed to retrieve data.", err);
-    })
+    fetch("./sampleData.json")
+        .then((res) => {
+            return res.json();
+        })
+        .then(function(res) {
+            console.log("Retrieved data successfully.", res);
+            menuItemSelected = res.result.menus[0].menu_sections[0].menu_items[0]
+        })
+        .catch(function(err) {
+            console.log("Failed to retrieve data.", err);
+        })
 }
 
 
