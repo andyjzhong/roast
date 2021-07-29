@@ -34,7 +34,7 @@
 | Add Application Logic      | 4.5 hrs     |
 | Styling                    | 0 hrs       |
 | Responsive Styling         | 0 hrs       |
-| **MVP Total**              | **6.5 hrs** |
+| **MVP Total**              | **8 hrs**   |
 | Stretch Goals              | 0 hrs       |
 | + Add Modal                | 0.5 hrs     |
-| **Project Total**          | 0 hrs       |
+| **Project Total**          | **8.5 hrs** |
