@@ -10,6 +10,7 @@
 - Build initial HTML layout with 3 main sections: tab-area, menu-area, and total-section.
 - Create initial ReadMe file to keep track of progress each day.
 - Very minor styling, enough to help identify div sizes.
+- Expand on button event handler to append a new div to the tab area with the name of the food item.
 
 ![Initial Layout](https://i.imgur.com/eixEAK2.png)
 
@@ -18,7 +19,7 @@
 | -------------------------- | -------- |
 | Set Up Framework           | 1 hr     |
 | Connecting to API & Render | 0.5 hr   |
-| Add Application Logic      | 0.5 hrs  |
+| Add Application Logic      | 1 hrs    |
 | Styling                    | 0 hrs    |
 | Responsive Styling         | 0 hrs    |
 | **MVP Total**              | 2 hrs    |

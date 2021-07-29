@@ -22,4 +22,15 @@ menuItemBtn.addEventListener("click", function() {
     console.log("Button was clicked.");
     activeOrder.push(menuItemSelected)
     console.log(activeOrder);
+
+    let newItem = document.createElement("div");
+
+    let html = `
+      <div class="tabItem">
+        <span>${menuItemSelected.name}</span>
+      </div>
+      `
+
+    newItem.innerHTML = `${html}`;
+    document.querySelector(".tab-area").append(newItem)
 })
