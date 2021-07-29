@@ -77,4 +77,6 @@ menuItemBtn.addEventListener("click", function() {
 
 getData();
 cancelOrderBtn.addEventListener("click", clearOrder)
+
+// TODO: This will later need to create a new object of existing orders as well so we can call it back.
 sendOrderBtn.addEventListener("click", clearOrder)

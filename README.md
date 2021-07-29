@@ -13,22 +13,27 @@
 - Build initial HTML layout with 3 main sections: tab-area, menu-area, and total-section.
 - Very minor styling, enough to help identify div sizes.
 
+#### JavaScript
+- Expand on button event handler to append a new div to the tab area with the name of the food item.
+- Loop through array of selected food items, grab the price, and reduce it to a total bill price.
+- Add a Cancel Order button and Send Order button
+
 #### Other
 - Examine Postman output and create a sample data set so that I'm not making too many expensive API calls during initial build.
 - Create initial ReadMe file to keep track of progress each day.
-- Expand on button event handler to append a new div to the tab area with the name of the food item.
-- Loop through array of selected food items, grab the price, and reduce it to a total bill price.
 
 ![Initial Layout](https://i.imgur.com/eixEAK2.png)
+![Initial Layout](https://media.giphy.com/media/Q9OFZkrUj3jVHb9Is8/giphy.gif)
+
 
 ## Time Frames
-| Task                       | Day 1      |
-| -------------------------- | ---------- |
-| Set Up Framework           | 1 hr       |
-| Connecting to API & Render | 0.5 hr     |
-| Add Application Logic      | 3.5 hrs    |
-| Styling                    | 0 hrs      |
-| Responsive Styling         | 0 hrs      |
-| **MVP Total**              | **5 hrs**  |
-| Stretch Goals              | 0 hrs      |
-| **Project Total**          | 0 hrs      |
+| Task                       | Day 1       |
+| -------------------------- | ----------- |
+| Set Up Framework           | 1 hr        |
+| Connecting to API & Render | 1 hr        |
+| Add Application Logic      | 4.5 hrs     |
+| Styling                    | 0 hrs       |
+| Responsive Styling         | 0 hrs       |
+| **MVP Total**              | **6.5 hrs** |
+| Stretch Goals              | 0 hrs       |
+| **Project Total**          | 0 hrs       |
