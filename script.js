@@ -5,6 +5,7 @@ console.warn("JS loaded.");
 const menuItemBtn = document.querySelector(".menu-item");
 const cancelOrderBtn = document.querySelector(".cancel-order");
 const totalBillBox = document.querySelector("#total-bill-box");
+const tabArea = document.querySelector(".tab-area");
 let activeOrder = [];
 let totalBill = "0";
 
@@ -32,6 +33,7 @@ const displayTotalBill = () => {
 // Cancels the order and clears tab
 const cancelOrder = () => {
     // Needs to remove all child elements from the tab area too.
+    tabArea.innerHTML = "";
     activeOrder = [];
     calcTotalBill();
 }
