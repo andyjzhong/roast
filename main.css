@@ -14,6 +14,11 @@ body {
     height: 60vh;
 }
 
+.tab-area {
+    background-color: white;
+    height: 30vh;
+}
+
 .col-7 {
     background-color: pink;
     height: 90vh;
