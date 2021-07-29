@@ -9,6 +9,7 @@ const modal = document.querySelector('#modal');
 const openModalBtn = document.querySelector('#openModal');
 const sendOrderBtn = document.querySelector(".send-order");
 const tabArea = document.querySelector(".tab-area");
+const tableBody = document.querySelector(".table-body");
 const totalBillBox = document.querySelector("#total-bill-box");
 let activeOrder = [];
 let totalBill = "0";
@@ -37,7 +38,7 @@ const displayTotalBill = () => {
 // Clears the order and clears tab-area and activeOrder
 const clearOrder = () => {
     // Needs to remove all child elements from the tab area too.
-    tabArea.innerHTML = "";
+    tableBody.innerHTML = "";
     activeOrder = [];
     calcTotalBill();
 }
@@ -71,17 +72,18 @@ menuItemBtn.addEventListener("click", function() {
     activeOrder.push(menuItemSelected)
     console.log(activeOrder);
 
-    let newItem = document.createElement("div");
+    let newItem = document.createElement("tr");
 
     let html = `
-      <div class="tabItem">
-        <span>${menuItemSelected.name}</span>
-        <span>${menuItemSelected.price}</span>
-      </div>
+        <th scope="row">${activeOrder.length}</th>
+        <td>${menuItemSelected.name}</td>
+        <td>1</td>
+        <td>$${menuItemSelected.price}</td>
+        <td>$${menuItemSelected.price}</td>
       `
 
     newItem.innerHTML = `${html}`;
-    document.querySelector(".tab-area").append(newItem)
+    document.querySelector("tbody").append(newItem)
 
     calcTotalBill();
 })
