@@ -4,6 +4,7 @@ console.warn("JS loaded.");
 
 const menuItemBtn = document.querySelector(".menu-item");
 const cancelOrderBtn = document.querySelector(".cancel-order");
+const sendOrderBtn = document.querySelector(".send-order");
 const totalBillBox = document.querySelector("#total-bill-box");
 const tabArea = document.querySelector(".tab-area");
 let activeOrder = [];
@@ -30,8 +31,8 @@ const displayTotalBill = () => {
     totalBillBox.innerText = totalBill;
 }
 
-// Cancels the order and clears tab
-const cancelOrder = () => {
+// Clears the order and clears tab-area and activeOrder
+const clearOrder = () => {
     // Needs to remove all child elements from the tab area too.
     tabArea.innerHTML = "";
     activeOrder = [];
@@ -75,4 +76,5 @@ menuItemBtn.addEventListener("click", function() {
 })
 
 getData();
-cancelOrderBtn.addEventListener("click", cancelOrder)
+cancelOrderBtn.addEventListener("click", clearOrder)
+sendOrderBtn.addEventListener("click", clearOrder)
