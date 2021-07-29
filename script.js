@@ -28,6 +28,7 @@ menuItemBtn.addEventListener("click", function() {
     let html = `
       <div class="tabItem">
         <span>${menuItemSelected.name}</span>
+        <span>${menuItemSelected.price}</span>
       </div>
       `
 
