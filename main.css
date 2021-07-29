@@ -34,3 +34,30 @@ body {
     background-color: lightgreen;
     height: 80vh;
 }
+
+#modal {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: auto;
+  display: none;
+}
+
+#modal-textbox {
+  background-color: white;
+  height: 350px;
+  width: 550px;
+  border-radius: 2px;
+  margin: 150px auto;
+  padding: 2%;
+  line-height: 120%;
+	font-family: Arial;
+}
+
+#modal-footer {
+	text-align: right;
+}

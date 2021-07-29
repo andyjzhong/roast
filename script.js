@@ -2,11 +2,14 @@
 
 console.warn("JS loaded.");
 
-const menuItemBtn = document.querySelector(".menu-item");
 const cancelOrderBtn = document.querySelector(".cancel-order");
+const closeModalBtn = document.querySelector('#closeModal');
+const menuItemBtn = document.querySelector(".menu-item");
+const modal = document.querySelector('#modal');
+const openModalBtn = document.querySelector('#openModal');
 const sendOrderBtn = document.querySelector(".send-order");
-const totalBillBox = document.querySelector("#total-bill-box");
 const tabArea = document.querySelector(".tab-area");
+const totalBillBox = document.querySelector("#total-bill-box");
 let activeOrder = [];
 let totalBill = "0";
 
@@ -37,6 +40,14 @@ const clearOrder = () => {
     tabArea.innerHTML = "";
     activeOrder = [];
     calcTotalBill();
+}
+
+const closeModal = () => {
+    modal.style.display = 'none'
+}
+
+const openModal = () => {
+    modal.style.display = 'block';
 }
 
 // Fetch menu data
@@ -77,6 +88,8 @@ menuItemBtn.addEventListener("click", function() {
 
 getData();
 cancelOrderBtn.addEventListener("click", clearOrder)
+closeModalBtn.addEventListener('click', closeModal)
+openModalBtn.addEventListener('click', openModal)
 
 // TODO: This will later need to create a new object of existing orders as well so we can call it back.
 sendOrderBtn.addEventListener("click", clearOrder)
