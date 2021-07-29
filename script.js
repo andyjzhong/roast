@@ -4,21 +4,25 @@ console.warn("JS loaded.");
 
 const menuItemBtn = document.querySelector(".menu-item");
 const activeOrder = [];
-const totalBill = "0";
+let totalBill = "0";
 
+// Calculate Total Bill
 const calcTotalBill = () => {
-    console.log("Made it inside calcTotalBill");
     let orderPricesArray = activeOrder.map(function(food) {
         return food.price;
     });
 
     console.log(orderPricesArray);
 
-    // activeOrder.reduce(function(acc, cur, i, arr) {
-    //     acc
-    // })
+    totalBill = orderPricesArray.reduce(function(acc, price) {
+        console.log("acc before adding is", acc);
+        return acc += price
+    }, 0)
+
+    console.log(totalBill);
 }
 
+// Fetch Menu Data
 fetch("/sampleData.json")
 .then((res) => {
   return res.json();
