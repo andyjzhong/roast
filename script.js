@@ -5,10 +5,10 @@ console.warn("JS loaded.");
 const menuItemBtn = document.querySelector(".menu-item");
 const cancelOrderBtn = document.querySelector(".cancel-order");
 const totalBillBox = document.querySelector("#total-bill-box");
-const activeOrder = [];
+let activeOrder = [];
 let totalBill = "0";
 
-// Calculate Total Bill
+// Calculate total bill
 const calcTotalBill = () => {
     let orderPricesArray = activeOrder.map(function(food) {
         return food.price;
@@ -24,12 +24,19 @@ const calcTotalBill = () => {
     displayTotalBill()
 }
 
-// Display the Total Bill to User
+// Display the total bill to user
 const displayTotalBill = () => {
     totalBillBox.innerText = totalBill;
 }
 
-// Fetch Menu Data
+// Cancels the order and clears tab
+const cancelOrder = () => {
+    // Needs to remove all child elements from the tab area too.
+    activeOrder = [];
+    calcTotalBill();
+}
+
+// Fetch menu data
 fetch("/sampleData.json")
 .then((res) => {
   return res.json();
