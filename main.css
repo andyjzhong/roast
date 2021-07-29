@@ -1,3 +1,20 @@
 body {
     background-color: #96BAFF;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+
+}
+
+.col-5 {
+    background-color: lightyellow;
+    height: 60vh;
+}
+
+.col-7 {
+    background-color: pink;
+    height: 90vh;
 }
