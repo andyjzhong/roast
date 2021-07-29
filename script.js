@@ -3,6 +3,7 @@
 console.warn("JS loaded.");
 
 const menuItemBtn = document.querySelector(".menu-item");
+const totalBillBox = document.querySelector("#total-bill-box");
 const activeOrder = [];
 let totalBill = "0";
 
@@ -20,6 +21,11 @@ const calcTotalBill = () => {
     }, 0)
 
     console.log(totalBill);
+    displayTotalBill()
+}
+
+const displayTotalBill = () => {
+    totalBillBox.innerText = totalBill;
 }
 
 // Fetch Menu Data
