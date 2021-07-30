@@ -34,9 +34,8 @@ const deleteItem = (e) => {
 
     // get the tbody's nth child and remove the whole thing
     tableBody.children.item(rowIndex).remove();
+    calcSubtotal()
 }
-
-
 
 const addNewMenuItem = () => {
     activeOrder.push(menuItemSelected)
