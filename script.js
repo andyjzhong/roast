@@ -23,8 +23,17 @@ let orderTotal = 0;
 let subtotalBill = 0;
 
 const deleteItem = (e) => {
-    // Select the id of the item, and remove it from the array.
-    console.log(e.target.outerHTML);
+    removalCandidate = e.target.parentElement.parentElement.firstElementChild.innerHTML;
+    rowIndex = removalCandidate - 1
+    console.log("rowIndex", rowIndex);
+    console.warn(e.target.parentElement.parentElement);
+    console.log("ACTIVE ORDER BEFORE", activeOrder);
+    activeOrder.splice(rowIndex, 1)
+    console.log("ACTIVE ORDER AFTER", activeOrder);
+
+
+    // get the tbody's nth child and remove the whole thing
+    tableBody.children.item(rowIndex).remove();
 }
 
 
@@ -36,7 +45,7 @@ const addNewMenuItem = () => {
     let newItem = document.createElement("tr");
 
     let html = `
-        <th scope="row">${activeOrder.length}</th>
+        <td scope="row">${activeOrder.length}</th>
         <td>${menuItemSelected.name}</td>
         <td>1</td>
         <td>$${menuItemSelected.price}</td>
@@ -66,8 +75,6 @@ const calcSubtotal = () => {
     let orderPricesArray = activeOrder.map(function(food) {
         return food.price;
     });
-
-    console.log(orderPricesArray);
 
     subtotalBill = orderPricesArray.reduce(function(acc, price) {
         return acc += price
