@@ -1,9 +1,8 @@
 'use-strict';
 
-console.warn("JS loaded.");
-
 const cancelOrderBtn = document.querySelector(".cancel-order");
 const closeModalBtn = document.querySelector('#closeModal');
+const discountBtn = document.querySelector('.add-discount');
 const mealsTaxBox = document.querySelector('#meals-tax-box');
 const menuItemBtn = document.querySelector(".menu-item");
 const modal = document.querySelector('#modal');
@@ -14,6 +13,7 @@ const tabArea = document.querySelector(".tab-area");
 const tableBody = document.querySelector(".table-body");
 const subtotalBillBox = document.querySelector("#subtotal-bill-box");
 let activeOrder = [];
+let discount = "0.00";
 let orderNumber = 1;
 let subtotalBill = "0";
 let mealsTax = "0.00";
@@ -103,6 +103,13 @@ getData();
 cancelOrderBtn.addEventListener("click", clearOrder)
 closeModalBtn.addEventListener('click', closeModal)
 openModalBtn.addEventListener('click', openModal)
+discountBtn.addEventListener('click', function() {
+    discount = prompt("Add discount.")
+
+    if (discount !== 0) {
+        document.querySelector("#discount-box").innerText = (Math.round(discount * 100) / 100).toFixed(2);
+    }
+})
 
 // TODO: This will later need to create a new object of existing orders as well so we can call it back.
 sendOrderBtn.addEventListener("click", clearOrder)
