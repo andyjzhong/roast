@@ -4,6 +4,7 @@ console.warn("JS loaded.");
 
 const cancelOrderBtn = document.querySelector(".cancel-order");
 const closeModalBtn = document.querySelector('#closeModal');
+const mealsTaxBox = document.querySelector('#meals-tax-box');
 const menuItemBtn = document.querySelector(".menu-item");
 const modal = document.querySelector('#modal');
 const openModalBtn = document.querySelector('#openModal');
@@ -15,6 +16,7 @@ const subtotalBillBox = document.querySelector("#subtotal-bill-box");
 let activeOrder = [];
 let orderNumber = 1;
 let subtotalBill = "0";
+let mealsTax = "0.00";
 
 // Calculate subtotal
 const calcSubtotal = () => {
@@ -30,7 +32,13 @@ const calcSubtotal = () => {
 
     subtotalBill = (Math.round(subtotalBill * 100) / 100).toFixed(2);
     console.log(subtotalBill);
-    displaySubtotalBill()
+    calcMealsTax();
+    displaySubtotalBill();
+}
+
+const calcMealsTax = () => {
+    mealsTax = (Math.round((subtotalBill * 0.0625) * 100) / 100).toFixed(2);
+    mealsTaxBox.innerText = mealsTax;
 }
 
 // Display the subtotal to user

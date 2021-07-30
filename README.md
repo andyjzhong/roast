@@ -33,10 +33,10 @@
 | -------------------------- | ----------- |
 | Set Up Framework & HTML    | 1.5 hr      |
 | Connecting to API & Render | 1 hr        |
-| Add Application Logic      | 4.5 hrs     |
+| Add Application Logic      | 5.0 hrs     |
 | Styling                    | 0.5 hrs     |
 | Responsive Styling         | 0 hrs       |
 | **MVP Total**              | **8 hrs**   |
 | Stretch Goals              | 0 hrs       |
 | + Add Modal                | 0.5 hrs     |
-| **Project Total**          | **9 hrs**   |
+| **Project Total**          | **8.5 hrs** |
