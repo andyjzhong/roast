@@ -38,7 +38,7 @@ const deleteItem = (e) => {
     rowIndex = removalCandidate - 1
     activeOrder.splice(rowIndex, 1)
     tableBody.children.item(rowIndex).remove();
-    renumberTable()
+    renumberTable();
     calcSubtotal();
 }
 
@@ -71,13 +71,17 @@ const addNewMenuItem = () => {
 }
 
 const addOrderHistory = () => {
-    orderNumber++;
-    orderNumText.innerText = orderNumber;
-    console.warn("Active order is:::", activeOrder);
-    orderHistory.push(activeOrder);
-    console.warn("Order history is:::", orderHistory);
+    if (activeOrder.length > 0) {
+        orderNumber++;
+        orderNumText.innerText = orderNumber;
+        console.warn("Active order is:::", activeOrder);
+        orderHistory.push(activeOrder);
+        console.warn("Order history is:::", orderHistory);
+        clearOrder();
+    } else {
+        alert("No items have been added yet.");
+    }
 
-    clearOrder();
 }
 
 const calcSubtotal = () => {
