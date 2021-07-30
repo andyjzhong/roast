@@ -50,17 +50,18 @@ const deleteItem = (e) => {
 }
 
 const addNewMenuItem = (e) => {
-    activeOrder.push(menuItemSelected)
+    console.log(e.target);
+    activeOrder.push(e) // TODO
     console.log(activeOrder);
 
     let newItem = document.createElement("tr");
 
     let html = `
         <td class="trow" scope="row">${activeOrder.length}</th>
-        <td>${menuItemSelected.name}</td>
+        <td>${e.target.name}</td>
         <td>1</td>
-        <td>$${menuItemSelected.price}</td>
-        <td>$${menuItemSelected.price}</td>
+        <td>$${e.target.getAttribute("price")}</td>
+        <td>$${e.target.getAttribute("price")}</td>
         <td>
             <button class="remove-btn btn btn-outline-danger btn-sm">
                 <i class="far fa-trash-alt"></i>
@@ -158,6 +159,8 @@ async function getData() {
                 console.log("Made it?");
                 let newMenuOption = document.createElement("button");
                 newMenuOption.setAttribute("type", "button");
+                newMenuOption.setAttribute("name", `${breakfastMenu[i].name}`);
+                newMenuOption.setAttribute("price", `${breakfastMenu[i].price}`);
                 newMenuOption.setAttribute("class", "btn btn-success menu-item add-btn");
                 newMenuOption.innerText = `${breakfastMenu[i].name}`;
                 document.querySelector("#menu-area").append(newMenuOption)
