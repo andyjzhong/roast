@@ -12,13 +12,15 @@ const orderNumText = document.querySelector('.orderNumText');
 const sendOrderBtn = document.querySelector(".send-order");
 const tabArea = document.querySelector(".tab-area");
 const tableBody = document.querySelector(".table-body");
+const totalBillBox = document.querySelector("#total-bill-box");
 const subtotalBillBox = document.querySelector("#subtotal-bill-box");
 let activeOrder = [];
-let orderHistory = [];
 let discount = 0;
-let orderNumber = 1;
-let subtotalBill = 0;
 let mealsTax = 0;
+let orderHistory = [];
+let orderNumber = 1;
+let orderTotal = 0;
+let subtotalBill = 0;
 
 const addNewMenuItem = () => {
     activeOrder.push(menuItemSelected)
@@ -63,9 +65,8 @@ const calcSubtotal = () => {
     }, 0)
 
     subtotalBill = (Math.round(subtotalBill * 100) / 100).toFixed(2);
-    console.log(subtotalBill);
+    subtotalBillBox.innerText = subtotalBill;
     calcMealsTax();
-    displaySubtotalBill();
 }
 
 const calcDiscount = () => {
@@ -80,10 +81,14 @@ const calcDiscount = () => {
 const calcMealsTax = () => {
     mealsTax = (Math.round(((subtotalBill - discount) * 0.0625) * 100) / 100).toFixed(2);
     mealsTaxBox.innerText = mealsTax;
+    calcBill();
 }
 
-const displaySubtotalBill = () => {
-    subtotalBillBox.innerText = subtotalBill;
+const calcBill = () => {
+    console.log("Did I make it.");
+    orderTotal = Number(subtotalBill) - Number(discount) + Number(mealsTax);
+    console.log(orderTotal);
+    totalBillBox.innerText = orderTotal;
 }
 
 const clearOrder = () => {
