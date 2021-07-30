@@ -48,6 +48,15 @@ const calcSubtotal = () => {
     displaySubtotalBill();
 }
 
+const calcDiscount = () => {
+    discount = prompt("Enter a discount amount.")
+
+    if (discount !== 0) {
+        document.querySelector("#discount-box").innerText = (Math.round(discount * 100) / 100).toFixed(2);
+    }
+    calcMealsTax();
+}
+
 const calcMealsTax = () => {
     mealsTax = (Math.round(((subtotalBill - discount) * 0.0625) * 100) / 100).toFixed(2);
     mealsTaxBox.innerText = mealsTax;
@@ -119,14 +128,7 @@ getData();
 cancelOrderBtn.addEventListener("click", clearOrder)
 closeModalBtn.addEventListener('click', closeModal)
 openModalBtn.addEventListener('click', openModal)
-discountBtn.addEventListener('click', function() {
-    discount = prompt("Add discount.")
-
-    if (discount !== 0) {
-        document.querySelector("#discount-box").innerText = (Math.round(discount * 100) / 100).toFixed(2);
-    }
-    calcMealsTax();
-})
+discountBtn.addEventListener('click', calcDiscount)
 
 // TODO: This will later need to create a new object of existing orders as well so we can call it back.
 sendOrderBtn.addEventListener("click", addOrderHistory)
