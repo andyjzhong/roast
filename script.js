@@ -6,6 +6,7 @@ const discountBox = document.querySelector('#discount-box');
 const discountBtn = document.querySelector('.add-discount');
 const mealsTaxBox = document.querySelector('#meals-tax-box');
 const menuItemBtn = document.querySelector(".menu-item");
+const menuItemBtn2 = document.querySelector(".menu-item-2");
 const modal = document.querySelector('#modal');
 const openModalBtn = document.querySelector('#openModal');
 const orderNumText = document.querySelector('.orderNumText');
@@ -76,6 +77,34 @@ const addNewMenuItem = () => {
     calcSubtotal();
 }
 
+const addNewMenuItem2 = () => {
+    activeOrder.push(menuItemSelected2)
+    console.log(activeOrder);
+
+    let newItem = document.createElement("tr");
+
+    let html = `
+        <td class="trow" scope="row">${activeOrder.length}</th>
+        <td>${menuItemSelected2.name}</td>
+        <td>1</td>
+        <td>$${menuItemSelected2.price}</td>
+        <td>$${menuItemSelected2.price}</td>
+        <td>
+            <button class="remove-btn btn btn-outline-danger btn-sm">
+                <i class="far fa-trash-alt"></i>
+            </button>
+        </td>
+      `
+
+    newItem.innerHTML = `${html}`;
+    document.querySelector("tbody").append(newItem)
+
+    let allRemoveBtns = document.querySelectorAll('.remove-btn');
+    allRemoveBtns.forEach(btn => btn.addEventListener("click", deleteItem));
+
+    calcSubtotal();
+}
+
 const addOrderHistory = () => {
     if (activeOrder.length > 0) {
         orderNumber++;
@@ -121,7 +150,7 @@ const calcMealsTax = () => {
 
 const calcBill = () => {
     orderTotal = Number(subtotalBill) - Number(discount) + Number(mealsTax);
-    totalBillBox.innerText = orderTotal;
+    totalBillBox.innerText = (Math.round((orderTotal * 0.0625) * 100) / 100).toFixed(2);
 }
 
 const clearOrder = () => {
@@ -149,7 +178,8 @@ async function getData() {
         })
         .then(function(res) {
             console.log("Retrieved data successfully.", res);
-            menuItemSelected = res.result.menus[0].menu_sections[0].menu_items[0]
+            menuItemSelected = res.result.menus[0].menu_sections[0].menu_items[0];
+            menuItemSelected2 = res.result.menus[0].menu_sections[0].menu_items[1];
         })
         .catch(function(err) {
             console.log("Failed to retrieve data.", err);
@@ -159,6 +189,7 @@ async function getData() {
 getData();
 
 menuItemBtn.addEventListener("click", addNewMenuItem);
+menuItemBtn2.addEventListener("click", addNewMenuItem2);
 cancelOrderBtn.addEventListener("click", clearOrder);
 closeModalBtn.addEventListener('click', closeModal);
 openModalBtn.addEventListener('click', openModal);
