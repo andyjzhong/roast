@@ -5,7 +5,7 @@
 ### Day 1
 
 <details>
-  <summary>Click to expand!</summary>
+  <summary>Expand</summary>
 
 #### Set Up
 
@@ -40,10 +40,10 @@
 ### Day 2
 
 <details>
-     <summary>Click to expand!</summary>
+     <summary>Expand</summary>
 
 #### JavaScript
-    - Debug calculation of Discounts, Taxes, and Subtotal.
+- Debug calculation of Discounts, Taxes, and Subtotal.
 
 </details>
 
