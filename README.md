@@ -12,14 +12,14 @@
 -   Build initial files and connect HTML, CSS, and JS.
 -   Add CSS libraries: Bootstrap and Font Awesome.
 
-    #### HTML & CSS
+#### HTML & CSS
 
 -   Add a navbar and a sample button with an event listener that logs text in the console when clicked.
 -   Build initial HTML layout with 3 main sections: tab-area, menu-area, and total-section.
 -   Create a table for menu items to be added to every time a menu item is selected.
 -   Very minor styling, enough to help identify div sizes.
 
-    #### JavaScript
+#### JavaScript
 
 -   Expand on button event handler to append a new table row to the tab area with the name of the food item.
 -   Loop through array of selected food items, grab the price, and reduce it to a total bill price.
@@ -27,7 +27,7 @@
 -   Add a modal when Pay button is clicked to bring up the payment screen.
 -   Add logic to calculate meals tax and to accept a user input value for discounts.
 
-    #### Other
+#### Other
 
 -   Examine Postman output and create a sample data set so that I'm not making too many expensive API calls during initial build.
 -   Create initial ReadMe file to keep track of progress each day.
@@ -42,7 +42,7 @@
 <details>
      <summary>Click to expand!</summary>
 
-    #### JavaScript
+#### JavaScript
     - Debug calculation of Discounts, Taxes, and Subtotal.
 
 </details>
