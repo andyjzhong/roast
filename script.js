@@ -7,11 +7,13 @@ const closeModalBtn = document.querySelector('#closeModal');
 const menuItemBtn = document.querySelector(".menu-item");
 const modal = document.querySelector('#modal');
 const openModalBtn = document.querySelector('#openModal');
+const orderNumText = document.querySelector('.orderNumText');
 const sendOrderBtn = document.querySelector(".send-order");
 const tabArea = document.querySelector(".tab-area");
 const tableBody = document.querySelector(".table-body");
 const totalBillBox = document.querySelector("#total-bill-box");
 let activeOrder = [];
+let orderNumber = 1;
 let totalBill = "0";
 
 // Calculate total bill
