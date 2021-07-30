@@ -161,7 +161,7 @@ async function getData() {
                 newMenuOption.setAttribute("price", `${breakfastMenu[i].price}`);
                 newMenuOption.setAttribute("class", "btn btn-success menu-item add-btn");
                 newMenuOption.innerText = `${breakfastMenu[i].name}`;
-                document.querySelector("#menu-area").append(newMenuOption)
+                document.querySelector(".individual-options-area").append(newMenuOption)
             }
 
             let allAddBtns = document.querySelectorAll('.add-btn');

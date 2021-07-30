@@ -54,8 +54,16 @@ th {
     height: 80vh;
 }
 
+.individual-options-area {
+    background-color: violet;
+    height: 50vh;
+    overflow: auto;
+}
+
 .add-btn {
     background-color: black !important;
+    width: 12em;
+    height: 6em;
 }
 
 /* Modal */
