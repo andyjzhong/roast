@@ -1,5 +1,11 @@
 # Roast Tab
 
+## Tech Stack
+-   Built with HTML, CSS, and JavaScript
+-   DocuMenu API
+-   Bootstrap
+-   FontAwesome
+
 ## Journal
 
 ### Day 1
