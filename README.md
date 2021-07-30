@@ -43,8 +43,9 @@
      <summary>Expand</summary>
 
 #### JavaScript
--   Debug calculation of Discounts, Taxes, and Subtotal.
+-   Debug calculation of discounts, taxes, and subtotal.
 -   Work on logic for order history.
+-   Added calculation of total bill based on refactored discounts, taxes, and subtotal.
 
 #### CSS
 -   Style Total section
@@ -62,7 +63,7 @@
 | -------------------------- | ----------- | ----------- | --------- |
 | Set Up Framework & HTML    | 2.0 hr      | 0 hr        | 0 hr      |
 | Connecting to API & Render | 1 hr        | 0 hr        | 0 hr      |
-| Add Application Logic      | 5.5 hrs     | 0.5 hrs     | 0 hr      |
+| Add Application Logic      | 5.5 hrs     | 1 hr        | 0 hr      |
 | Styling                    | 0.5 hrs     | 0.5 hr      | 0 hr      |
 | Responsive Styling         | 0 hrs       | 0 hr        | 0 hr      |
 | **MVP Total**              | **9 hrs**   | **0 hrs**   | **0 hrs** |
