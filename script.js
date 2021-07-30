@@ -67,7 +67,6 @@ async function getData() {
         })
 }
 
-
 // Event Handlers
 menuItemBtn.addEventListener("click", function() {
     activeOrder.push(menuItemSelected)
