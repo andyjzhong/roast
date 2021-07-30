@@ -51,7 +51,6 @@ const addOrderHistory = () => {
     clearOrder();
 }
 
-// Calculate subtotal
 const calcSubtotal = () => {
     let orderPricesArray = activeOrder.map(function(food) {
         return food.price;
@@ -83,14 +82,11 @@ const calcMealsTax = () => {
     mealsTaxBox.innerText = mealsTax;
 }
 
-// Display the subtotal to user
 const displaySubtotalBill = () => {
     subtotalBillBox.innerText = subtotalBill;
 }
 
-// Clears the order and clears tab-area and activeOrder
 const clearOrder = () => {
-    // Needs to remove all child elements from the tab area too.
     tableBody.innerHTML = "";
     activeOrder = [];
     discount = 0;
@@ -108,7 +104,6 @@ const openModal = () => {
     modal.style.display = 'block';
 }
 
-// Fetch menu data
 async function getData() {
     fetch("./sampleData.json")
         .then((res) => {
@@ -125,7 +120,6 @@ async function getData() {
 
 getData();
 
-// Event Handlers
 menuItemBtn.addEventListener("click", addNewMenuItem);
 cancelOrderBtn.addEventListener("click", clearOrder);
 closeModalBtn.addEventListener('click', closeModal);
