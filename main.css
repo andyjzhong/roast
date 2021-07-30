@@ -4,20 +4,28 @@ body {
     padding: 0;
 }
 
+row {
+    padding: 0;
+    margin: 0;
+}
+
 #main-container {
     padding: 10px 10px 0 10px;
     margin: 0 auto;
 }
 
+/* Tab Section */
 #tab-section {
     background-color: lightyellow;
     height: 90vh;
 }
 
+/* Total Section */
 #total-area {
     background-color: skyblue;
-    height: 30vh;
+    height: 20vh;
     padding: 0;
+    margin: 0;
 }
 
 .tab-area {
@@ -26,6 +34,11 @@ body {
     overflow: auto;
 }
 
+#total-area > .right-panel {
+    text-align: right;
+}
+
+/* Menu Section */
 #menu-section {
     background-color: pink;
     height: 90vh;
@@ -36,6 +49,7 @@ body {
     height: 80vh;
 }
 
+/* Modal */
 #modal {
   background-color: rgba(0, 0, 0, 0.4);
   position: fixed;

@@ -39,15 +39,18 @@
                 <button type="button" class="btn btn-danger cancel-order">Cancel Order</button>
                 <button type="button" class="btn btn-success send-order">Send Order</button>
             </div>
-            <div id="total-area" class="col-12">
+            <div id="total-area" class="row col-12 left-panel">
+                <div class="col-6">
+                    <p>Subtotal: $<span id="subtotal-bill-box">0.00</span></p>
+                    <p>Discounts: $<span id="discount-box">0.00</span></p>
+                    <p>Taxes: $<span id="meals-tax-box">0.00</span></p>
+                </div>
+                <div class="col-6 right-panel">
+                    <p>Total: $0.00</p>
+                    <button class="btn btn-primary add-discount">Discounts</button>
+                    <button class="btn btn-primary make-payment" id="openModal">Pay</button>
+                </div>
 
-
-                <p>Subtotal: $<span id="subtotal-bill-box">0.00</span></p>
-                <p>Discounts: $<span id="discount-box">0.00</span></p>
-                <p>Taxes: $<span id="meals-tax-box">0.00</span></p>
-                <p>Total: $0.00</p>
-                <button class="btn btn-primary add-discount">Discounts</button>
-                <button class="btn btn-primary make-payment" id="openModal">Pay</button>
             </div>
         </section>
         <!-- Menu Section -->
