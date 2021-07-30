@@ -22,6 +22,7 @@ let mealsTax = 0;
 
 const addOrderHistory = () => {
     orderNumber++;
+    orderNumText.innerText = orderNumber;
     console.warn("Active order is:::", activeOrder);
     orderHistory.push(activeOrder);
     console.warn("Order history is:::", orderHistory);
