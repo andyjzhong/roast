@@ -26,9 +26,9 @@ let subtotalBill = 0;
 const renumberTable = () => {
     // let rowTarget = tableBody.children.item(0).children.item(0);
     // console.log("rowTarget", rowTarget);
-    let rowTargetText = tableBody.children.item(0).children.item(0).innerText;
 
     if (activeOrder.length > 0){
+        let rowTargetText = tableBody.children.item(0).children.item(0).innerText;
         for (let i = 0; i < activeOrder.length; i++) {
             // console.error("rowTargetText", rowTargetText);
             let newRowNum = rowTargetText - 1;
@@ -50,8 +50,8 @@ const deleteItem = (e) => {
 }
 
 const addNewMenuItem = (e) => {
-    console.log(e.target);
-    activeOrder.push(e) // TODO
+    let index = breakfastMenu.findIndex(item => item.name === e.target.name);
+    activeOrder.push(breakfastMenu[index]);
     console.log(activeOrder);
 
     let newItem = document.createElement("tr");
@@ -153,10 +153,8 @@ async function getData() {
             console.log("Retrieved data successfully.", res);
 
             breakfastMenu = res.result.menus[0].menu_sections[0].menu_items;
-            console.log(breakfastMenu.length);
 
             for (let i = 0; i < breakfastMenu.length; i++) {
-                console.log("Made it?");
                 let newMenuOption = document.createElement("button");
                 newMenuOption.setAttribute("type", "button");
                 newMenuOption.setAttribute("name", `${breakfastMenu[i].name}`);
