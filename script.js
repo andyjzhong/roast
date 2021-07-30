@@ -20,6 +20,27 @@ let orderNumber = 1;
 let subtotalBill = 0;
 let mealsTax = 0;
 
+const addNewMenuItem = () => {
+    activeOrder.push(menuItemSelected)
+    console.log(activeOrder);
+
+    let newItem = document.createElement("tr");
+
+    let html = `
+        <th scope="row">${activeOrder.length}</th>
+        <td>${menuItemSelected.name}</td>
+        <td>1</td>
+        <td>$${menuItemSelected.price}</td>
+        <td>$${menuItemSelected.price}</td>
+        <td><button class="btn btn-outline-danger btn-sm">Delete</button></td>
+      `
+
+    newItem.innerHTML = `${html}`;
+    document.querySelector("tbody").append(newItem)
+
+    calcSubtotal();
+}
+
 const addOrderHistory = () => {
     orderNumber++;
     orderNumText.innerText = orderNumber;
@@ -102,33 +123,12 @@ async function getData() {
         })
 }
 
-// Event Handlers
-menuItemBtn.addEventListener("click", function() {
-    activeOrder.push(menuItemSelected)
-    console.log(activeOrder);
-
-    let newItem = document.createElement("tr");
-
-    let html = `
-        <th scope="row">${activeOrder.length}</th>
-        <td>${menuItemSelected.name}</td>
-        <td>1</td>
-        <td>$${menuItemSelected.price}</td>
-        <td>$${menuItemSelected.price}</td>
-        <td><button class="btn btn-outline-danger btn-sm">Delete</button></td>
-      `
-
-    newItem.innerHTML = `${html}`;
-    document.querySelector("tbody").append(newItem)
-
-    calcSubtotal();
-})
-
 getData();
-cancelOrderBtn.addEventListener("click", clearOrder)
-closeModalBtn.addEventListener('click', closeModal)
-openModalBtn.addEventListener('click', openModal)
-discountBtn.addEventListener('click', calcDiscount)
 
-// TODO: This will later need to create a new object of existing orders as well so we can call it back.
-sendOrderBtn.addEventListener("click", addOrderHistory)
+// Event Handlers
+menuItemBtn.addEventListener("click", addNewMenuItem);
+cancelOrderBtn.addEventListener("click", clearOrder);
+closeModalBtn.addEventListener('click', closeModal);
+openModalBtn.addEventListener('click', openModal);
+discountBtn.addEventListener('click', calcDiscount);
+sendOrderBtn.addEventListener("click", addOrderHistory);
