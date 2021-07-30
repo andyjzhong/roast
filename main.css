@@ -23,6 +23,7 @@ body {
 .tab-area {
     background-color: white;
     height: 50vh;
+    overflow: auto;
 }
 
 #menu-section {
