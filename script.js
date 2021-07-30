@@ -37,7 +37,7 @@ const calcSubtotal = () => {
 }
 
 const calcMealsTax = () => {
-    mealsTax = (Math.round((subtotalBill * 0.0625) * 100) / 100).toFixed(2);
+    mealsTax = (Math.round(((subtotalBill - discount) * 0.0625) * 100) / 100).toFixed(2);
     mealsTaxBox.innerText = mealsTax;
 }
 
@@ -109,6 +109,7 @@ discountBtn.addEventListener('click', function() {
     if (discount !== 0) {
         document.querySelector("#discount-box").innerText = (Math.round(discount * 100) / 100).toFixed(2);
     }
+    calcMealsTax();
 })
 
 // TODO: This will later need to create a new object of existing orders as well so we can call it back.
