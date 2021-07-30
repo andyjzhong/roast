@@ -22,6 +22,13 @@ let orderNumber = 1;
 let orderTotal = 0;
 let subtotalBill = 0;
 
+const deleteItem = (e) => {
+    // Select the id of the item, and remove it from the array.
+    console.log(e.target.outerHTML);
+}
+
+
+
 const addNewMenuItem = () => {
     activeOrder.push(menuItemSelected)
     console.log(activeOrder);
@@ -34,11 +41,13 @@ const addNewMenuItem = () => {
         <td>1</td>
         <td>$${menuItemSelected.price}</td>
         <td>$${menuItemSelected.price}</td>
-        <td><button class="btn btn-outline-danger btn-sm">Delete</button></td>
+        <td><button class="remove-btn btn btn-outline-danger btn-sm">Remove</button></td>
       `
 
     newItem.innerHTML = `${html}`;
     document.querySelector("tbody").append(newItem)
+
+    document.querySelector('.remove-btn').addEventListener("click", deleteItem)
 
     calcSubtotal();
 }
@@ -85,9 +94,7 @@ const calcMealsTax = () => {
 }
 
 const calcBill = () => {
-    console.log("Did I make it.");
     orderTotal = Number(subtotalBill) - Number(discount) + Number(mealsTax);
-    console.log(orderTotal);
     totalBillBox.innerText = orderTotal;
 }
 
