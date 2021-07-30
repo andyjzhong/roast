@@ -43,13 +43,18 @@
      <summary>Expand</summary>
 
 #### JavaScript
-- Debug calculation of Discounts, Taxes, and Subtotal.
+-   Debug calculation of Discounts, Taxes, and Subtotal.
+-   Work on logic for order history.
+
+#### CSS
+-   Style Total section
 
 </details>
 
 ## Challenges
 
 -   Figuring out why certain values were not clearing on the cancel order button. I added some console.logs in the code to figure out the value of discounts before and after the click of the clear button and it turns out that the discount value itself was clearing, but it just wasn't updating in the DOM.
+-   Determining how to create an order history seemed challenging but when I stepped away and actually wrote out the pseudocode for it, it made a lot more sense what I needed to achieve. I had to create a new function that takes the activeOrder array and push it into an orderHistory array.
 
 ## Time Frames
 
@@ -57,8 +62,8 @@
 | -------------------------- | ----------- | ----------- | --------- |
 | Set Up Framework & HTML    | 2.0 hr      | 0 hr        | 0 hr      |
 | Connecting to API & Render | 1 hr        | 0 hr        | 0 hr      |
-| Add Application Logic      | 5.5 hrs     | 0.5 hr      | 0 hr      |
-| Styling                    | 0.5 hrs     | 0 hr        | 0 hr      |
+| Add Application Logic      | 5.5 hrs     | 0.5 hrs     | 0 hr      |
+| Styling                    | 0.5 hrs     | 0.5 hr      | 0 hr      |
 | Responsive Styling         | 0 hrs       | 0 hr        | 0 hr      |
 | **MVP Total**              | **9 hrs**   | **0 hrs**   | **0 hrs** |
 | Stretch Goals              | 0 hrs       | 0 hrs       | 0 hr      |

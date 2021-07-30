@@ -14,10 +14,20 @@ const tabArea = document.querySelector(".tab-area");
 const tableBody = document.querySelector(".table-body");
 const subtotalBillBox = document.querySelector("#subtotal-bill-box");
 let activeOrder = [];
+let orderHistory = [];
 let discount = 0;
 let orderNumber = 1;
 let subtotalBill = 0;
 let mealsTax = 0;
+
+const addOrderHistory = () => {
+    orderNumber++;
+    console.warn("Active order is:::", activeOrder);
+    orderHistory.push(activeOrder);
+    console.warn("Order history is:::", orderHistory);
+
+    clearOrder();
+}
 
 // Calculate subtotal
 const calcSubtotal = () => {
@@ -118,4 +128,4 @@ discountBtn.addEventListener('click', function() {
 })
 
 // TODO: This will later need to create a new object of existing orders as well so we can call it back.
-sendOrderBtn.addEventListener("click", clearOrder)
+sendOrderBtn.addEventListener("click", addOrderHistory)
