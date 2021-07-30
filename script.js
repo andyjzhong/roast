@@ -13,10 +13,10 @@ const tabArea = document.querySelector(".tab-area");
 const tableBody = document.querySelector(".table-body");
 const subtotalBillBox = document.querySelector("#subtotal-bill-box");
 let activeOrder = [];
-let discount = "0.00";
+let discount = 0;
 let orderNumber = 1;
-let subtotalBill = "0";
-let mealsTax = "0.00";
+let subtotalBill = 0;
+let mealsTax = 0;
 
 // Calculate subtotal
 const calcSubtotal = () => {
@@ -51,6 +51,9 @@ const clearOrder = () => {
     // Needs to remove all child elements from the tab area too.
     tableBody.innerHTML = "";
     activeOrder = [];
+    discount = 0;
+    mealsTax = 0;
+    subtotalBill = 0;
     calcSubtotal();
 }
 
