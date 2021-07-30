@@ -26,6 +26,7 @@ const calcTotalBill = () => {
         return acc += price
     }, 0)
 
+    totalBill = (Math.round(totalBill * 100) / 100).toFixed(2);
     console.log(totalBill);
     displayTotalBill()
 }
