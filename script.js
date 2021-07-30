@@ -22,19 +22,22 @@ let orderNumber = 1;
 let orderTotal = 0;
 let subtotalBill = 0;
 
+const renumberTable = () => {
+    let rowTargetText = tableBody.children.item(0).children.item(0).innerText;
+    for (let i = 0; i < activeOrder.length; i++) {
+        newRowNum = rowTargetText - 1;
+        tableBody.children.item(i).children.item(0).innerText = newRowNum;
+        rowTargetText++
+    }
+}
+
 const deleteItem = (e) => {
     removalCandidate = e.target.parentElement.parentElement.firstElementChild.innerHTML;
     rowIndex = removalCandidate - 1
-    console.log("rowIndex", rowIndex);
-    console.warn(e.target.parentElement.parentElement);
-    console.log("ACTIVE ORDER BEFORE", activeOrder);
     activeOrder.splice(rowIndex, 1)
-    console.log("ACTIVE ORDER AFTER", activeOrder);
-
-
-    // get the tbody's nth child and remove the whole thing
     tableBody.children.item(rowIndex).remove();
-    calcSubtotal()
+    renumberTable();
+    calcSubtotal();
 }
 
 const addNewMenuItem = () => {
@@ -44,12 +47,16 @@ const addNewMenuItem = () => {
     let newItem = document.createElement("tr");
 
     let html = `
-        <td scope="row">${activeOrder.length}</th>
+        <td class="trow" scope="row">${activeOrder.length}</th>
         <td>${menuItemSelected.name}</td>
         <td>1</td>
         <td>$${menuItemSelected.price}</td>
         <td>$${menuItemSelected.price}</td>
-        <td><button class="remove-btn btn btn-outline-danger btn-sm">Remove</button></td>
+        <td>
+            <button class="remove-btn btn btn-outline-danger btn-sm">
+                <i class="far fa-trash-alt"></i>
+            </button>
+        </td>
       `
 
     newItem.innerHTML = `${html}`;
