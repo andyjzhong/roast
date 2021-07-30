@@ -36,11 +36,14 @@
                     <tbody class="table-body">
                     </tbody>
                 </table>
+                <button type="button" class="btn btn-danger cancel-order">Cancel Order</button>
+                <button type="button" class="btn btn-success send-order">Send Order</button>
             </div>
-            <button type="button" class="btn btn-danger cancel-order">Cancel Order</button>
-            <button type="button" class="btn btn-success send-order">Send Order</button>
             <div id="total-section" class="col-12">
-                Total: $<span id="total-bill-box">0.00</span>
+                <p>Discounts: $0.00</p>
+                <p>Subtotal: $<span id="subtotal-bill-box">0.00</span></p>
+                <p>Taxes: $0.70</p>
+                <p>Total: $0.00</p>
                 <button class="btn btn-primary make-payment" id="openModal">Pay</button>
             </div>
         </section>

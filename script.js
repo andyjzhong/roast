@@ -11,31 +11,31 @@ const orderNumText = document.querySelector('.orderNumText');
 const sendOrderBtn = document.querySelector(".send-order");
 const tabArea = document.querySelector(".tab-area");
 const tableBody = document.querySelector(".table-body");
-const totalBillBox = document.querySelector("#total-bill-box");
+const subtotalBillBox = document.querySelector("#subtotal-bill-box");
 let activeOrder = [];
 let orderNumber = 1;
-let totalBill = "0";
+let subtotalBill = "0";
 
-// Calculate total bill
-const calcTotalBill = () => {
+// Calculate subtotal
+const calcSubtotal = () => {
     let orderPricesArray = activeOrder.map(function(food) {
         return food.price;
     });
 
     console.log(orderPricesArray);
 
-    totalBill = orderPricesArray.reduce(function(acc, price) {
+    subtotalBill = orderPricesArray.reduce(function(acc, price) {
         return acc += price
     }, 0)
 
-    totalBill = (Math.round(totalBill * 100) / 100).toFixed(2);
-    console.log(totalBill);
-    displayTotalBill()
+    subtotalBill = (Math.round(subtotalBill * 100) / 100).toFixed(2);
+    console.log(subtotalBill);
+    displaySubtotalBill()
 }
 
-// Display the total bill to user
-const displayTotalBill = () => {
-    totalBillBox.innerText = totalBill;
+// Display the subtotal to user
+const displaySubtotalBill = () => {
+    subtotalBillBox.innerText = subtotalBill;
 }
 
 // Clears the order and clears tab-area and activeOrder
@@ -43,7 +43,7 @@ const clearOrder = () => {
     // Needs to remove all child elements from the tab area too.
     tableBody.innerHTML = "";
     activeOrder = [];
-    calcTotalBill();
+    calcSubtotal();
 }
 
 const closeModal = () => {
@@ -88,7 +88,7 @@ menuItemBtn.addEventListener("click", function() {
     newItem.innerHTML = `${html}`;
     document.querySelector("tbody").append(newItem)
 
-    calcTotalBill();
+    calcSubtotal();
 })
 
 getData();
