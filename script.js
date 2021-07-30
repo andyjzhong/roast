@@ -2,6 +2,7 @@
 
 const cancelOrderBtn = document.querySelector(".cancel-order");
 const closeModalBtn = document.querySelector('#closeModal');
+const discountBox = document.querySelector('#discount-box');
 const discountBtn = document.querySelector('.add-discount');
 const mealsTaxBox = document.querySelector('#meals-tax-box');
 const menuItemBtn = document.querySelector(".menu-item");
@@ -52,6 +53,7 @@ const clearOrder = () => {
     tableBody.innerHTML = "";
     activeOrder = [];
     discount = 0;
+    discountBox.innerText = "0.00"
     mealsTax = 0;
     subtotalBill = 0;
     calcSubtotal();

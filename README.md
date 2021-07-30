@@ -25,17 +25,24 @@
 - Create initial ReadMe file to keep track of progress each day.
 
 ![Initial Layout](https://i.imgur.com/eixEAK2.png)
-![Initial Layout](https://media.giphy.com/media/xDddjFdHnXiMHm2eMD/giphy.gif)
+![Initial Logic](https://media.giphy.com/media/xDddjFdHnXiMHm2eMD/giphy.gif)
 
+### Day 2
+
+#### JavaScript
+- Debug calculation of Discounts, Taxes, and Subtotal.
+
+## Challenges
+- Figuring out why certain values were not clearing on the cancel order button. I added some console.logs in the code to figure out the value of discounts before and after the click of the clear button and it turns out that the discount value itself was clearing, but it just wasn't updating in the DOM.
 
 ## Time Frames
-| Task                       | Day 1       |
-| -------------------------- | ----------- |
-| Set Up Framework & HTML    | 2.0 hr      |
-| Connecting to API & Render | 1 hr        |
-| Add Application Logic      | 5.5 hrs     |
-| Styling                    | 0.5 hrs     |
-| Responsive Styling         | 0 hrs       |
-| **MVP Total**              | **9 hrs**   |
-| Stretch Goals              | 0 hrs       |
-| **Project Total**          | **9.0 hrs** |
+| Task                       | Day 1       | Day 2       |
+| -------------------------- | ----------- | ----------- |
+| Set Up Framework & HTML    | 2.0 hr      | 0 hr        |
+| Connecting to API & Render | 1 hr        | 0 hr        |
+| Add Application Logic      | 5.5 hrs     | 0.5 hr      |
+| Styling                    | 0.5 hrs     | 0 hr        |
+| Responsive Styling         | 0 hrs       | 0 hr        |
+| **MVP Total**              | **9 hrs**   | **0 hrs**   |
+| Stretch Goals              | 0 hrs       | 0 hrs       |
+| **Project Total**          | **9.0 hrs** | **0.0 hrs** |
