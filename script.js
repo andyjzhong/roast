@@ -23,7 +23,7 @@ let orderTotal = 0;
 let subtotalBill = 0;
 
 const renumberTable = () => {
-    let rowTarget = tableBody.children.item(0).children.item(0);
+    // let rowTarget = tableBody.children.item(0).children.item(0);
     // console.log("rowTarget", rowTarget);
     let rowTargetText = tableBody.children.item(0).children.item(0).innerText;
 
