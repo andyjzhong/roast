@@ -15,7 +15,7 @@
 #### HTML & CSS
 
 -   Add a navbar and a sample button with an event listener that logs text in the console when clicked.
--   Build initial HTML layout with 3 main sections: tab-area, menu-area, and total-section.
+-   Build initial HTML layout with 3 main sections: tab-area, menu-area, and total-area.
 -   Create a table for menu items to be added to every time a menu item is selected.
 -   Very minor styling, enough to help identify div sizes.
 
