@@ -159,8 +159,12 @@ async function getData() {
                 let newMenuOption = document.createElement("button");
                 newMenuOption.setAttribute("type", "button");
                 newMenuOption.setAttribute("class", "btn btn-success menu-item add-btn");
+                newMenuOption.innerText = `${breakfastMenu[i].name}`;
                 document.querySelector("#menu-area").append(newMenuOption)
             }
+
+            let allAddBtns = document.querySelectorAll('.add-btn');
+            allAddBtns.forEach(btn => btn.addEventListener("click", addNewMenuItem));
 
             // menuItemSelected = breakfastMenu.menu_items[i];
         })
@@ -171,8 +175,7 @@ async function getData() {
 
 getData();
 
-let allAddBtns = document.querySelectorAll('.add-btn');
-allAddBtns.forEach(btn => btn.addEventListener("click", addNewMenuItem));
+
 
 cancelOrderBtn.addEventListener("click", clearOrder);
 closeModalBtn.addEventListener('click', closeModal);

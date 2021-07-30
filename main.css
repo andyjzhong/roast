@@ -54,6 +54,10 @@ th {
     height: 80vh;
 }
 
+.add-btn {
+    background-color: black !important;
+}
+
 /* Modal */
 #modal {
   background-color: rgba(0, 0, 0, 0.4);
