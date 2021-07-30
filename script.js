@@ -150,7 +150,7 @@ const calcMealsTax = () => {
 
 const calcBill = () => {
     orderTotal = Number(subtotalBill) - Number(discount) + Number(mealsTax);
-    totalBillBox.innerText = (Math.round((orderTotal * 0.0625) * 100) / 100).toFixed(2);
+    totalBillBox.innerText = (Math.round(orderTotal * 100) / 100).toFixed(2);
 }
 
 const clearOrder = () => {
