@@ -23,11 +23,13 @@ let orderTotal = 0;
 let subtotalBill = 0;
 
 const renumberTable = () => {
-    let rowTargetText = tableBody.children.item(0).children.item(0).innerText;
-    for (let i = 0; i < activeOrder.length; i++) {
-        newRowNum = rowTargetText - 1;
-        tableBody.children.item(i).children.item(0).innerText = newRowNum;
-        rowTargetText++
+    if (activeOrder.length > 0){
+        let rowTargetText = tableBody.children.item(0).children.item(0).innerText;
+        for (let i = 0; i < activeOrder.length; i++) {
+            newRowNum = rowTargetText - 1;
+            tableBody.children.item(i).children.item(0).innerText = newRowNum;
+            rowTargetText++
+        }
     }
 }
 
@@ -36,7 +38,7 @@ const deleteItem = (e) => {
     rowIndex = removalCandidate - 1
     activeOrder.splice(rowIndex, 1)
     tableBody.children.item(rowIndex).remove();
-    renumberTable();
+    renumberTable()
     calcSubtotal();
 }
 
@@ -62,7 +64,8 @@ const addNewMenuItem = () => {
     newItem.innerHTML = `${html}`;
     document.querySelector("tbody").append(newItem)
 
-    document.querySelector('.remove-btn').addEventListener("click", deleteItem)
+    let allRemoveBtns = document.querySelectorAll('.remove-btn');
+    allRemoveBtns.forEach(btn => btn.addEventListener("click", deleteItem));
 
     calcSubtotal();
 }
