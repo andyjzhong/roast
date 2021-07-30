@@ -53,6 +53,8 @@
 -   Work on logic for order history.
 -   Added calculation of total bill based on refactored discounts, taxes, and subtotal.
 -   Work on delete button functionality and renumbering of the tab items.
+-   Refactor adding items so that the buttons get generated based on the API response dynamically and scales based on number of returned items.
+-   Dynamically add event handlers to each of the aforementioned menu option buttons.
 
 #### CSS
 -   Style Totals section
@@ -71,9 +73,9 @@
 | -------------------------- | ----------- | ----------- | --------- |
 | Set Up Framework & HTML    | 2.0 hr      | 0 hr        | 0 hr      |
 | Connecting to API & Render | 1 hr        | 0 hr        | 0 hr      |
-| Add Application Logic      | 5.5 hrs     | 3.5 hrs     | 0 hr      |
+| Add Application Logic      | 5.5 hrs     | 5.0 hrs     | 0 hr      |
 | Styling                    | 0.5 hrs     | 0.5 hr      | 0 hr      |
 | Responsive Styling         | 0 hrs       | 0 hr        | 0 hr      |
-| **MVP Total**              | **9 hrs**   | **0 hrs**   | **0 hrs** |
+| **MVP Total**              | **9 hrs**   | **5.5 hrs** | **0 hrs** |
 | Stretch Goals              | 0 hrs       | 0 hrs       | 0 hr      |
 | **Project Total**          | **9.0 hrs** | **0.0 hrs** | **0 hrs** |

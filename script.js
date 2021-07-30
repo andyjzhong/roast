@@ -145,7 +145,7 @@ const openModal = () => {
 }
 
 async function getData() {
-    fetch("./sampleData.json")
+    fetch("/sampleData.json")
         .then((res) => {
             return res.json();
         })
