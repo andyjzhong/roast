@@ -49,7 +49,7 @@ const deleteItem = (e) => {
     calcSubtotal();
 }
 
-const addNewMenuItem = () => {
+const addNewMenuItem = (e) => {
     activeOrder.push(menuItemSelected)
     console.log(activeOrder);
 
@@ -61,34 +61,6 @@ const addNewMenuItem = () => {
         <td>1</td>
         <td>$${menuItemSelected.price}</td>
         <td>$${menuItemSelected.price}</td>
-        <td>
-            <button class="remove-btn btn btn-outline-danger btn-sm">
-                <i class="far fa-trash-alt"></i>
-            </button>
-        </td>
-      `
-
-    newItem.innerHTML = `${html}`;
-    document.querySelector("tbody").append(newItem)
-
-    let allRemoveBtns = document.querySelectorAll('.remove-btn');
-    allRemoveBtns.forEach(btn => btn.addEventListener("click", deleteItem));
-
-    calcSubtotal();
-}
-
-const addNewMenuItem2 = () => {
-    activeOrder.push(menuItemSelected2)
-    console.log(activeOrder);
-
-    let newItem = document.createElement("tr");
-
-    let html = `
-        <td class="trow" scope="row">${activeOrder.length}</th>
-        <td>${menuItemSelected2.name}</td>
-        <td>1</td>
-        <td>$${menuItemSelected2.price}</td>
-        <td>$${menuItemSelected2.price}</td>
         <td>
             <button class="remove-btn btn btn-outline-danger btn-sm">
                 <i class="far fa-trash-alt"></i>
@@ -178,8 +150,19 @@ async function getData() {
         })
         .then(function(res) {
             console.log("Retrieved data successfully.", res);
-            menuItemSelected = res.result.menus[0].menu_sections[0].menu_items[0];
-            menuItemSelected2 = res.result.menus[0].menu_sections[0].menu_items[1];
+
+            breakfastMenu = res.result.menus[0].menu_sections[0].menu_items;
+            console.log(breakfastMenu.length);
+
+            for (let i = 0; i < breakfastMenu.length; i++) {
+                console.log("Made it?");
+                let newMenuOption = document.createElement("button");
+                newMenuOption.setAttribute("type", "button");
+                newMenuOption.setAttribute("class", "btn btn-success menu-item add-btn");
+                document.querySelector("#menu-area").append(newMenuOption)
+            }
+
+            // menuItemSelected = breakfastMenu.menu_items[i];
         })
         .catch(function(err) {
             console.log("Failed to retrieve data.", err);
@@ -188,8 +171,9 @@ async function getData() {
 
 getData();
 
-menuItemBtn.addEventListener("click", addNewMenuItem);
-menuItemBtn2.addEventListener("click", addNewMenuItem2);
+let allAddBtns = document.querySelectorAll('.add-btn');
+allAddBtns.forEach(btn => btn.addEventListener("click", addNewMenuItem));
+
 cancelOrderBtn.addEventListener("click", clearOrder);
 closeModalBtn.addEventListener('click', closeModal);
 openModalBtn.addEventListener('click', openModal);
