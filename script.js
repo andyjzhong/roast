@@ -24,14 +24,14 @@ let orderTotal = 0;
 let subtotalBill = 0;
 
 const createOrderCard = () => {
-    let newCard = document.createElement("div");
-    newCard.setAttribute("class", "card");
+    let newCard = document.createElement("button");
+    newCard.setAttribute("class", "btn btn-warning");
     newCard.setAttribute("style", "width: 12rem; margin: 10px;");
 
     let cardHtml = `
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p>Text</p>
+            <h5 class="card-title">Order #${orderNumber - 1}</h5>
+            <p>Item Count: ${orderNumber}</p>
         </div>
       `
 

@@ -70,7 +70,7 @@
      <summary>Day 3</summary>
 
 #### JavaScript
--   TBD
+-   Add logic to create a new order history card on the click of Send. 830.
 
 #### HTML & CSS
 -   TBD
