@@ -25,7 +25,7 @@ row {
 
 /* Tab Section */
 #tab-section {
-    background-color: lightyellow;
+    background-color: #313131;
     height: 90vh;
 }
 
@@ -51,14 +51,14 @@ row {
 
 /* Total Section */
 #total-area {
-    background-color: skyblue;
+    background-color: #E0E0E0;
     height: 20vh;
     padding: 10px;
     margin: 0;
 }
 
 .tab-container {
-    background-color: royalblue;
+    background-color: #E0E0E0;
     height: 65vh;
     margin: 10px 0;
 }
@@ -81,12 +81,12 @@ th {
 
 /* Menu Section */
 #menu-section {
-    background-color: pink;
+    background-color: #7D7D7D;
     height: 90vh;
 }
 
 #menu-area {
-    background-color: lightgreen;
+    background-color: #D5D5D5;
     height: 65vh;
     margin: 10px 0;
 }
@@ -96,7 +96,7 @@ th {
 }
 
 .individual-options-area {
-    background-color: violet;
+    background-color: #D5D5D5;
     height: 54vh;
     overflow: auto;
     margin: 8px;
@@ -104,7 +104,7 @@ th {
 }
 
 #order-history-section {
-    background-color: mediumpurple;
+    background-color: #D5D5D5;
     height: 20vh;
 }
 
@@ -177,4 +177,8 @@ th {
   50% {transform: rotate(5deg);}
   75% {transform: rotate(-5deg);}
   100% {transform: rotate(0deg);}
+}
+
+.navbar-brand {
+    color: #635BFF !important;
 }

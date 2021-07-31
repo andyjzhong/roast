@@ -141,9 +141,9 @@ const createOrderCard = () => {
     ticketId = orderHistory[dynaIndex].ticketId;
     payStatus = orderHistory[dynaIndex].payStatus;
     let newCard = document.createElement("button");
-    newCard.setAttribute("class", "btn btn-warning order-ticket");
+    newCard.setAttribute("class", "btn btn-dark order-ticket");
     newCard.setAttribute("value", dynaIndex);
-    newCard.setAttribute("style", "width: 12rem; margin: 10px;");
+    newCard.setAttribute("style", "width: 12rem; margin: 10px; background-color: #C6B4CE; color: #000;");
 
     let cardHtml = `
         <div class="order-ticket-content" style="pointer-events: none;">
@@ -305,7 +305,8 @@ async function getData() {
                 newMenuOption.setAttribute("type", "button");
                 newMenuOption.setAttribute("name", `${breakfastMenu[i].name}`);
                 newMenuOption.setAttribute("price", `${breakfastMenu[i].price}`);
-                newMenuOption.setAttribute("class", "btn btn-light menu-item add-btn");
+                newMenuOption.setAttribute("class", "btn btn-dark menu-item add-btn");
+                newMenuOption.setAttribute("style", "background-color: #9B72AA;");
                 newMenuOption.innerText = `${breakfastMenu[i].name}`;
                 document.querySelector(".individual-options-area").append(newMenuOption)
             }
