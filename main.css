@@ -2,6 +2,11 @@ body {
     background-color: #96BAFF;
     margin: 0;
     padding: 0;
+    background: url("/keith-misner-wood.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 p {
@@ -35,7 +40,7 @@ row {
     text-align: right;
 }
 
-.send-order, .cancel-order, .make-payment, .add-discount  {
+.send-order, .cancel-order, .make-payment, .add-discount {
     margin-right: 10px;
     width: 140px;
 }
@@ -107,23 +112,23 @@ th {
 
 /* Modal */
 #modal {
-  background-color: rgba(0, 0, 0, 0.4);
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  overflow: auto;
-  display: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    overflow: auto;
+    display: none;
 }
 
 #modal-textbox {
-  background-color: white;
-  height: 70vh;
-  width: 500px;
-  border-radius: 2px;
-  margin: 150px auto;
-  padding: 2%;
-  line-height: 120%;
+    background-color: white;
+    height: 70vh;
+    width: 500px;
+    border-radius: 2px;
+    margin: 150px auto;
+    padding: 2%;
+    line-height: 120%;
 }
