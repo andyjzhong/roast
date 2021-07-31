@@ -44,7 +44,7 @@ row {
     text-align: right;
 }
 
-.send-order, .cancel-order, .make-payment, .add-discount {
+.send-order, .cancel-order, .start-order, .make-payment, .add-discount {
     margin-right: 10px;
     width: 140px;
 }
