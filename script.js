@@ -26,6 +26,13 @@ let orderNumText = document.querySelector('.orderNumText');
 let orderTotal = 0;
 let subtotalBill = 0;
 
+const makeWiggle = () => {
+    document.querySelector(".order-ticket").classList.add("wiggle");
+    setTimeout(function() {
+        cancelOrderBtn.classList.remove("wiggle");
+    }, 2000)
+}
+
 const completePayment = () => {
     closeModal();
     enableOrdering();
@@ -149,6 +156,7 @@ const createOrderCard = () => {
     newCard.innerHTML = `${cardHtml}`;
     orderHistoryArea.parentNode.insertBefore(newCard, orderHistoryArea.nextSibling);
 
+    makeWiggle();
     let allTickets = document.querySelectorAll('.order-ticket');
     allTickets.forEach(btn => btn.addEventListener("click", retrieveTicket));
 }

@@ -74,6 +74,7 @@
 -   Add logic to pull back order ticket information back to the tab area. 10:30.
 -   Disable editing of an existing order for MVP. 12
 -   Payment functionality. 12:30 to 1:30
+-   Reverse order of order history to show most recent orders first. 2:30 to 3.
 
 #### HTML & CSS
 -   Add a new order type indicator to differentiate between new orders and old orders.
