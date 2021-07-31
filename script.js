@@ -71,8 +71,8 @@ const retrieveTicket = (e) => {
     // TODO: If activeOrder.length > 0, Are you sure you want to cancel the current order?
     clearOrder();
     orderTypeText.innerText = "Existing Order";
-    orderNumText.innerText = `${Number(selectedTicketIndex) + 1}`;
     selectedTicketIndex = e.target.value;
+    orderNumText.innerText = `${Number(selectedTicketIndex) + 1}`;
     selectedTicketOrder = orderHistory[selectedTicketIndex];
 
     for (let i = 0; i < selectedTicketOrder.length; i++) {
