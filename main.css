@@ -20,8 +20,17 @@ row {
     height: 90vh;
 }
 
-.send-order, .cancel-order {
+.orderNum {
+    margin: 10px;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.tab-commands {
     float: right;
+}
+
+.send-order, .cancel-order {
     margin-right: 10px;
 }
 
