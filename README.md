@@ -74,17 +74,18 @@
 -   Add logic to create a new order history card on the click of Send.
 -   Add logic to pull back order ticket information back to the tab area.
 -   Disable editing of an existing order for MVP.
--   Payment functionality. 830 to 130
--   Reverse order of order history to show most recent orders first. 2:30 to 3.
+-   Payment functionality.
+-   Reverse order of order history to show most recent orders first.
 
 #### HTML & CSS
 -   Add a new order type indicator to differentiate between new orders and old orders.
 -   Add a New Order button.
 -   Minor responsive styling.
--   Add wiggle for when new ticket orders are added. 3 to 5:30
+-   Add wiggle for when new ticket orders are added.
 
 #### Other
--   Adding a login modal. 6 to 7
+-   Add a login modal.
+-   Add logic for logging in and logging out. 730
 
 ![Day 3 Progress](https://i.imgur.com/ZD5Wol5.png)
 ![Day 3 Progress](https://media.giphy.com/media/vMLObyTvGXVsarJBYM/giphy.gif)
@@ -100,13 +101,13 @@
 
 ## Time Frames
 
-| Task                       | Day 1       | Day 2       | Day 3     | Day 4     | Day 5     | Day 6     | Day 7     |
-| -------------------------- | ----------- | ----------- | --------- | --------- | --------- | --------- | --------- |
-| Set Up Framework & HTML    | 2.0 hr      | 0.5 hr      | 0.5 hr    | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
-| Connecting to API & Render | 1 hr        | 0.5 hr      | 0 hr      | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
-| Add Application Logic      | 5.5 hrs     | 5.0 hrs     | 5.5 hrs   | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
-| Styling                    | 0.5 hrs     | 3.0 hr      | 2.5 hrs   | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
-| Responsive Styling         | 0 hrs       | 0 hr        | 0.5 hr    | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
-| **MVP Total**              | **9 hrs**   | **9 hrs**   | **0 hrs** | **0 hrs** | **0 hrs** | **0 hrs** | **0 hrs** |
-| Stretch Goals              | 0 hrs       | 0 hrs       | 0 hr      | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
-| **Project Total**          | **9.0 hrs** | **9.0 hrs** | **0 hrs** | **0 hrs** | **0 hrs** | **0 hrs** | **0 hrs** |
+| Task                       | Day 1       | Day 2       | Day 3        | Day 4     | Day 5     | Day 6     | Day 7     |
+| -------------------------- | ----------- | ----------- | ------------ | --------- | --------- | --------- | --------- |
+| Set Up Framework & HTML    | 2.0 hr      | 0.5 hr      | 0.5 hr       | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
+| Connecting to API & Render | 1 hr        | 0.5 hr      | 0 hr         | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
+| Add Application Logic      | 5.5 hrs     | 5.0 hrs     | 5.5 hrs      | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
+| Styling                    | 0.5 hrs     | 3.0 hr      | 2.5 hrs      | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
+| Responsive Styling         | 0 hrs       | 0 hr        | 0.5 hr       | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
+| **MVP Total**              | **9 hrs**   | **9 hrs**   | **9 hrs**    | **0 hrs** | **0 hrs** | **0 hrs** | **0 hrs** |
+| Stretch Goals              | 0 hrs       | 0 hrs       | 1.5 hr       | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
+| **Project Total**          | **9.0 hrs** | **9.0 hrs** | **10.5 hrs** | **0 hrs** | **0 hrs** | **0 hrs** | **0 hrs** |
