@@ -23,6 +23,10 @@ let orderNumber = 1;
 let orderTotal = 0;
 let subtotalBill = 0;
 
+const makeNoise = () => {
+    console.log("Made a noise!");
+}
+
 const createOrderCard = () => {
     dynaIndex = orderNumber - 2;
     console.log("dynaIndex is", dynaIndex);
@@ -33,7 +37,7 @@ const createOrderCard = () => {
     newCard.setAttribute("style", "width: 12rem; margin: 10px;");
 
     let cardHtml = `
-        <div class="card-body">
+        <div class="order-ticket">
             <h5 class="card-title">Order #${ticketId}</h5>
             <p>Item Count: ${numOfItems}</p>
         </div>
@@ -41,6 +45,9 @@ const createOrderCard = () => {
 
     newCard.innerHTML = `${cardHtml}`;
     document.querySelector("#order-history-section").append(newCard);
+
+    let allTickets = document.querySelectorAll('.order-ticket');
+    allTickets.forEach(btn => btn.addEventListener("click", makeNoise));
 }
 
 const renumberTable = () => {
