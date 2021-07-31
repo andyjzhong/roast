@@ -24,8 +24,10 @@ let orderTotal = 0;
 let subtotalBill = 0;
 
 const createOrderCard = () => {
-    numOfItems = orderHistory[0].itemCount;
-    ticketId = orderHistory[0].ticketId;
+    dynaIndex = orderNumber - 2;
+    console.log("dynaIndex is", dynaIndex);
+    numOfItems = orderHistory[dynaIndex].itemCount;
+    ticketId = orderHistory[dynaIndex].ticketId;
     let newCard = document.createElement("button");
     newCard.setAttribute("class", "btn btn-warning");
     newCard.setAttribute("style", "width: 12rem; margin: 10px;");
