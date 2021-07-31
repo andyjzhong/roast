@@ -23,6 +23,22 @@ let orderNumber = 1;
 let orderTotal = 0;
 let subtotalBill = 0;
 
+const createOrderCard = () => {
+    let newCard = document.createElement("div");
+    newCard.setAttribute("class", "card");
+    newCard.setAttribute("style", "width: 12rem; margin: 10px;");
+
+    let cardHtml = `
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p>Text</p>
+        </div>
+      `
+
+    newCard.innerHTML = `${cardHtml}`;
+    document.querySelector("#order-history-section").append(newCard);
+}
+
 const renumberTable = () => {
     // let rowTarget = tableBody.children.item(0).children.item(0);
     // console.log("rowTarget", rowTarget);
@@ -56,7 +72,7 @@ const addNewMenuItem = (e) => {
 
     let newItem = document.createElement("tr");
 
-    let html = `
+    let itemHtml = `
         <td class="trow" scope="row">${activeOrder.length}</th>
         <td>${e.target.name}</td>
         <td>1</td>
@@ -69,7 +85,7 @@ const addNewMenuItem = (e) => {
         </td>
       `
 
-    newItem.innerHTML = `${html}`;
+    newItem.innerHTML = `${itemHtml}`;
     document.querySelector("tbody").append(newItem)
 
     let allRemoveBtns = document.querySelectorAll('.remove-btn');
@@ -85,6 +101,7 @@ const addOrderHistory = () => {
         console.warn("Active order is:::", activeOrder);
         orderHistory.push(activeOrder);
         console.warn("Order history is:::", orderHistory);
+        createOrderCard();
         clearOrder();
     } else {
         alert("No items have been added yet.");
@@ -166,8 +183,6 @@ async function getData() {
 
             let allAddBtns = document.querySelectorAll('.add-btn');
             allAddBtns.forEach(btn => btn.addEventListener("click", addNewMenuItem));
-
-            // menuItemSelected = breakfastMenu.menu_items[i];
         })
         .catch(function(err) {
             console.log("Failed to retrieve data.", err);
