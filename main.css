@@ -10,6 +10,21 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+#main-container {
+    opacity: 1;
+    /* display: none; */
+    transition: all 1s;
+}
+
+.login-title {
+    color: #F24A07;
+}
+
+.login-content {
+    text-align: center;
+    height: 70vh !important;
+}
+
 .fa-receipt {
     margin-right: 4px;
 }
@@ -157,7 +172,7 @@ th {
     height: 70vh;
     width: 500px;
     border-radius: 2px;
-    margin: 150px auto;
+    margin: 100px auto;
     padding: 2%;
     line-height: 120%;
 }

@@ -84,7 +84,7 @@
 -   Add wiggle for when new ticket orders are added. 3 to 5:30
 
 #### Other
--   TBD
+-   Adding a login modal. 6 to 7
 
 ![Day 3 Progress](https://i.imgur.com/ZD5Wol5.png)
 ![Day 3 Progress](https://media.giphy.com/media/vMLObyTvGXVsarJBYM/giphy.gif)
