@@ -51,8 +51,8 @@ th {
 
 #menu-area {
     background-color: lightgreen;
-    height: 60vh;
-    margin-top: 10px;
+    height: 63vh;
+    margin: 10px 0;
 }
 
 .nav-tabs {
@@ -61,10 +61,15 @@ th {
 
 .individual-options-area {
     background-color: violet;
-    height: 50vh;
+    height: 54vh;
     overflow: auto;
     margin: 8px;
     text-align: center;
+}
+
+#order-history-section {
+    background-color: mediumpurple;
+    height: 23vh;
 }
 
 .add-btn {
