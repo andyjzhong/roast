@@ -28,8 +28,16 @@ body {
     position: relative;
 }
 
+#login-welcome {
+    margin-top: 2rem;
+}
+
+#login-msg {
+    margin-top: 14rem;
+}
+
 #pin-pad {
-    width: 50%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -38,11 +46,11 @@ body {
 }
 
 #login-btn {
-    width: 90% !important;
+    width: 80% !important;
     position: absolute;
     left: 0;
     bottom: 0;
-    margin: 5%;
+    margin: 10%;
     background-color: #F24A07;
     color: #FFF;
 }
@@ -168,6 +176,11 @@ th {
     width: 11.25em;
     height: 6em;
     margin: 3px;
+}
+
+.add-btn:hover {
+    background-color: white !important;
+    transition: 0.5s;
 }
 
 /* Order History */
