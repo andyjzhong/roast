@@ -24,20 +24,15 @@ let orderNumber = 1;
 let orderTotal = 0;
 let subtotalBill = 0;
 
-const makeNoise = (e) => {
-    console.log("Made a noise!");
+const retrieveTicket = (e) => {
 
     // TODO: If activeOrder.length > 0, Are you sure you want to cancel the current order?
     clearOrder();
     orderTypeText.innerText = "Existing Order";
     selectedTicketIndex = e.target.value;
     selectedTicketOrder = orderHistory[selectedTicketIndex];
-    console.log("Pull Back Object", selectedTicketOrder);
-
-    // Now we have the order, let's fill the table.
 
     for (let i = 0; i < selectedTicketOrder.length; i++) {
-        console.log("How many items are in here?");
 
         let ticketItem = document.createElement("tr");
 
@@ -59,14 +54,14 @@ const makeNoise = (e) => {
 
         let allRemoveBtns = document.querySelectorAll('.remove-btn');
         allRemoveBtns.forEach(btn => btn.addEventListener("click", deleteItem));
-
-        calcSubtotal();
     }
+
+    activeOrder = selectedTicketOrder;
+    calcSubtotal();
 }
 
 const createOrderCard = () => {
     dynaIndex = orderNumber - 2;
-    console.log("dynaIndex is", dynaIndex);
     numOfItems = orderHistory[dynaIndex].itemCount;
     ticketId = orderHistory[dynaIndex].ticketId;
     let newCard = document.createElement("button");
@@ -85,7 +80,7 @@ const createOrderCard = () => {
     document.querySelector("#order-history-section").append(newCard);
 
     let allTickets = document.querySelectorAll('.order-ticket');
-    allTickets.forEach(btn => btn.addEventListener("click", makeNoise));
+    allTickets.forEach(btn => btn.addEventListener("click", retrieveTicket));
 }
 
 const renumberTable = () => {
