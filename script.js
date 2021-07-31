@@ -31,6 +31,12 @@ const completePayment = () => {
 
     let targetTicket = orderHistory[orderNumText.innerText - 2];
     targetTicket.payStatus = "Paid";
+
+    let targetButton = document.querySelector(".order-ticket");
+    let targetButtonPayStatus = targetButton.children.item(0).children.item(2).children.item(0);
+    targetButtonPayStatus.innerText = targetTicket.payStatus;
+    targetButton.classList.add("disabled");
+
     console.log(targetTicket);
 }
 
@@ -129,7 +135,7 @@ const createOrderCard = () => {
         <div class="order-ticket-content" style="pointer-events: none;">
             <h5 class="ticket-title">Order #${ticketId}</h5>
             <p>Item Count: ${numOfItems}</p>
-            <p>Status: ${payStatus}</p>
+            <p>Status: <span class="payStatusText">${payStatus}</span></p>
         </div>
       `
 
