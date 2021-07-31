@@ -6,7 +6,6 @@ const discountBox = document.querySelector('#discount-box');
 const discountBtn = document.querySelector('.add-discount');
 const mealsTaxBox = document.querySelector('#meals-tax-box');
 const menuItemBtn = document.querySelector(".menu-item");
-const menuItemBtn2 = document.querySelector(".menu-item-2");
 const modal = document.querySelector('#modal');
 const openModalBtn = document.querySelector('#openModal');
 const orderNumText = document.querySelector('.orderNumText');
@@ -23,6 +22,19 @@ let orderHistory = [];
 let orderNumber = 1;
 let orderTotal = 0;
 let subtotalBill = 0;
+
+const disableOrdering = () => {
+    cancelOrderBtn.classList.add("disabled");
+    cancelOrderBtn.style.pointerEvents = "none";
+    sendOrderBtn.classList.add("disabled");
+    sendOrderBtn.style.pointerEvents = "none";
+
+    let allAddBtns = document.querySelectorAll('.add-btn');
+    allAddBtns.forEach(function(btn) {
+        btn.classList.add("disabled");
+        btn.style.pointerEvents = "none";
+    });
+}
 
 const retrieveTicket = (e) => {
 
@@ -54,6 +66,8 @@ const retrieveTicket = (e) => {
 
         let allRemoveBtns = document.querySelectorAll('.remove-btn');
         allRemoveBtns.forEach(btn => btn.addEventListener("click", deleteItem));
+
+        disableOrdering();
     }
 
     activeOrder = selectedTicketOrder;
