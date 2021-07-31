@@ -42,11 +42,11 @@ const makeNoise = (e) => {
         let ticketItem = document.createElement("tr");
 
         let ticketItemHtml = `
-            <td class="trow" scope="row">${selectedTicketOrder[0].name}</th>
-            <td>${selectedTicketOrder[0].name}</td>
+            <td class="trow" scope="row">${i + 1}</th>
+            <td>${selectedTicketOrder[i].name}</td>
             <td>1</td>
-            <td>${selectedTicketOrder[0].price}</td>
-            <td>${selectedTicketOrder[0].price}</td>
+            <td>${(Math.round((selectedTicketOrder[i].price) * 100) / 100).toFixed(2)}</td>
+            <td>${(Math.round((selectedTicketOrder[i].price) * 100) / 100).toFixed(2)}</td>
             <td>
                 <button class="remove-btn btn btn-outline-danger btn-sm">
                     <i class="far fa-trash-alt"></i>
