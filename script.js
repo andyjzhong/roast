@@ -10,6 +10,7 @@ const menuItemBtn2 = document.querySelector(".menu-item-2");
 const modal = document.querySelector('#modal');
 const openModalBtn = document.querySelector('#openModal');
 const orderNumText = document.querySelector('.orderNumText');
+const orderStatusText = document.querySelector('.order-status-value');
 const sendOrderBtn = document.querySelector(".send-order");
 const tabArea = document.querySelector(".tab-area");
 const tableBody = document.querySelector(".table-body");
@@ -28,7 +29,7 @@ const makeNoise = (e) => {
 
     // TODO: If activeOrder.length > 0, Are you sure you want to cancel the current order?
     clearOrder();
-
+    orderStatusText.innerText = "Existing Order";
     selectedTicketIndex = e.target.value;
     selectedTicketOrder = orderHistory[selectedTicketIndex];
     console.log("index is probably:",selectedTicketIndex);

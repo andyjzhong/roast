@@ -35,6 +35,10 @@ row {
     font-weight: bold;
 }
 
+#order-status {
+    float: right;
+}
+
 .tab-commands, .total-commands {
     float: right !important;
     text-align: right;
@@ -112,7 +116,7 @@ th {
 
 /* Order History */
 .card-body {
-    width: 200px;    
+    width: 200px;
 }
 
 /* Modal */
