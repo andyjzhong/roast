@@ -15,6 +15,7 @@ const subtotalBillBox = document.querySelector("#subtotal-bill-box");
 const tabArea = document.querySelector(".tab-area");
 const tableBody = document.querySelector(".table-body");
 const totalBillBox = document.querySelector("#total-bill-box");
+const completePaymentBtn = document.querySelector("#complete-payment");
 let activeOrder = [];
 let discount = 0;
 let mealsTax = 0;
@@ -23,6 +24,12 @@ let orderNumber = 1;
 let orderNumText = document.querySelector('.orderNumText');
 let orderTotal = 0;
 let subtotalBill = 0;
+
+const completePayment = () => {
+    closeModal();
+    clearOrder();
+    // make the specific ticket button disabled.
+}
 
 const enableOrdering = () => {
     clearOrder();
@@ -289,3 +296,4 @@ closeModalBtn.addEventListener('click', closeModal);
 openModalBtn.addEventListener('click', openModal);
 discountBtn.addEventListener('click', calcDiscount);
 sendOrderBtn.addEventListener("click", addOrderHistory);
+completePaymentBtn.addEventListener("click", completePayment);
