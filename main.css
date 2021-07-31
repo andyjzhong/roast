@@ -32,6 +32,7 @@ row {
 
 .tab-commands, .total-commands {
     float: right !important;
+    text-align: right;
 }
 
 .send-order, .cancel-order, .make-payment, .add-discount  {
@@ -60,7 +61,7 @@ row {
     margin: 10px;
 }
 
-#total-area > .right-panel {
+.right-panel {
     text-align: right;
 }
 

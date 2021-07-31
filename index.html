@@ -48,22 +48,28 @@
             </div>
 
 
-            <div id="total-area" class="row col-12 left-panel">
-                <div class="col-6">
-                    <p>Food: $<span id="subtotal-bill-box">0.00</span></p>
-                    <p>Discounts: $<span id="discount-box">0.00</span></p>
-                    <p>Taxes: $<span id="meals-tax-box">0.00</span></p>
+            <div id="total-area" class="left-panel">
+                <div class="row">
+                    <div class="col-6">
+                        <p>Food: $<span id="subtotal-bill-box">0.00</span></p>
+                        <p>Discounts: $<span id="discount-box">0.00</span></p>
+                        <p>Taxes: $<span id="meals-tax-box">0.00</span></p>
+                    </div>
+
+                    <div class="col-6 right-panel">
+                        <p>Total: $<span id="total-bill-box">0.00</span></p>
+                        <p>Balance Due: $<span id="balance-due-box">0.00</span></p>
+                    </div>
                 </div>
 
-                <div class="col-6 right-panel">
-                    <p>Total: $<span id="total-bill-box">0.00</span></p>
-                    <p>Balance Due: $<span id="balance-due-box">0.00</span></p>
+                <div class="row">
+
+                    <div class="total-commands col-12">
+                        <button class="btn btn-primary add-discount">Discounts</button>
+                        <button class="btn btn-primary make-payment" id="openModal">Pay
+                        </div>
                 </div>
 
-                <div class="total-commands row col-12">
-                    <button class="btn btn-primary add-discount">Discounts</button>
-                    <button class="btn btn-primary make-payment" id="openModal">Pay
-                </div>
 
             </div>
         </section>
