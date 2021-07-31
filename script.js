@@ -11,10 +11,11 @@ const openModalBtn = document.querySelector('#openModal');
 const orderNumText = document.querySelector('.orderNumText');
 const orderTypeText = document.querySelector('.order-type-value');
 const sendOrderBtn = document.querySelector(".send-order");
+const startOrderBtn = document.querySelector(".start-order");
+const subtotalBillBox = document.querySelector("#subtotal-bill-box");
 const tabArea = document.querySelector(".tab-area");
 const tableBody = document.querySelector(".table-body");
 const totalBillBox = document.querySelector("#total-bill-box");
-const subtotalBillBox = document.querySelector("#subtotal-bill-box");
 let activeOrder = [];
 let discount = 0;
 let mealsTax = 0;
@@ -22,6 +23,21 @@ let orderHistory = [];
 let orderNumber = 1;
 let orderTotal = 0;
 let subtotalBill = 0;
+
+const enableOrdering = () => {
+    clearOrder();
+
+    cancelOrderBtn.classList.remove("disabled");
+    cancelOrderBtn.style.pointerEvents = "auto";
+    sendOrderBtn.classList.remove("disabled");
+    sendOrderBtn.style.pointerEvents = "auto";
+
+    let allAddBtns = document.querySelectorAll('.add-btn');
+    allAddBtns.forEach(function(btn) {
+        btn.classList.remove("disabled");
+        btn.style.pointerEvents = "auto";
+    });
+}
 
 const disableOrdering = () => {
     cancelOrderBtn.classList.add("disabled");
@@ -252,7 +268,7 @@ async function getData() {
 getData();
 
 
-
+startOrderBtn.addEventListener("click", enableOrdering);
 cancelOrderBtn.addEventListener("click", clearOrder);
 closeModalBtn.addEventListener('click', closeModal);
 openModalBtn.addEventListener('click', openModal);
