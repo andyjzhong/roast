@@ -27,8 +27,11 @@ let subtotalBill = 0;
 
 const completePayment = () => {
     closeModal();
-    clearOrder();
-    // make the specific ticket button disabled.
+    enableOrdering();
+
+    let targetTicket = orderHistory[orderNumText.innerText - 2];
+    targetTicket.payStatus = "Paid";
+    console.log(targetTicket);
 }
 
 const enableOrdering = () => {
@@ -116,6 +119,7 @@ const createOrderCard = () => {
     dynaIndex = orderNumber - 2;
     numOfItems = orderHistory[dynaIndex].itemCount;
     ticketId = orderHistory[dynaIndex].ticketId;
+    payStatus = orderHistory[dynaIndex].payStatus;
     let newCard = document.createElement("button");
     newCard.setAttribute("class", "btn btn-warning order-ticket");
     newCard.setAttribute("value", dynaIndex);
@@ -125,6 +129,7 @@ const createOrderCard = () => {
         <div class="order-ticket-content" style="pointer-events: none;">
             <h5 class="ticket-title">Order #${ticketId}</h5>
             <p>Item Count: ${numOfItems}</p>
+            <p>Status: ${payStatus}</p>
         </div>
       `
 
@@ -196,6 +201,7 @@ const addOrderHistory = () => {
         orderNumText.innerText = orderNumber;
         activeOrder.itemCount = activeOrder.length;
         activeOrder.ticketId = orderNumber - 1;
+        activeOrder.payStatus = "Active";
         console.warn("Active order is:::", activeOrder);
         orderHistory.push(activeOrder);
         console.warn("Order history is:::", orderHistory);
