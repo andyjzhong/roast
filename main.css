@@ -7,6 +7,11 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.fa-receipt {
+    margin-right: 4px;
 }
 
 p {
@@ -51,6 +56,10 @@ row {
 
 .start-order, .make-payment, .add-discount {
     background-color: #2C4FB8;
+}
+
+.start-order:hover, .make-payment:hover, .add-discount:hover {
+    background-color: #002182;
 }
 
 /* Total Section */
