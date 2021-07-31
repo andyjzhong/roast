@@ -71,9 +71,10 @@
 
 #### JavaScript
 -   Add logic to create a new order history card on the click of Send. 830.
+-   Add logic to pull back order ticket information back to the tab area. 10:30.
 
 #### HTML & CSS
--   TBD
+-   Add a new order type indicator to differentiate between new orders and old orders.
 
 #### Other
 -   TBD

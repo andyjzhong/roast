@@ -35,7 +35,7 @@ row {
     font-weight: bold;
 }
 
-#order-status {
+#order-type {
     float: right;
 }
 
@@ -115,8 +115,9 @@ th {
 }
 
 /* Order History */
-.card-body {
-    width: 200px;
+#order-history-section {
+    overflow: auto;
+    white-space: nowrap;
 }
 
 /* Modal */

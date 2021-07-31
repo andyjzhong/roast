@@ -10,7 +10,7 @@ const menuItemBtn2 = document.querySelector(".menu-item-2");
 const modal = document.querySelector('#modal');
 const openModalBtn = document.querySelector('#openModal');
 const orderNumText = document.querySelector('.orderNumText');
-const orderStatusText = document.querySelector('.order-status-value');
+const orderTypeText = document.querySelector('.order-type-value');
 const sendOrderBtn = document.querySelector(".send-order");
 const tabArea = document.querySelector(".tab-area");
 const tableBody = document.querySelector(".table-body");
@@ -29,11 +29,10 @@ const makeNoise = (e) => {
 
     // TODO: If activeOrder.length > 0, Are you sure you want to cancel the current order?
     clearOrder();
-    orderStatusText.innerText = "Existing Order";
+    orderTypeText.innerText = "Existing Order";
     selectedTicketIndex = e.target.value;
     selectedTicketOrder = orderHistory[selectedTicketIndex];
-    console.log("index is probably:",selectedTicketIndex);
-    console.log("Pull Back Object", orderHistory[selectedTicketIndex]);
+    console.log("Pull Back Object", selectedTicketOrder);
 
     // Now we have the order, let's fill the table.
 
@@ -43,11 +42,11 @@ const makeNoise = (e) => {
         let ticketItem = document.createElement("tr");
 
         let ticketItemHtml = `
-            <td class="trow" scope="row">Test</th>
-            <td>Test</td>
+            <td class="trow" scope="row">${selectedTicketOrder[0].name}</th>
+            <td>${selectedTicketOrder[0].name}</td>
             <td>1</td>
-            <td>Test</td>
-            <td>Test</td>
+            <td>${selectedTicketOrder[0].price}</td>
+            <td>${selectedTicketOrder[0].price}</td>
             <td>
                 <button class="remove-btn btn btn-outline-danger btn-sm">
                     <i class="far fa-trash-alt"></i>
