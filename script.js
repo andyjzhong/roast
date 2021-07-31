@@ -283,7 +283,11 @@ const closeModal = () => {
 }
 
 const openModal = () => {
-    modal.style.display = 'block';
+    if (activeOrder.length > 0) {
+        modal.style.display = 'block';
+    } else {
+        alert("No order selected.");
+    }
 }
 
 async function getData() {

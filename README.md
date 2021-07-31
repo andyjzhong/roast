@@ -80,6 +80,7 @@
 -   Add a new order type indicator to differentiate between new orders and old orders.
 -   Add a New Order button.
 -   Minor responsive styling.
+-   Add wiggle for when new ticket orders are added.
 
 #### Other
 -   TBD
