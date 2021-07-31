@@ -8,10 +8,8 @@
 
 ## Journal
 
-### Day 1
-
 <details>
-  <summary>Expand</summary>
+  <summary>Day 1</summary>
 
 #### Set Up
 
@@ -43,10 +41,8 @@
 
     </details>
 
-### Day 2
-
 <details>
-     <summary>Expand</summary>
+     <summary>Day 2</summary>
 
 #### JavaScript
 -   Debug calculation of discounts, taxes, and subtotal.
@@ -56,9 +52,13 @@
 -   Refactor adding items so that the buttons get generated based on the API response dynamically and scales based on number of returned items.
 -   Dynamically add event handlers to each of the aforementioned menu option buttons.
 
-#### CSS
--   Style Totals section.
+#### HTML & CSS
+-   Style all sections.
 -   Add tabs to menu section and style buttons.
+
+![Day 2 Progress](https://i.imgur.com/ZD5Wol5.png)
+![Day 2 Progress](https://media.giphy.com/media/vMLObyTvGXVsarJBYM/giphy.gif)
+
 
 </details>
 
@@ -72,11 +72,11 @@
 
 | Task                       | Day 1       | Day 2       | Day 3     |
 | -------------------------- | ----------- | ----------- | --------- |
-| Set Up Framework & HTML    | 2.0 hr      | 0 hr        | 0 hr      |
+| Set Up Framework & HTML    | 2.0 hr      | 0.5 hr      | 0 hr      |
 | Connecting to API & Render | 1 hr        | 0.5 hr      | 0 hr      |
 | Add Application Logic      | 5.5 hrs     | 5.0 hrs     | 0 hr      |
-| Styling                    | 0.5 hrs     | 2.0 hr      | 0 hr      |
+| Styling                    | 0.5 hrs     | 3.0 hr      | 0 hr      |
 | Responsive Styling         | 0 hrs       | 0 hr        | 0 hr      |
-| **MVP Total**              | **9 hrs**   | **7.5 hrs** | **0 hrs** |
+| **MVP Total**              | **9 hrs**   | **9 hrs**   | **0 hrs** |
 | Stretch Goals              | 0 hrs       | 0 hrs       | 0 hr      |
 | **Project Total**          | **9.0 hrs** | **0.0 hrs** | **0 hrs** |
