@@ -2,7 +2,7 @@ body {
     background-color: #96BAFF;
     margin: 0;
     padding: 0;
-    background: url("/keith-misner-wood.jpg") no-repeat center center fixed;
+    background: url("./keith-misner-wood.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -72,7 +72,7 @@ row {
 
 .tab-container {
     background-color: #E0E0E0;
-    height: 65vh;
+    height: 68vh;
     margin: 10px 0;
 }
 
@@ -95,12 +95,12 @@ th {
 /* Menu Section */
 #menu-section {
     background-color: #7D7D7D;
-    height: 90vh;
+    height: 92vh;
 }
 
 #menu-area {
     background-color: #D5D5D5;
-    height: 65vh;
+    height: 68vh;
     margin: 10px 0;
 }
 
@@ -119,6 +119,7 @@ th {
 #order-history-section {
     background-color: #D5D5D5;
     height: 20vh;
+    padding: 1%;
 }
 
 .add-btn {
