@@ -23,8 +23,15 @@ let orderNumber = 1;
 let orderTotal = 0;
 let subtotalBill = 0;
 
-const makeNoise = () => {
+const makeNoise = (e) => {
     console.log("Made a noise!");
+
+    // TODO: If activeOrder.length > 0, Are you sure you want to cancel the current order?
+    clearOrder();
+    // FILL WITH data
+
+    // grab the object that we
+    console.log("index is probably:",e.target.value);
 }
 
 const createOrderCard = () => {
@@ -33,12 +40,13 @@ const createOrderCard = () => {
     numOfItems = orderHistory[dynaIndex].itemCount;
     ticketId = orderHistory[dynaIndex].ticketId;
     let newCard = document.createElement("button");
-    newCard.setAttribute("class", "btn btn-warning");
+    newCard.setAttribute("class", "btn btn-warning order-ticket");
+    newCard.setAttribute("value", dynaIndex);
     newCard.setAttribute("style", "width: 12rem; margin: 10px;");
 
     let cardHtml = `
-        <div class="order-ticket">
-            <h5 class="card-title">Order #${ticketId}</h5>
+        <div class="order-ticket-content" style="pointer-events: none;">
+            <h5 class="ticket-title">Order #${ticketId}</h5>
             <p>Item Count: ${numOfItems}</p>
         </div>
       `
