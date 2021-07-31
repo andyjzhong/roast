@@ -24,14 +24,16 @@ let orderTotal = 0;
 let subtotalBill = 0;
 
 const createOrderCard = () => {
+    numOfItems = orderHistory[0].itemCount;
+    ticketId = orderHistory[0].ticketId;
     let newCard = document.createElement("button");
     newCard.setAttribute("class", "btn btn-warning");
     newCard.setAttribute("style", "width: 12rem; margin: 10px;");
 
     let cardHtml = `
         <div class="card-body">
-            <h5 class="card-title">Order #${orderNumber - 1}</h5>
-            <p>Item Count: ${orderNumber}</p>
+            <h5 class="card-title">Order #${ticketId}</h5>
+            <p>Item Count: ${numOfItems}</p>
         </div>
       `
 
@@ -98,6 +100,8 @@ const addOrderHistory = () => {
     if (activeOrder.length > 0) {
         orderNumber++;
         orderNumText.innerText = orderNumber;
+        activeOrder.itemCount = activeOrder.length;
+        activeOrder.ticketId = orderNumber - 1;
         console.warn("Active order is:::", activeOrder);
         orderHistory.push(activeOrder);
         console.warn("Order history is:::", orderHistory);
