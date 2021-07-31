@@ -18,11 +18,33 @@ body {
 
 .login-title {
     color: #F24A07;
+    font-size: 3rem;
+    padding: 60px;
 }
 
 .login-content {
     text-align: center;
     height: 70vh !important;
+    position: relative;
+}
+
+#pin-pad {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#pin-input {
+    text-align: center;
+}
+
+#login-btn {
+    width: 90% !important;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 5%;
+    background-color: #F24A07;
+    color: #FFF;
 }
 
 .fa-receipt {
