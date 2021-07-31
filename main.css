@@ -20,6 +20,11 @@ row {
     height: 90vh;
 }
 
+.send-order, .cancel-order {
+    float: right;
+    margin-right: 10px;
+}
+
 /* Total Section */
 #total-area {
     background-color: skyblue;
@@ -28,10 +33,17 @@ row {
     margin: 0;
 }
 
+.tab-container {
+    background-color: royalblue;
+    height: 65vh;
+    margin: 10px 0;
+}
+
 .tab-area {
-    background-color: white;
-    height: 60vh;
+    background-color: gray;
+    height: 52vh;
     overflow: auto;
+    margin: 10px;
 }
 
 #total-area > .right-panel {
@@ -51,7 +63,7 @@ th {
 
 #menu-area {
     background-color: lightgreen;
-    height: 63vh;
+    height: 65vh;
     margin: 10px 0;
 }
 
@@ -69,7 +81,7 @@ th {
 
 #order-history-section {
     background-color: mediumpurple;
-    height: 23vh;
+    height: 20vh;
 }
 
 .add-btn {
