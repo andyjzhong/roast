@@ -306,7 +306,7 @@ async function getData() {
                 newMenuOption.setAttribute("name", `${breakfastMenu[i].name}`);
                 newMenuOption.setAttribute("price", `${breakfastMenu[i].price}`);
                 newMenuOption.setAttribute("class", "btn btn-dark menu-item add-btn");
-                newMenuOption.setAttribute("style", "background-color: #9B72AA;");
+                newMenuOption.setAttribute("style", "background-color: #5068C3;");
                 newMenuOption.innerText = `${breakfastMenu[i].name}`;
                 document.querySelector(".individual-options-area").append(newMenuOption)
             }

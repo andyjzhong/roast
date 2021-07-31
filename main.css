@@ -25,7 +25,7 @@ row {
 
 /* Tab Section */
 #tab-section {
-    background-color: #313131;
+    background-color: #313131; // #303030
     height: 90vh;
 }
 
@@ -47,6 +47,10 @@ row {
 .send-order, .cancel-order, .start-order, .make-payment, .add-discount {
     margin-right: 10px;
     width: 140px;
+}
+
+.start-order, .make-payment, .add-discount {
+    background-color: #2C4FB8;
 }
 
 /* Total Section */
@@ -180,5 +184,5 @@ th {
 }
 
 .navbar-brand {
-    color: #635BFF !important;
+    color: #F24A07 !important;
 }
