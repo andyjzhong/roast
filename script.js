@@ -8,6 +8,7 @@ const mealsTaxBox = document.querySelector('#meals-tax-box');
 const menuItemBtn = document.querySelector(".menu-item");
 const modal = document.querySelector('#modal');
 const openModalBtn = document.querySelector('#openModal');
+const orderHistoryArea = document.querySelector('.order-history-area');
 const orderTypeText = document.querySelector('.order-type-value');
 const sendOrderBtn = document.querySelector(".send-order");
 const startOrderBtn = document.querySelector(".start-order");
@@ -32,8 +33,11 @@ const completePayment = () => {
     let targetTicket = orderHistory[orderNumText.innerText - 2];
     targetTicket.payStatus = "Paid";
 
+
     // TODO: THIS ALWAYS SELECTS THE FIRST ONE CURRENTLY
-    let targetButton = document.querySelector(".order-ticket");
+    let targetTicketId = targetTicket.ticketId;
+    let targetButton = document.querySelectorAll(".order-ticket")[targetTicketId - 2];
+    console.warn("TARGET TICKET NUMBER IS WHAT", targetTicketId);
     console.warn("TARGET BUTTON IS WHAT", targetButton);
 
     let targetButtonPayStatus = targetButton.children.item(0).children.item(2).children.item(0);
@@ -143,7 +147,7 @@ const createOrderCard = () => {
       `
 
     newCard.innerHTML = `${cardHtml}`;
-    document.querySelector("#order-history-section").append(newCard);
+    orderHistoryArea.parentNode.insertBefore(newCard, orderHistoryArea.nextSibling);
 
     let allTickets = document.querySelectorAll('.order-ticket');
     allTickets.forEach(btn => btn.addEventListener("click", retrieveTicket));
