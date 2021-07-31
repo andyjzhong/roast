@@ -30,7 +30,7 @@ row {
 
 /* Tab Section */
 #tab-section {
-    background-color: #313131; // #303030
+    background-color: #313131;
     height: 90vh;
 }
 
@@ -106,6 +106,11 @@ th {
 
 .nav-tabs {
     padding-top: 10px;
+    border-bottom: 1px solid #313131;
+}
+
+.nav-link.active {
+    border-bottom: 1px solid #313131 !important;
 }
 
 .individual-options-area {
