@@ -28,10 +28,40 @@ const makeNoise = (e) => {
 
     // TODO: If activeOrder.length > 0, Are you sure you want to cancel the current order?
     clearOrder();
-    // FILL WITH data
 
-    // grab the object that we
-    console.log("index is probably:",e.target.value);
+    selectedTicketIndex = e.target.value;
+    selectedTicketOrder = orderHistory[selectedTicketIndex];
+    console.log("index is probably:",selectedTicketIndex);
+    console.log("Pull Back Object", orderHistory[selectedTicketIndex]);
+
+    // Now we have the order, let's fill the table.
+
+    for (let i = 0; i < selectedTicketOrder.length; i++) {
+        console.log("How many items are in here?");
+
+        let ticketItem = document.createElement("tr");
+
+        let ticketItemHtml = `
+            <td class="trow" scope="row">Test</th>
+            <td>Test</td>
+            <td>1</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>
+                <button class="remove-btn btn btn-outline-danger btn-sm">
+                    <i class="far fa-trash-alt"></i>
+                </button>
+            </td>
+          `
+
+        ticketItem.innerHTML = `${ticketItemHtml}`;
+        document.querySelector("tbody").append(ticketItem)
+
+        let allRemoveBtns = document.querySelectorAll('.remove-btn');
+        allRemoveBtns.forEach(btn => btn.addEventListener("click", deleteItem));
+
+        calcSubtotal();
+    }
 }
 
 const createOrderCard = () => {
