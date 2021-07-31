@@ -32,7 +32,10 @@ const completePayment = () => {
     let targetTicket = orderHistory[orderNumText.innerText - 2];
     targetTicket.payStatus = "Paid";
 
+    // TODO: THIS ALWAYS SELECTS THE FIRST ONE CURRENTLY
     let targetButton = document.querySelector(".order-ticket");
+    console.warn("TARGET BUTTON IS WHAT", targetButton);
+
     let targetButtonPayStatus = targetButton.children.item(0).children.item(2).children.item(0);
     targetButtonPayStatus.innerText = targetTicket.payStatus;
     targetButton.classList.add("disabled");
