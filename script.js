@@ -8,7 +8,6 @@ const mealsTaxBox = document.querySelector('#meals-tax-box');
 const menuItemBtn = document.querySelector(".menu-item");
 const modal = document.querySelector('#modal');
 const openModalBtn = document.querySelector('#openModal');
-const orderNumText = document.querySelector('.orderNumText');
 const orderTypeText = document.querySelector('.order-type-value');
 const sendOrderBtn = document.querySelector(".send-order");
 const startOrderBtn = document.querySelector(".start-order");
@@ -21,11 +20,14 @@ let discount = 0;
 let mealsTax = 0;
 let orderHistory = [];
 let orderNumber = 1;
+let orderNumText = document.querySelector('.orderNumText');
 let orderTotal = 0;
 let subtotalBill = 0;
 
 const enableOrdering = () => {
     clearOrder();
+    orderNumText.innerText = orderHistory.length + 1;
+    orderTypeText.innerText = "New Order"
 
     cancelOrderBtn.classList.remove("disabled");
     cancelOrderBtn.style.pointerEvents = "auto";
@@ -34,6 +36,12 @@ const enableOrdering = () => {
 
     let allAddBtns = document.querySelectorAll('.add-btn');
     allAddBtns.forEach(function(btn) {
+        btn.classList.remove("disabled");
+        btn.style.pointerEvents = "auto";
+    });
+
+    let allRemoveBtns = document.querySelectorAll('.remove-btn');
+    allRemoveBtns.forEach(function(btn) {
         btn.classList.remove("disabled");
         btn.style.pointerEvents = "auto";
     });
@@ -50,6 +58,12 @@ const disableOrdering = () => {
         btn.classList.add("disabled");
         btn.style.pointerEvents = "none";
     });
+
+    let allRemoveBtns = document.querySelectorAll('.remove-btn');
+    allRemoveBtns.forEach(function(btn) {
+        btn.classList.add("disabled");
+        btn.style.pointerEvents = "none";
+    });
 }
 
 const retrieveTicket = (e) => {
@@ -57,6 +71,7 @@ const retrieveTicket = (e) => {
     // TODO: If activeOrder.length > 0, Are you sure you want to cancel the current order?
     clearOrder();
     orderTypeText.innerText = "Existing Order";
+    orderNumText.innerText = `${Number(selectedTicketIndex) + 1}`;
     selectedTicketIndex = e.target.value;
     selectedTicketOrder = orderHistory[selectedTicketIndex];
 
