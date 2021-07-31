@@ -4,6 +4,8 @@ const cancelOrderBtn = document.querySelector(".cancel-order");
 const closeModalBtn = document.querySelector('#closeModal');
 const discountBox = document.querySelector('#discount-box');
 const discountBtn = document.querySelector('.add-discount');
+const loginModal = document.querySelector('#login-modal');
+const mainContainer = document.querySelector('#main-container');
 const mealsTaxBox = document.querySelector('#meals-tax-box');
 const menuItemBtn = document.querySelector(".menu-item");
 const modal = document.querySelector('#modal');
@@ -17,6 +19,8 @@ const tabArea = document.querySelector(".tab-area");
 const tableBody = document.querySelector(".table-body");
 const totalBillBox = document.querySelector("#total-bill-box");
 const completePaymentBtn = document.querySelector("#complete-payment");
+const loginBtn = document.querySelector("#login-btn");
+const logoutBtn = document.querySelector("#logout-btn");
 let activeOrder = [];
 let discount = 0;
 let mealsTax = 0;
@@ -25,6 +29,18 @@ let orderNumber = 1;
 let orderNumText = document.querySelector('.orderNumText');
 let orderTotal = 0;
 let subtotalBill = 0;
+
+const login = (e) => {
+    e.preventDefault();
+    loginModal.style.display = "none";
+    mainContainer.style.opacity = 1;
+}
+
+const logout = (e) => {
+    e.preventDefault();
+    loginModal.style.display = "block";
+    mainContainer.style.opacity = 0;
+}
 
 const makeWiggle = () => {
     document.querySelector(".order-ticket").classList.add("wiggle");
@@ -329,3 +345,5 @@ openModalBtn.addEventListener('click', openModal);
 discountBtn.addEventListener('click', calcDiscount);
 sendOrderBtn.addEventListener("click", addOrderHistory);
 completePaymentBtn.addEventListener("click", completePayment);
+loginBtn.addEventListener("click", login);
+logoutBtn.addEventListener("click", logout);

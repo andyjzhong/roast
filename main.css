@@ -10,9 +10,12 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+#settings-btn {
+    text-align: right;
+}
+
 #main-container {
-    opacity: 1;
-    /* display: none; */
+    opacity: 0;
     transition: all 1s;
 }
 
@@ -23,9 +26,11 @@ body {
 }
 
 .login-content {
+    border-radius: 2% !important;
     text-align: center;
     height: 70vh !important;
     position: relative;
+    transition: all 1s;
 }
 
 #login-welcome {
