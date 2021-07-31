@@ -51,7 +51,12 @@ th {
 
 #menu-area {
     background-color: lightgreen;
-    height: 80vh;
+    height: 60vh;
+    margin-top: 10px;
+}
+
+.nav-tabs {
+    padding-top: 10px;
 }
 
 .individual-options-area {
