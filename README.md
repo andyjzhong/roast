@@ -72,7 +72,7 @@
 #### JavaScript
 -   Add logic to create a new order history card on the click of Send. 830.
 -   Add logic to pull back order ticket information back to the tab area. 10:30.
--   Disable editing of an existing order for MVP. 11:30
+-   Disable editing of an existing order for MVP. 12
 
 #### HTML & CSS
 -   Add a new order type indicator to differentiate between new orders and old orders.
@@ -99,7 +99,7 @@
 | -------------------------- | ----------- | ----------- | --------- | --------- | --------- | --------- | --------- |
 | Set Up Framework & HTML    | 2.0 hr      | 0.5 hr      | 0.5 hr    | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
 | Connecting to API & Render | 1 hr        | 0.5 hr      | 0 hr      | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
-| Add Application Logic      | 5.5 hrs     | 5.0 hrs     | 3.0 hrs   | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
+| Add Application Logic      | 5.5 hrs     | 5.0 hrs     | 3.5 hrs   | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
 | Styling                    | 0.5 hrs     | 3.0 hr      | 0 hr      | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
 | Responsive Styling         | 0 hrs       | 0 hr        | 0 hr      | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
 | **MVP Total**              | **9 hrs**   | **9 hrs**   | **0 hrs** | **0 hrs** | **0 hrs** | **0 hrs** | **0 hrs** |
