@@ -159,7 +159,7 @@ async function getData() {
                 newMenuOption.setAttribute("type", "button");
                 newMenuOption.setAttribute("name", `${breakfastMenu[i].name}`);
                 newMenuOption.setAttribute("price", `${breakfastMenu[i].price}`);
-                newMenuOption.setAttribute("class", "btn btn-success menu-item add-btn");
+                newMenuOption.setAttribute("class", "btn btn-light menu-item add-btn");
                 newMenuOption.innerText = `${breakfastMenu[i].name}`;
                 document.querySelector(".individual-options-area").append(newMenuOption)
             }

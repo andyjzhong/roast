@@ -58,12 +58,14 @@ th {
     background-color: violet;
     height: 50vh;
     overflow: auto;
+    margin: 8px;
+    text-align: center;
 }
 
 .add-btn {
-    background-color: black !important;
-    width: 12em;
+    width: 11.25em;
     height: 6em;
+    margin: 3px;
 }
 
 /* Modal */
