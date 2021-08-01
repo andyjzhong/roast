@@ -24,6 +24,7 @@ const completePaymentBtn = document.querySelector("#complete-payment");
 const loginBtn = document.querySelector("#login-btn");
 const logoutBtn = document.querySelector("#logout-btn");
 const paymentSuccessMsg = document.querySelector("#payment-success");
+const historyMsg = document.querySelector("#history-msg");
 let activeOrder = [];
 let discount = 0;
 let mealsTax = 0;
@@ -186,6 +187,7 @@ const retrieveTicket = (e) => {
 }
 
 const createOrderCard = () => {
+    historyMsg.style.display = "none";
     dynaIndex = orderNumber - 2;
     numOfItems = orderHistory[dynaIndex].itemCount;
     ticketId = orderHistory[dynaIndex].ticketId;
