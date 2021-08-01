@@ -15,6 +15,11 @@ body {
 /* Navbar */
 .navbar-brand {
     color: #F24A07 !important;
+    font-size: 1.75rem;
+}
+
+.fa-sign-out-alt, .fa-cog {
+    font-size: 1.25rem;
 }
 
 #settings-btn {

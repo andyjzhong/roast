@@ -109,8 +109,9 @@
 #### Other
 -   Payment confirmation 1 to 1:30.
 
-![Day 3 Progress](https://i.imgur.com/tB0cAyV.png)
-![Day 3 Progress](https://media.giphy.com/media/OJaEw0B5ChJilPI3ag/giphy.gif)
+![Day 4 Progress](https://i.imgur.com/BoGrGfX.jpg)
+![Day 4 Progress](https://i.imgur.com/nahMRgl.png)
+![Day 4 Progress](https://media.giphy.com/media/HBPBcCDBTWpUCcYnK9/giphy.gif)
 
 
 </details>
