@@ -86,7 +86,7 @@ const completePayment = () => {
         closeModal();
         enableOrdering();
 
-        balanceDue.style.color = "black";
+        balanceDue.style.color = "#000";
 
         let targetButtonPayStatus = masterSelectedTicket.children.item(0).children.item(2).children.item(0);
         targetButtonPayStatus.innerText = "Paid";
@@ -101,6 +101,7 @@ const completePayment = () => {
 
 const enableOrdering = () => {
     clearOrder();
+    balanceDue.style.color = "#000";
     orderNumText.innerText = orderHistory.length + 1;
     orderTypeText.innerText = "New Order"
 
@@ -323,12 +324,12 @@ const calcBill = () => {
     balanceDueBox.innerText = (Math.round(orderTotal * 100) / 100).toFixed(2);
 
     if (payBtn.innerText === "Paid") {
-        balanceDue.style.color = "green";
+        balanceDue.style.color = "#28A745";
         balanceDueBox.innerText = "0.00";
     } else if (payBtn.innerText === "Pay" && totalBillBox.innerText == 0) {
-        balanceDue.style.color = "black";
+        balanceDue.style.color = "#000";
     } else {
-        balanceDue.style.color = "red";
+        balanceDue.style.color = "#DC3444";
     }
 
 }
