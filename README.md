@@ -100,7 +100,8 @@
 
 #### JavaScript
 -   Spent most of the morning debugging the completePayment functionality.
--   Add more validation logic for when payment has been complete (hide/show/disable buttons). 9 to 1
+-   Add more validation logic for when payment has been complete (hide/show/disable buttons). 9 to 1,
+-   Add logic to change balance due after payment complete. 5 to 530.
 
 #### HTML & CSS
 -   Style log in modal and buttons.
