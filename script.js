@@ -21,6 +21,7 @@ const totalBillBox = document.querySelector("#total-bill-box");
 const completePaymentBtn = document.querySelector("#complete-payment");
 const loginBtn = document.querySelector("#login-btn");
 const logoutBtn = document.querySelector("#logout-btn");
+const paymentSuccessMsg = document.querySelector("#payment-success");
 let activeOrder = [];
 let discount = 0;
 let mealsTax = 0;
@@ -30,6 +31,10 @@ let orderNumText = document.querySelector('.orderNumText');
 let orderTotal = 0;
 let subtotalBill = 0;
 let masterSelectedTicket = {};
+
+const displayPaymentSuccess = () => {
+    paymentSuccessMsg.style.visibility = "visible";
+}
 
 const checkPayment = () => {
     console.log("checkPayment ran.");
@@ -73,15 +78,21 @@ const makeWiggle = () => {
 }
 
 const completePayment = () => {
-    closeModal();
-    enableOrdering();
+    displayPaymentSuccess();
 
-    let targetButtonPayStatus = masterSelectedTicket.children.item(0).children.item(2).children.item(0);
-    targetButtonPayStatus.innerText = "Paid";
-    masterSelectedTicket.classList.add("disabled");
+    setTimeout(function() {
+        closeModal();
+        enableOrdering();
 
-    let targetOrder = orderHistory[masterSelectedTicket.value]
-    targetOrder.payStatus = "Paid";
+        let targetButtonPayStatus = masterSelectedTicket.children.item(0).children.item(2).children.item(0);
+        targetButtonPayStatus.innerText = "Paid";
+        masterSelectedTicket.classList.add("disabled");
+
+        let targetOrder = orderHistory[masterSelectedTicket.value]
+        targetOrder.payStatus = "Paid";
+
+        paymentSuccessMsg.style.visibility = "hidden";
+    }, 3000);
 }
 
 const enableOrdering = () => {
@@ -202,7 +213,7 @@ const renumberTable = () => {
     // let rowTarget = tableBody.children.item(0).children.item(0);
     // console.log("rowTarget", rowTarget);
 
-    if (activeOrder.length > 0){
+    if (activeOrder.length > 0) {
         let rowTargetText = tableBody.children.item(0).children.item(0).innerText;
         for (let i = 0; i < activeOrder.length; i++) {
             // console.error("rowTargetText", rowTargetText);
