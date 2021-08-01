@@ -110,11 +110,21 @@ row {
     float: right !important;
     text-align: right;
     margin-right: 10px;
+    width: 100%;
+}
+
+.start-order {
+    float: left;
+    margin-left: 20px;
 }
 
 .send-order, .cancel-order, .start-order, .make-payment, .add-discount {
     margin-right: 10px;
     width: 140px;
+}
+
+.cancel-order, .send-order {
+    border: 1px solid black;
 }
 
 .start-order, .make-payment, .add-discount {

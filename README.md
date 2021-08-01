@@ -100,6 +100,7 @@
 
 #### JavaScript
 -   Spent most of the morning debugging the completePayment functionality.
+-   Add more validation logic for when payment has been complete (hide/show/disable buttons). 9 to 12:30
 
 #### HTML & CSS
 -   Style log in modal and buttons.

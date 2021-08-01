@@ -9,7 +9,7 @@ const mainContainer = document.querySelector('#main-container');
 const mealsTaxBox = document.querySelector('#meals-tax-box');
 const menuItemBtn = document.querySelector(".menu-item");
 const modal = document.querySelector('#modal');
-const openModalBtn = document.querySelector('#openModal');
+const payBtn = document.querySelector('#openModal');
 const orderHistoryArea = document.querySelector('.order-history-area');
 const orderTypeText = document.querySelector('.order-type-value');
 const sendOrderBtn = document.querySelector(".send-order");
@@ -30,6 +30,26 @@ let orderNumText = document.querySelector('.orderNumText');
 let orderTotal = 0;
 let subtotalBill = 0;
 let masterSelectedTicket = {};
+
+const checkPayment = () => {
+    console.log("checkPayment ran.");
+    let targetButtonPayStatusValue = masterSelectedTicket.children.item(0).children.item(2).children.item(0).innerHTML;
+    console.warn("### targetButtonPayStatusValue ###", targetButtonPayStatusValue);
+
+    if (targetButtonPayStatusValue === "Paid") {
+        console.warn("PAID");
+        payBtn.classList.add("disabled");
+        payBtn.style.pointerEvents = "none";
+        payBtn.innerText = "Paid";
+        discountBtn.style.visibility = "hidden";
+    } else {
+        console.warn("UNPAID");
+        payBtn.classList.remove("disabled");
+        payBtn.style.pointerEvents = "auto";
+        payBtn.innerText = "Pay";
+        discountBtn.style.visibility = "visible";
+    }
+}
 
 const login = (e) => {
     e.preventDefault();
@@ -73,6 +93,11 @@ const enableOrdering = () => {
     cancelOrderBtn.style.pointerEvents = "auto";
     sendOrderBtn.classList.remove("disabled");
     sendOrderBtn.style.pointerEvents = "auto";
+
+    payBtn.classList.remove("disabled");
+    payBtn.style.pointerEvents = "auto";
+    payBtn.innerText = "Pay";
+    discountBtn.style.visibility = "visible";
 
     let allAddBtns = document.querySelectorAll('.add-btn');
     allAddBtns.forEach(function(btn) {
@@ -140,6 +165,7 @@ const retrieveTicket = (e) => {
         allRemoveBtns.forEach(btn => btn.addEventListener("click", deleteItem));
 
         disableOrdering();
+        checkPayment();
     }
 
     activeOrder = selectedTicketOrder;
@@ -336,7 +362,7 @@ getData();
 startOrderBtn.addEventListener("click", enableOrdering);
 cancelOrderBtn.addEventListener("click", clearOrder);
 closeModalBtn.addEventListener('click', closeModal);
-openModalBtn.addEventListener('click', openModal);
+payBtn.addEventListener('click', openModal);
 discountBtn.addEventListener('click', calcDiscount);
 sendOrderBtn.addEventListener("click", addOrderHistory);
 completePaymentBtn.addEventListener("click", completePayment);
