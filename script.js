@@ -39,18 +39,14 @@ const displayPaymentSuccess = () => {
 }
 
 const checkPayment = () => {
-    console.log("checkPayment ran.");
     let targetButtonPayStatusValue = masterSelectedTicket.children.item(0).children.item(2).children.item(0).innerHTML;
-    console.warn("### targetButtonPayStatusValue ###", targetButtonPayStatusValue);
 
     if (targetButtonPayStatusValue === "Paid") {
-        console.warn("PAID");
         payBtn.classList.add("disabled");
         payBtn.style.pointerEvents = "none";
         payBtn.innerText = "Paid";
         discountBtn.style.visibility = "hidden";
     } else {
-        console.warn("UNPAID");
         payBtn.classList.remove("disabled");
         payBtn.style.pointerEvents = "auto";
         payBtn.innerText = "Pay";
@@ -151,7 +147,6 @@ const disableOrdering = () => {
 
 const retrieveTicket = (e) => {
     masterSelectedTicket = e.target
-    console.log("### Selected Button ###", masterSelectedTicket);
     // TODO: If activeOrder.length > 0, Are you sure you want to cancel the current order?
     clearOrder();
     orderTypeText.innerText = "Existing Order";
@@ -245,7 +240,6 @@ const deleteItem = (e) => {
 const addNewMenuItem = (e) => {
     let index = breakfastMenu.findIndex(item => item.name === e.target.name);
     activeOrder.push(breakfastMenu[index]);
-    console.log(activeOrder);
 
     let newItem = document.createElement("tr");
 
@@ -278,9 +272,7 @@ const addOrderHistory = () => {
         activeOrder.itemCount = activeOrder.length;
         activeOrder.ticketId = orderNumber - 1;
         activeOrder.payStatus = "Active";
-        console.warn("Active order is:::", activeOrder);
         orderHistory.push(activeOrder);
-        console.warn("Order history is:::", orderHistory);
         createOrderCard();
         clearOrder();
     } else {
