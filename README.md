@@ -85,10 +85,10 @@
 
 #### Other
 -   Add a login modal.
--   Add logic for logging in and logging out. 730
+-   Add logic for logging in and logging out.
 
-![Day 3 Progress](https://i.imgur.com/ZD5Wol5.png)
-![Day 3 Progress](https://media.giphy.com/media/vMLObyTvGXVsarJBYM/giphy.gif)
+![Day 3 Progress](https://i.imgur.com/tB0cAyV.png)
+![Day 3 Progress](https://media.giphy.com/media/OJaEw0B5ChJilPI3ag/giphy.gif)
 
 
 </details>

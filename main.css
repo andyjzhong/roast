@@ -10,6 +10,11 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+/* Navbar */
+.navbar-brand {
+    color: #F24A07 !important;
+}
+
 #settings-btn {
     text-align: right;
 }
@@ -251,8 +256,4 @@ th {
   50% {transform: rotate(5deg);}
   75% {transform: rotate(-5deg);}
   100% {transform: rotate(0deg);}
-}
-
-.navbar-brand {
-    color: #F24A07 !important;
 }
