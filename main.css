@@ -201,8 +201,8 @@ th {
 }
 
 .add-btn:hover {
-    background-color: white !important;
-    transition: 0.5s;
+    background-color: #4965A1 !important;
+    transition: 0.25s;
 }
 
 /* Order History */
