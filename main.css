@@ -49,7 +49,7 @@ body {
 }
 
 #pin-pad {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -58,13 +58,18 @@ body {
 }
 
 #login-btn {
-    width: 80% !important;
+    background-color: #F24A07;
+    color: #FFF;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.login-container {
     position: absolute;
     left: 0;
     bottom: 0;
     margin: 10%;
-    background-color: #F24A07;
-    color: #FFF;
+    width: 80%;
 }
 
 .fa-receipt {

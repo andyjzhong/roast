@@ -95,6 +95,24 @@
 
 </details>
 
+<details>
+     <summary>Day 4</summary>
+
+#### JavaScript
+-   
+
+#### HTML & CSS
+-   
+
+#### Other
+-   
+
+![Day 3 Progress](https://i.imgur.com/tB0cAyV.png)
+![Day 3 Progress](https://media.giphy.com/media/OJaEw0B5ChJilPI3ag/giphy.gif)
+
+
+</details>
+
 ## Challenges
 
 -   Figuring out why certain values were not clearing on the cancel order button. I added some console.logs in the code to figure out the value of discounts before and after the click of the clear button and it turns out that the discount value itself was clearing, but it just wasn't updating in the DOM.
@@ -109,7 +127,7 @@
 | Set Up Framework & HTML    | 2.0 hrs     | 0.5 hrs     | 0.5 hrs      | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
 | Connecting to API & Render | 1 hrs       | 0.5 hrs     | 0 hrs        | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
 | Add Application Logic      | 5.5 hrs     | 5.0 hrs     | 5.5 hrs      | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
-| Styling                    | 0.5 hrs     | 3.0 hrs     | 3.0 hrs      | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
+| Styling                    | 0.5 hrs     | 3.0 hrs     | 3.0 hrs      | 0.5 hrs   | 0 hr      | 0 hr      | 0 hr      |
 | Responsive Styling         | 0 hrs       | 0 hrs       | 0.5 hrs      | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
 | **MVP Total**              | **9 hrs**   | **9 hrs**   | **9.5 hrs**  | **0 hrs** | **0 hrs** | **0 hrs** | **0 hrs** |
 | Stretch Goals              | 0 hrs       | 0 hrs       | 1.5 hrs      | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
