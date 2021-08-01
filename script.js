@@ -18,6 +18,8 @@ const subtotalBillBox = document.querySelector("#subtotal-bill-box");
 const tabArea = document.querySelector(".tab-area");
 const tableBody = document.querySelector(".table-body");
 const totalBillBox = document.querySelector("#total-bill-box");
+const balanceDue = document.querySelector("#balanceDue");
+const balanceDueBox = document.querySelector("#balance-due-box");
 const completePaymentBtn = document.querySelector("#complete-payment");
 const loginBtn = document.querySelector("#login-btn");
 const logoutBtn = document.querySelector("#logout-btn");
@@ -84,6 +86,8 @@ const completePayment = () => {
         closeModal();
         enableOrdering();
 
+        balanceDue.style.color = "black";
+
         let targetButtonPayStatus = masterSelectedTicket.children.item(0).children.item(2).children.item(0);
         targetButtonPayStatus.innerText = "Paid";
         masterSelectedTicket.classList.add("disabled");
@@ -92,7 +96,7 @@ const completePayment = () => {
         targetOrder.payStatus = "Paid";
 
         paymentSuccessMsg.style.visibility = "hidden";
-    }, 3000);
+    }, 1000);
 }
 
 const enableOrdering = () => {
@@ -316,6 +320,17 @@ const calcMealsTax = () => {
 const calcBill = () => {
     orderTotal = Number(subtotalBill) - Number(discount) + Number(mealsTax);
     totalBillBox.innerText = (Math.round(orderTotal * 100) / 100).toFixed(2);
+    balanceDueBox.innerText = (Math.round(orderTotal * 100) / 100).toFixed(2);
+
+    if (payBtn.innerText === "Paid") {
+        balanceDue.style.color = "green";
+        balanceDueBox.innerText = "0.00";
+    } else if (payBtn.innerText === "Pay" && totalBillBox.innerText == 0) {
+        balanceDue.style.color = "black";
+    } else {
+        balanceDue.style.color = "red";
+    }
+
 }
 
 const clearOrder = () => {

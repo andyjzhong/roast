@@ -100,13 +100,13 @@
 
 #### JavaScript
 -   Spent most of the morning debugging the completePayment functionality.
--   Add more validation logic for when payment has been complete (hide/show/disable buttons). 9 to 12:30
+-   Add more validation logic for when payment has been complete (hide/show/disable buttons). 9 to 1
 
 #### HTML & CSS
 -   Style log in modal and buttons.
 
 #### Other
--   
+-   Payment confirmation 1 to 1:30.
 
 ![Day 3 Progress](https://i.imgur.com/tB0cAyV.png)
 ![Day 3 Progress](https://media.giphy.com/media/OJaEw0B5ChJilPI3ag/giphy.gif)
