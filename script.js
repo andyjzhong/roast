@@ -120,6 +120,7 @@ const enableOrdering = () => {
     allRemoveBtns.forEach(function(btn) {
         btn.classList.remove("disabled");
         btn.style.pointerEvents = "auto";
+        btn.style.visibility = "visible";
     });
 }
 
@@ -139,6 +140,7 @@ const disableOrdering = () => {
     allRemoveBtns.forEach(function(btn) {
         btn.classList.add("disabled");
         btn.style.pointerEvents = "none";
+        btn.style.visibility = "hidden";
     });
 }
 
