@@ -302,3 +302,7 @@ th {
     visibility: hidden;
     transition: all 1s;
 }
+
+.order-ticket:hover {
+    background-color: white;
+}
