@@ -245,7 +245,7 @@ th {
 }
 
 #modal-textbox {
-    background-color: white;
+    background-color: #D5D5D5;
     height: 70vh;
     width: 500px;
     border-radius: 2px;
@@ -305,4 +305,14 @@ th {
 
 .order-ticket:hover {
     background-color: white;
+}
+
+.calculator {
+    text-align: center;
+    margin: 0 30px;
+}
+
+.calc-btn {
+    height: 4rem;
+    width: 6rem;
 }
