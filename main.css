@@ -115,7 +115,7 @@ row {
 
 .start-order {
     float: left;
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 .send-order, .cancel-order, .start-order, .make-payment, .add-discount {
@@ -278,4 +278,8 @@ th {
   50% {transform: rotate(5deg);}
   75% {transform: rotate(-5deg);}
   100% {transform: rotate(0deg);}
+}
+
+#total {
+
 }
