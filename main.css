@@ -2,6 +2,8 @@ body {
     background-color: #96BAFF;
     margin: 0;
     padding: 0;
+    height: 100%;
+    overflow: hidden;
     background: url("./keith-misner-wood.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -102,6 +104,7 @@ row {
 .tab-commands, .total-commands {
     float: right !important;
     text-align: right;
+    margin-right: 10px;
 }
 
 .send-order, .cancel-order, .start-order, .make-payment, .add-discount {
@@ -136,6 +139,10 @@ row {
     height: 52vh;
     overflow: auto;
     margin: 10px;
+}
+
+.right-panel, .left-panel {
+    padding: 10px 30px;
 }
 
 .right-panel {

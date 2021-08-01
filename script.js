@@ -34,12 +34,14 @@ const login = (e) => {
     e.preventDefault();
     loginModal.style.display = "none";
     mainContainer.style.opacity = 1;
+    document.querySelector("body").style.overflow = "scroll";
 }
 
 const logout = (e) => {
     e.preventDefault();
     loginModal.style.display = "block";
     mainContainer.style.opacity = 0;
+    document.querySelector("body").style.overflow = "hidden";
 }
 
 const makeWiggle = () => {
