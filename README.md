@@ -99,10 +99,10 @@
      <summary>Day 4</summary>
 
 #### JavaScript
--   
+-   Spent most of the morning debugging the completePayment functionality.
 
 #### HTML & CSS
--   
+-   Style log in modal and buttons.
 
 #### Other
 -   
@@ -118,7 +118,7 @@
 -   Figuring out why certain values were not clearing on the cancel order button. I added some console.logs in the code to figure out the value of discounts before and after the click of the clear button and it turns out that the discount value itself was clearing, but it just wasn't updating in the DOM.
 -   Determining how to create an order history seemed challenging but when I stepped away and actually wrote out the pseudocode for it, it made a lot more sense what I needed to achieve. I had to create a new function that takes the activeOrder array and push it into an orderHistory array.
 -   Delete button was more complicated than I thought. I started with removing the selected item by traversing the DOM and using the splice() array method, deleting only the first item on the tab. The difficulty was renumbering the tab items displayed to the user. There seems to also be a race condition happening about 20% of the time where it would not number the items correctly and start with item 0.
--   Pulling back the data from order history was quite time consuming.
+-   Pulling back the data from order history was quite time consuming. Also getting the completePayment function to work was a challenge but it was much more simple once I broke it down step by step.
 
 ## Time Frames
 
@@ -126,7 +126,7 @@
 | -------------------------- | ----------- | ----------- | ------------ | --------- | --------- | --------- | --------- |
 | Set Up Framework & HTML    | 2.0 hrs     | 0.5 hrs     | 0.5 hrs      | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
 | Connecting to API & Render | 1 hrs       | 0.5 hrs     | 0 hrs        | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
-| Add Application Logic      | 5.5 hrs     | 5.0 hrs     | 5.5 hrs      | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
+| Add Application Logic      | 5.5 hrs     | 5.0 hrs     | 5.5 hrs      | 2 hrs     | 0 hr      | 0 hr      | 0 hr      |
 | Styling                    | 0.5 hrs     | 3.0 hrs     | 3.0 hrs      | 0.5 hrs   | 0 hr      | 0 hr      | 0 hr      |
 | Responsive Styling         | 0 hrs       | 0 hrs       | 0.5 hrs      | 0 hr      | 0 hr      | 0 hr      | 0 hr      |
 | **MVP Total**              | **9 hrs**   | **9 hrs**   | **9.5 hrs**  | **0 hrs** | **0 hrs** | **0 hrs** | **0 hrs** |

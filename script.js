@@ -29,6 +29,7 @@ let orderNumber = 1;
 let orderNumText = document.querySelector('.orderNumText');
 let orderTotal = 0;
 let subtotalBill = 0;
+let masterSelectedTicket = {};
 
 const login = (e) => {
     e.preventDefault();
@@ -55,21 +56,12 @@ const completePayment = () => {
     closeModal();
     enableOrdering();
 
-    let targetTicket = orderHistory[orderNumText.innerText - 2];
-    targetTicket.payStatus = "Paid";
+    let targetButtonPayStatus = masterSelectedTicket.children.item(0).children.item(2).children.item(0);
+    targetButtonPayStatus.innerText = "Paid";
+    masterSelectedTicket.classList.add("disabled");
 
-
-    // TODO: THIS ALWAYS SELECTS THE FIRST ONE CURRENTLY
-    let targetTicketId = targetTicket.ticketId;
-    let targetButton = document.querySelectorAll(".order-ticket")[targetTicketId - 2];
-    console.warn("TARGET TICKET NUMBER IS WHAT", targetTicketId);
-    console.warn("TARGET BUTTON IS WHAT", targetButton);
-
-    let targetButtonPayStatus = targetButton.children.item(0).children.item(2).children.item(0);
-    targetButtonPayStatus.innerText = targetTicket.payStatus;
-    targetButton.classList.add("disabled");
-
-    console.log(targetTicket);
+    let targetOrder = orderHistory[masterSelectedTicket.value]
+    targetOrder.payStatus = "Paid";
 }
 
 const enableOrdering = () => {
@@ -115,7 +107,8 @@ const disableOrdering = () => {
 }
 
 const retrieveTicket = (e) => {
-
+    masterSelectedTicket = e.target
+    console.log("### Selected Button ###", masterSelectedTicket);
     // TODO: If activeOrder.length > 0, Are you sure you want to cancel the current order?
     clearOrder();
     orderTypeText.innerText = "Existing Order";

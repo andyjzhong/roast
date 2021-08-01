@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
     background: url("./keith-misner-wood.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -22,7 +22,7 @@ body {
 }
 
 #main-container {
-    opacity: 0;
+    /* opacity: 0; */
     transition: all 1s;
 }
 
