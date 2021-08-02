@@ -144,7 +144,7 @@ const calcDiscount = () => {
     discount = prompt("Enter a discount amount.")
 
     if (discount !== 0) {
-        dicountBox.innerText = (Math.round(discount * 100) / 100).toFixed(2);
+        discountBox.innerText = (Math.round(discount * 100) / 100).toFixed(2);
     }
     calcMealsTax();
 }
