@@ -40,6 +40,10 @@ let orderNumText = document.querySelector('.orderNumText');
 let orderTotal = 0;
 let subtotalBill = 0;
 
+const clearGuestPayment = () => {
+    guestPaymentBox.value = "";
+}
+
 const addNewMenuItem = (e) => {
     let index = breakfastMenu.findIndex(item => item.name === e.target.name);
     activeOrder.push(breakfastMenu[index]);
@@ -116,6 +120,7 @@ const completePayment = () => {
         targetOrder.payStatus = "Paid";
 
         paymentSuccessMsg.style.visibility = "hidden";
+        clearGuestPayment();
     }, 1000);
 }
 
@@ -174,7 +179,8 @@ const clearOrder = () => {
 }
 
 const closeModal = () => {
-    modal.style.display = 'none'
+    modal.style.display = 'none';
+    clearGuestPayment();
 }
 
 const createOrderCard = () => {
