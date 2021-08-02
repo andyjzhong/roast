@@ -5,6 +5,7 @@ const balanceDue = document.querySelector("#balanceDue");
 const balanceDueBox = document.querySelector("#balance-due-box");
 const body = document.querySelector("body");
 const cancelOrderBtn = document.querySelector(".cancel-order");
+const clearGuestPaymentBtn = document.querySelector('.clear-calc');
 const closeModalBtn = document.querySelector('#cancel-payment');
 const completePaymentBtn = document.querySelector("#complete-payment");
 const discountBox = document.querySelector('#discount-box');
@@ -397,6 +398,7 @@ let allCalcDigitBtns = document.querySelectorAll('.digit');
 
 startOrderBtn.addEventListener("click", enableOrdering);
 cancelOrderBtn.addEventListener("click", clearOrder);
+clearGuestPaymentBtn.addEventListener("click", clearGuestPayment);
 closeModalBtn.addEventListener('click', closeModal);
 payBtn.addEventListener('click', openModal);
 discountBtn.addEventListener('click', calcDiscount);

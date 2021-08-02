@@ -131,8 +131,8 @@
 #### Other
 -   
 
-![Day 5 Progress](https://i.imgur.com/nahMRgl.png)
-![Day 5 Progress](https://media.giphy.com/media/HBPBcCDBTWpUCcYnK9/giphy.gif)
+![Day 5 Progress](https://i.imgur.com/tWpTSOJ.png)
+![Day 5 Progress](https://media.giphy.com/media/msx9rsNgJQGxpw77gL/giphy.gif)
 
 
 </details>
