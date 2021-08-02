@@ -8,6 +8,7 @@ const closeModalBtn = document.querySelector('#cancel-payment');
 const completePaymentBtn = document.querySelector("#complete-payment");
 const discountBox = document.querySelector('#discount-box');
 const discountBtn = document.querySelector('.add-discount');
+const guestPaymentBox = document.querySelector("#guestPayment");
 const historyMsg = document.querySelector("#history-msg");
 const loginBtn = document.querySelector("#login-btn");
 const loginModal = document.querySelector('#login-modal');
@@ -374,6 +375,7 @@ getData();
 
 const updateCalculator = (e) => {
     console.log(e.target.innerText);
+    guestPaymentBox.value = guestPaymentBox.value.toString() + e.target.innerText.toString();
 }
 
 let allCalcDigitBtns = document.querySelectorAll('.digit');

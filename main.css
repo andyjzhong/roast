@@ -22,7 +22,7 @@ th {
     background-color: #FFF;
 }
 
-h6 {
+h5{
     text-align: center;
 }
 
@@ -261,10 +261,19 @@ h6 {
     text-align: center;
     visibility: hidden;
     transition: all 1s;
+    margin-bottom: 0.5rem;
+}
+
+#amountDueBox {
+    margin-bottom: 0.5rem;
 }
 
 #complete-payment, #cancel-payment {
     font-size: 1.25rem;
+    width: 42%;
+    height: 2.25rem;
+    text-align: center;
+    padding: 0;
 }
 
 .calculator {
@@ -273,7 +282,11 @@ h6 {
 }
 
 #guestPayment {
-    width: 100%;
+    width: 85%;
+    font-size: 2.5rem;
+    text-align: right;
+    margin: .25em auto;
+    height: 3rem;
 }
 
 .calc-btn {
