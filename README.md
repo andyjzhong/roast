@@ -118,6 +118,24 @@
 
 </details>
 
+<details>
+     <summary>Day 5</summary>
+
+#### JavaScript
+-   
+
+#### HTML & CSS
+-   
+
+#### Other
+-   
+
+![Day 5 Progress](https://i.imgur.com/nahMRgl.png)
+![Day 5 Progress](https://media.giphy.com/media/HBPBcCDBTWpUCcYnK9/giphy.gif)
+
+
+</details>
+
 ## Challenges
 
 -   Figuring out why certain values were not clearing on the cancel order button. I added some console.logs in the code to figure out the value of discounts before and after the click of the clear button and it turns out that the discount value itself was clearing, but it just wasn't updating in the DOM.
