@@ -22,6 +22,10 @@ th {
     background-color: #FFF;
 }
 
+h6 {
+    text-align: center;
+}
+
 /* Navbar */
 .navbar-brand {
     color: #F24A07 !important;
@@ -250,7 +254,7 @@ th {
 }
 
 #modal-textbox {
-    width: 30rem;
+    width: 28rem;
 }
 
 #payment-success {
@@ -266,6 +270,10 @@ th {
 .calculator {
     text-align: center;
     margin: 0 30px;
+}
+
+#guestPayment {
+    width: 100%;
 }
 
 .calc-btn {
