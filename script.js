@@ -1,5 +1,6 @@
 'use-strict';
 
+const amountDueValue = document.querySelector("#amountDue");
 const balanceDue = document.querySelector("#balanceDue");
 const balanceDueBox = document.querySelector("#balance-due-box");
 const body = document.querySelector("body");
@@ -283,7 +284,14 @@ const makeWiggle = () => {
     setTimeout(() => { cancelOrderBtn.classList.remove("wiggle") }, 2000);
 }
 
-const openModal = () => { (activeOrder.length > 0) ? modal.style.display = 'block' : alert("No order selected.") };
+const openModal = () => {
+    if (activeOrder.length > 0) {
+        modal.style.display = 'block';
+        amountDueValue.innerText = balanceDueBox.innerText;
+    } else {
+        alert("No order selected.");
+    }
+}
 
 const renumberTable = () => {
     // let rowTarget = tableBody.children.item(0).children.item(0);
