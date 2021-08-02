@@ -12,25 +12,31 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+p {
+    margin: 0;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    background-color: #FFF;
+}
+
 /* Navbar */
 .navbar-brand {
     color: #F24A07 !important;
     font-size: 1.75rem;
 }
 
+.fa-receipt {
+    margin-right: 4px;
+}
+
 .fa-sign-out-alt, .fa-cog {
     font-size: 1.25rem;
 }
 
-#settings-btn {
-    text-align: right;
-}
-
-#main-container {
-    opacity: 0;
-    transition: all 1s;
-}
-
+/* Login Screen */
 .login-title {
     color: #F24A07;
     font-size: 3rem;
@@ -77,20 +83,10 @@ body {
     width: 80%;
 }
 
-.fa-receipt {
-    margin-right: 4px;
-}
-
-p {
-    margin: 0;
-}
-
-row {
-    padding: 0;
-    margin: 0;
-}
-
+/* Main Container */
 #main-container {
+    opacity: 0;
+    transition: all 1s;
     padding: 10px 10px 0 10px;
     margin: 0 auto;
 }
@@ -169,9 +165,11 @@ row {
     text-align: right;
 }
 
-th {
-    position: sticky;
-    top: 0;
+#total {
+    font-size: 2rem;
+    font-weight: bold;
+    vertical-align: top;
+    margin-top: -10px;
 }
 
 /* Menu Section */
@@ -203,12 +201,6 @@ th {
     text-align: center;
 }
 
-#order-history-section {
-    background-color: #D5D5D5;
-    height: 20vh;
-    padding: 1%;
-}
-
 .add-btn {
     width: 11.25em;
     height: 6em;
@@ -222,6 +214,9 @@ th {
 
 /* Order History */
 #order-history-section {
+    background-color: #D5D5D5;
+    height: 20vh;
+    padding: 1%;
     overflow: auto;
     white-space: nowrap;
 }
@@ -244,7 +239,7 @@ th {
     display: none;
 }
 
-#login-modal-textbox {
+#login-modal-textbox, #modal-textbox {
     background-color: #FFF;
     height: 70vh;
     width: 500px;
@@ -255,13 +250,29 @@ th {
 }
 
 #modal-textbox {
-    background-color: #FFF;
-    height: 70vh;
     width: 30rem;
-    border-radius: 2px;
-    margin: 100px auto;
-    padding: 2%;
-    line-height: 120%;
+}
+
+#payment-success {
+    text-align: center;
+    visibility: hidden;
+    transition: all 1s;
+}
+
+#complete-payment, #cancel-payment {
+    font-size: 1.25rem;
+}
+
+.calculator {
+    text-align: center;
+    margin: 0 30px;
+}
+
+.calc-btn {
+    height: 4rem;
+    width: 6rem;
+    font-size: 2rem;
+    margin: 5px;
 }
 
 /* Wiggle Animation */
@@ -298,41 +309,4 @@ th {
   50% {transform: rotate(5deg);}
   75% {transform: rotate(-5deg);}
   100% {transform: rotate(0deg);}
-}
-
-#total {
-    font-size: 2rem;
-    font-weight: bold;
-    vertical-align: top;
-    margin-top: -10px;
-}
-
-#payment-success {
-    text-align: center;
-    visibility: hidden;
-    transition: all 1s;
-}
-
-.order-ticket:hover {
-    background-color: white;
-}
-
-.calculator {
-    text-align: center;
-    margin: 0 30px;
-}
-
-.calc-btn {
-    height: 4rem;
-    width: 6rem;
-    font-size: 2rem;
-    margin: 5px;
-}
-
-#complete-payment, #cancel-payment {
-    font-size: 1.25rem;
-}
-
-th {
-    background-color: #FFF;
 }
