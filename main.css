@@ -332,3 +332,7 @@ th {
 #complete-payment, #cancel-payment {
     font-size: 1.25rem;
 }
+
+th {
+    background-color: #FFF;
+}
