@@ -55,10 +55,10 @@ const addNewMenuItem = (e) => {
                 <i class="far fa-trash-alt"></i>
             </button>
         </td>
-      `
+      `;
 
     newItem.innerHTML = `${itemHtml}`;
-    tbody.append(newItem)
+    tbody.append(newItem);
 
     let allRemoveBtns = document.querySelectorAll('.remove-btn');
     allRemoveBtns.forEach(btn => btn.addEventListener("click", deleteItem));
@@ -192,7 +192,7 @@ const createOrderCard = () => {
             <p>Item Count: ${numOfItems}</p>
             <p>Status: <span class="payStatusText">${payStatus}</span></p>
         </div>
-      `
+      `;
 
     newCard.innerHTML = `${cardHtml}`;
     orderHistoryArea.parentNode.insertBefore(newCard, orderHistoryArea.nextSibling);
@@ -237,7 +237,7 @@ const enableOrdering = () => {
     clearOrder();
     balanceDue.style.color = "#000";
     orderNumText.innerText = orderHistory.length + 1;
-    orderTypeText.innerText = "New Order"
+    orderTypeText.innerText = "New Order";
 
     cancelOrderBtn.classList.remove("disabled");
     cancelOrderBtn.style.pointerEvents = "auto";
@@ -279,10 +279,10 @@ const logout = (e) => {
 
 const makeWiggle = () => {
     document.querySelector(".order-ticket").classList.add("wiggle");
-    setTimeout(() => {cancelOrderBtn.classList.remove("wiggle")}, 2000);
+    setTimeout(() => { cancelOrderBtn.classList.remove("wiggle") }, 2000);
 }
 
-const openModal = () => {(activeOrder.length > 0) ? modal.style.display = 'block' : alert("No order selected.")}
+const openModal = () => { (activeOrder.length > 0) ? modal.style.display = 'block' : alert("No order selected.") };
 
 const renumberTable = () => {
     // let rowTarget = tableBody.children.item(0).children.item(0);
@@ -296,13 +296,13 @@ const renumberTable = () => {
 
             // console.warn("newRowNum", newRowNum);
             tableBody.children.item(i).children.item(0).innerText = newRowNum;
-            rowTargetText++
+            rowTargetText++;
         }
     }
 }
 
 const retrieveTicket = (e) => {
-    masterSelectedTicket = e.target
+    masterSelectedTicket = e.target;
     // TODO: If activeOrder.length > 0, Are you sure you want to cancel the current order?
     clearOrder();
     orderTypeText.innerText = "Existing Order";
@@ -325,10 +325,10 @@ const retrieveTicket = (e) => {
                     <i class="far fa-trash-alt"></i>
                 </button>
             </td>
-          `
+          `;
 
         ticketItem.innerHTML = `${ticketItemHtml}`;
-        tbody.append(ticketItem)
+        tbody.append(ticketItem);
 
         let allRemoveBtns = document.querySelectorAll('.remove-btn');
         allRemoveBtns.forEach(btn => btn.addEventListener("click", deleteItem));
@@ -359,7 +359,7 @@ async function getData() {
                 newMenuOption.setAttribute("class", "btn btn-dark menu-item add-btn");
                 newMenuOption.setAttribute("style", "background-color: #3D83CE;");
                 newMenuOption.innerText = `${breakfastMenu[i].name}`;
-                document.querySelector(".individual-options-area").append(newMenuOption)
+                document.querySelector(".individual-options-area").append(newMenuOption);
             }
 
             let allAddBtns = document.querySelectorAll('.add-btn');
