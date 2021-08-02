@@ -110,7 +110,7 @@ const completePayment = () => {
         targetButtonPayStatus.innerText = "Paid";
         masterSelectedTicket.classList.add("disabled");
 
-        let targetOrder = orderHistory[masterSelectedTicket.value]
+        let targetOrder = orderHistory[masterSelectedTicket.value];
         targetOrder.payStatus = "Paid";
 
         paymentSuccessMsg.style.visibility = "hidden";
@@ -153,7 +153,7 @@ const calcSubtotal = () => {
     });
 
     subtotalBill = orderPricesArray.reduce(function(acc, price) {
-        return acc += price
+        return acc += price;
     }, 0)
 
     subtotalBill = (Math.round(subtotalBill * 100) / 100).toFixed(2);
@@ -165,7 +165,7 @@ const clearOrder = () => {
     tableBody.innerHTML = "";
     activeOrder = [];
     discount = 0;
-    discountBox.innerText = "0.00"
+    discountBox.innerText = "0.00";
     mealsTax = 0;
     subtotalBill = 0;
     calcSubtotal();
@@ -204,8 +204,8 @@ const createOrderCard = () => {
 
 const deleteItem = (e) => {
     removalCandidate = e.target.parentElement.parentElement.firstElementChild.innerHTML;
-    rowIndex = removalCandidate - 1
-    activeOrder.splice(rowIndex, 1)
+    rowIndex = removalCandidate - 1;
+    activeOrder.splice(rowIndex, 1);
     tableBody.children.item(rowIndex).remove();
     renumberTable();
     calcSubtotal();
@@ -231,9 +231,7 @@ const disableOrdering = () => {
     });
 }
 
-const displayPaymentSuccess = () => {
-    paymentSuccessMsg.style.visibility = "visible";
-}
+const displayPaymentSuccess = () => { paymentSuccessMsg.style.visibility = "visible" };
 
 const enableOrdering = () => {
     clearOrder();
@@ -281,18 +279,10 @@ const logout = (e) => {
 
 const makeWiggle = () => {
     document.querySelector(".order-ticket").classList.add("wiggle");
-    setTimeout(function() {
-        cancelOrderBtn.classList.remove("wiggle");
-    }, 2000)
+    setTimeout(() => {cancelOrderBtn.classList.remove("wiggle")}, 2000);
 }
 
-const openModal = () => {
-    if (activeOrder.length > 0) {
-        modal.style.display = 'block';
-    } else {
-        alert("No order selected.");
-    }
-}
+const openModal = () => {(activeOrder.length > 0) ? modal.style.display = 'block' : alert("No order selected.")}
 
 const renumberTable = () => {
     // let rowTarget = tableBody.children.item(0).children.item(0);
