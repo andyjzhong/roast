@@ -244,10 +244,20 @@ th {
     display: none;
 }
 
-#modal-textbox {
-    background-color: #D5D5D5;
+#login-modal-textbox {
+    background-color: #FFF;
     height: 70vh;
     width: 500px;
+    border-radius: 2px;
+    margin: 100px auto;
+    padding: 2%;
+    line-height: 120%;
+}
+
+#modal-textbox {
+    background-color: #FFF;
+    height: 70vh;
+    width: 30rem;
     border-radius: 2px;
     margin: 100px auto;
     padding: 2%;
@@ -315,4 +325,9 @@ th {
 .calc-btn {
     height: 4rem;
     width: 6rem;
+    font-size: 2rem;
+}
+
+#complete-payment, #cancel-payment {
+    font-size: 1.25rem;
 }

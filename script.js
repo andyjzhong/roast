@@ -1,7 +1,7 @@
 'use-strict';
 
 const cancelOrderBtn = document.querySelector(".cancel-order");
-const closeModalBtn = document.querySelector('#closeModal');
+const closeModalBtn = document.querySelector('#cancel-payment');
 const discountBox = document.querySelector('#discount-box');
 const discountBtn = document.querySelector('.add-discount');
 const loginModal = document.querySelector('#login-modal');

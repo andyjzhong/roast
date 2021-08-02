@@ -27,7 +27,7 @@
 <body>
     <!-- Login Modal -->
     <div id="login-modal">
-        <div id="modal-textbox" class="login-content">
+        <div id="login-modal-textbox" class="login-content">
             <h1 class="login-title"><i class="fas fa-receipt"></i> Roast Tab</h1>
             <h2 id="login-welcome">Welcome</h2>
 
@@ -135,7 +135,8 @@
 
 
             <div class="calculator">
-                <h1>Amount Due</h1>
+                <h5>Amount Due</h5>
+                <h1>$<span id="amountDue">0.00</span></h1>
                 <div class="">
                     <input type="bwqkjdbkjqwbd" name="" value="">
                 </div>
@@ -155,7 +156,7 @@
                     <button type="button" name="button" class="btn btn-light calc-btn">9</button>
                 </div>
                 <div class="">
-                    <button class="btn btn-danger cancel-payment calc-btn" id="closeModal" href="#">Cancel</button>
+                    <button class="btn btn-danger cancel-payment calc-btn" id="cancel-payment" href="#">Cancel</button>
                     <button type="button" name="button" class="btn btn-light calc-btn">0</button>
                     <button class="btn btn-success complete-payment calc-btn" id="complete-payment" href="#">Confirm</button>
                 </div>
