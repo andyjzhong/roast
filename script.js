@@ -1,39 +1,42 @@
 'use-strict';
 
+const balanceDue = document.querySelector("#balanceDue");
+const balanceDueBox = document.querySelector("#balance-due-box");
+const body = document.querySelector("body");
 const cancelOrderBtn = document.querySelector(".cancel-order");
 const closeModalBtn = document.querySelector('#cancel-payment');
+const completePaymentBtn = document.querySelector("#complete-payment");
 const discountBox = document.querySelector('#discount-box');
 const discountBtn = document.querySelector('.add-discount');
+const historyMsg = document.querySelector("#history-msg");
+const loginBtn = document.querySelector("#login-btn");
 const loginModal = document.querySelector('#login-modal');
+const logoutBtn = document.querySelector("#logout-btn");
 const mainContainer = document.querySelector('#main-container');
 const mealsTaxBox = document.querySelector('#meals-tax-box');
 const menuItemBtn = document.querySelector(".menu-item");
 const modal = document.querySelector('#modal');
-const payBtn = document.querySelector('#openModal');
 const orderHistoryArea = document.querySelector('.order-history-area');
+const orderTicket = document.querySelector(".order-ticket");
 const orderTypeText = document.querySelector('.order-type-value');
+const payBtn = document.querySelector('#openModal');
+const paymentSuccessMsg = document.querySelector("#payment-success");
 const sendOrderBtn = document.querySelector(".send-order");
 const startOrderBtn = document.querySelector(".start-order");
 const subtotalBillBox = document.querySelector("#subtotal-bill-box");
 const tabArea = document.querySelector(".tab-area");
 const tableBody = document.querySelector(".table-body");
+const tbody = document.querySelector("tbody")
 const totalBillBox = document.querySelector("#total-bill-box");
-const balanceDue = document.querySelector("#balanceDue");
-const balanceDueBox = document.querySelector("#balance-due-box");
-const completePaymentBtn = document.querySelector("#complete-payment");
-const loginBtn = document.querySelector("#login-btn");
-const logoutBtn = document.querySelector("#logout-btn");
-const paymentSuccessMsg = document.querySelector("#payment-success");
-const historyMsg = document.querySelector("#history-msg");
 let activeOrder = [];
 let discount = 0;
+let masterSelectedTicket = {};
 let mealsTax = 0;
 let orderHistory = [];
 let orderNumber = 1;
 let orderNumText = document.querySelector('.orderNumText');
 let orderTotal = 0;
 let subtotalBill = 0;
-let masterSelectedTicket = {};
 
 const displayPaymentSuccess = () => {
     paymentSuccessMsg.style.visibility = "visible";
@@ -59,14 +62,14 @@ const login = (e) => {
     e.preventDefault();
     loginModal.style.display = "none";
     mainContainer.style.opacity = 1;
-    document.querySelector("body").style.overflow = "scroll";
+    body.style.overflow = "scroll";
 }
 
 const logout = (e) => {
     e.preventDefault();
     loginModal.style.display = "block";
     mainContainer.style.opacity = 0;
-    document.querySelector("body").style.overflow = "hidden";
+    body.style.overflow = "hidden";
 }
 
 const makeWiggle = () => {
@@ -173,7 +176,7 @@ const retrieveTicket = (e) => {
           `
 
         ticketItem.innerHTML = `${ticketItemHtml}`;
-        document.querySelector("tbody").append(ticketItem)
+        tbody.append(ticketItem)
 
         let allRemoveBtns = document.querySelectorAll('.remove-btn');
         allRemoveBtns.forEach(btn => btn.addEventListener("click", deleteItem));
@@ -259,7 +262,7 @@ const addNewMenuItem = (e) => {
       `
 
     newItem.innerHTML = `${itemHtml}`;
-    document.querySelector("tbody").append(newItem)
+    tbody.append(newItem)
 
     let allRemoveBtns = document.querySelectorAll('.remove-btn');
     allRemoveBtns.forEach(btn => btn.addEventListener("click", deleteItem));
@@ -301,7 +304,7 @@ const calcDiscount = () => {
     discount = prompt("Enter a discount amount.")
 
     if (discount !== 0) {
-        document.querySelector("#discount-box").innerText = (Math.round(discount * 100) / 100).toFixed(2);
+        dicountBox.innerText = (Math.round(discount * 100) / 100).toFixed(2);
     }
     calcMealsTax();
 }
