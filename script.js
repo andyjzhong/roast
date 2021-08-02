@@ -372,6 +372,12 @@ async function getData() {
 
 getData();
 
+const updateCalculator = (e) => {
+    console.log(e.target.innerText);
+}
+
+let allCalcDigitBtns = document.querySelectorAll('.digit');
+    allCalcDigitBtns.forEach(btn => btn.addEventListener("click", updateCalculator));
 
 startOrderBtn.addEventListener("click", enableOrdering);
 cancelOrderBtn.addEventListener("click", clearOrder);
