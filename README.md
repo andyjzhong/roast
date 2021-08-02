@@ -106,6 +106,7 @@
 #### HTML & CSS
 -   Style log in modal and buttons.
 -   Add friendly message when no orders are present.
+-   Create calculator buttons and style modal.
 
 #### Other
 -   Add payment confirmation alert when payment is complete.
@@ -128,11 +129,11 @@
 
 | Task                       | Day 1       | Day 2       | Day 3        | Day 4       | Day 5     | Day 6     | Day 7     |
 | -------------------------- | ----------- | ----------- | ------------ | ----------- | --------- | --------- | --------- |
-| Set Up Framework & HTML    | 2.0 hrs     | 0.5 hrs     | 0.5 hrs      | 0 hr        | 0 hr      | 0 hr      | 0 hr      |
+| Set Up Framework & HTML    | 2.0 hrs     | 0.5 hrs     | 0.5 hrs      | 0.5 hrs     | 0 hr      | 0 hr      | 0 hr      |
 | Connecting to API & Render | 1 hrs       | 0.5 hrs     | 0 hrs        | 0 hr        | 0 hr      | 0 hr      | 0 hr      |
 | Add Application Logic      | 5.5 hrs     | 5.0 hrs     | 5.5 hrs      | 4.5 hrs     | 0 hr      | 0 hr      | 0 hr      |
-| Styling                    | 0.5 hrs     | 3.0 hrs     | 3.0 hrs      | 1.0 hrs     | 0 hr      | 0 hr      | 0 hr      |
+| Styling                    | 0.5 hrs     | 3.0 hrs     | 3.0 hrs      | 2.0 hrs     | 0 hr      | 0 hr      | 0 hr      |
 | Responsive Styling         | 0 hrs       | 0 hrs       | 0.5 hrs      | 0 hr        | 0 hr      | 0 hr      | 0 hr      |
-| **MVP Total**              | **9 hrs**   | **9 hrs**   | **9.5 hrs**  | **5.5 hrs** | **0 hrs** | **0 hrs** | **0 hrs** |
+| **MVP Total**              | **9 hrs**   | **9 hrs**   | **9.5 hrs**  | **7.0 hrs** | **0 hrs** | **0 hrs** | **0 hrs** |
 | Stretch Goals              | 0 hrs       | 0 hrs       | 1.5 hrs      | 0.5 hrs     | 0 hr      | 0 hr      | 0 hr      |
-| **Project Total**          | **9.0 hrs** | **9.0 hrs** | **11.0 hrs** | **6.0 hrs** | **0 hrs** | **0 hrs** | **0 hrs** |
+| **Project Total**          | **9.0 hrs** | **9.0 hrs** | **11.0 hrs** | **7.5 hrs** | **0 hrs** | **0 hrs** | **0 hrs** |
