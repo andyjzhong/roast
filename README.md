@@ -170,9 +170,9 @@
 | -------------------------- | ----------- | ----------- | ------------ | ----------- | ----------- | --------- | --------- |
 | Set Up Framework & HTML    | 2.0 hrs     | 0.5 hrs     | 0.5 hrs      | 0.5 hrs     | 0.5 hrs     | 0 hr      | 0 hr      |
 | Connecting to API & Render | 1 hrs       | 0.5 hrs     | 0 hrs        | 0 hr        | 0 hr        | 1.5 hrs   | 0 hr      |
-| Add Application Logic      | 5.5 hrs     | 5.0 hrs     | 5.5 hrs      | 4.5 hrs     | 1 hrs       | 0 hr      | 0 hr      |
+| Add Application Logic      | 5.5 hrs     | 5.0 hrs     | 5.5 hrs      | 4.5 hrs     | 1 hrs       | 0.5 hrs   | 0 hr      |
 | Styling                    | 0.5 hrs     | 3.0 hrs     | 3.0 hrs      | 2.0 hrs     | 1 hrs       | 0 hr      | 0 hr      |
 | Responsive Styling         | 0 hrs       | 0 hrs       | 0.5 hrs      | 0 hr        | 0.5 hr      | 0 hr      | 0 hr      |
 | **MVP Total**              | **9 hrs**   | **9 hrs**   | **9.5 hrs**  | **7.0 hrs** | **3 hrs**   | **0 hrs** | **0 hrs** |
-| Stretch Goals              | 0 hrs       | 0 hrs       | 1.5 hrs      | 0.5 hrs     | 0 hr        | 3.5 hrs   | 0 hr      |
+| Stretch Goals              | 0 hrs       | 0 hrs       | 1.5 hrs      | 0.5 hrs     | 0 hr        | 3.0 hrs   | 0 hr      |
 | **Project Total**          | **9.0 hrs** | **9.0 hrs** | **11.0 hrs** | **7.5 hrs** | **3.0 hrs** | **0 hrs** | **0 hrs** |
