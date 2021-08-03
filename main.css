@@ -372,3 +372,10 @@ h5{
     transform: translate3d(4px, 0, 0);
   }
 }
+
+@media (min-width: 576px) {
+    #login-modal-textbox {
+        margin: 1rem auto;
+        width: 90%;
+    }
+}
