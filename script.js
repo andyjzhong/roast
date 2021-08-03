@@ -1,7 +1,7 @@
 'use-strict';
 
 const API_KEY = config.API_KEY;
-const RESTAURANT_ID = config.RESTAURANT_ID;
+const RESTAURANT_ID = "4235058471070138";
 const amountDueValue = document.querySelector("#amountDue");
 const balanceDue = document.querySelector("#balanceDue");
 const balanceDueBox = document.querySelector("#balance-due-box");
@@ -402,6 +402,7 @@ const retrieveTicket = (e) => {
 async function getData() {
     let liveUrl = `https://api.documenu.com/v2/restaurant/${RESTAURANT_ID}?key=${API_KEY}`;
     let mode = "demo";
+    console.warn(`Initiating ${mode} mode.`);
     let url = (mode == "live") ? liveUrl : `./sampleData.json`;
 
     fetch(url)
