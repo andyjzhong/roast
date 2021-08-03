@@ -377,6 +377,7 @@ h5{
     #login-modal-textbox {
         margin: 1rem auto;
         width: 90%;
+        height: 80vh !important;
     }
 
     #login-modal {
@@ -408,6 +409,7 @@ h5{
     #login-btn {
         height: 6rem;
         font-size: 3rem;
+        margin-top: 3rem;
     }
 
     #login-msg {
@@ -416,5 +418,9 @@ h5{
 
     .login-container {
         bottom: 10rem;
+    }
+
+    .navbar {
+        display: none;
     }
 }
