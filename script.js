@@ -25,6 +25,7 @@ const orderHistoryArea = document.querySelector('.order-history-area');
 const orderTicket = document.querySelector(".order-ticket");
 const orderTypeText = document.querySelector('.order-type-value');
 const payBtn = document.querySelector('#openModal');
+const paymentFailureMsg = document.querySelector("#payment-failure");
 const paymentSuccessMsg = document.querySelector("#payment-success");
 const sendOrderBtn = document.querySelector(".send-order");
 const startOrderBtn = document.querySelector(".start-order");
@@ -134,24 +135,30 @@ const checkPayment = () => {
 }
 
 const completePayment = () => {
-    displayPaymentSuccess();
+    //TODO
 
-    setTimeout(function() {
-        closeModal();
-        enableOrdering();
+    if (Number(guestPaymentBox.value) >= Number(balanceDueBox.innerText)) {
+        displayPaymentSuccess();
 
-        balanceDue.style.color = "#000";
+        setTimeout(function() {
+            closeModal();
+            enableOrdering();
 
-        let targetButtonPayStatus = masterSelectedTicket.children.item(0).children.item(2).children.item(0);
-        targetButtonPayStatus.innerText = "Paid";
-        masterSelectedTicket.classList.add("disabled");
+            balanceDue.style.color = "#000";
 
-        let targetOrder = orderHistory[masterSelectedTicket.value];
-        targetOrder.payStatus = "Paid";
+            let targetButtonPayStatus = masterSelectedTicket.children.item(0).children.item(2).children.item(0);
+            targetButtonPayStatus.innerText = "Paid";
+            masterSelectedTicket.classList.add("disabled");
 
-        paymentSuccessMsg.style.visibility = "hidden";
-        clearGuestPayment();
-    }, 1000);
+            let targetOrder = orderHistory[masterSelectedTicket.value];
+            targetOrder.payStatus = "Paid";
+
+            paymentSuccessMsg.style.visibility = "hidden";
+            clearGuestPayment();
+        }, 1000);
+    } else {
+        displayPaymentFailure();
+    }
 }
 
 const calcBill = () => {
@@ -269,7 +276,17 @@ const disableOrdering = () => {
     });
 }
 
-const displayPaymentSuccess = () => { paymentSuccessMsg.style.visibility = "visible" };
+const displayPaymentSuccess = () => {
+    paymentSuccessMsg.style.visibility = "visible";
+    paymentSuccessMsg.style.display = "";
+    paymentFailureMsg.style.display = "none";
+};
+
+const displayPaymentFailure = () => {
+    paymentFailureMsg.style.visibility = "visible";
+    paymentFailureMsg.style.display = "";
+    paymentSuccessMsg.style.display = "none";
+};
 
 const enableOrdering = () => {
     clearOrder();

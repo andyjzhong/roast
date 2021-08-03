@@ -118,9 +118,15 @@
     <!-- Payment Modal -->
     <div id="modal">
         <div id="modal-textbox">
-            <!-- Payment Success -->
-            <div id="payment-success" class="alert alert-success" role="alert">
-                <strong>Payment accepted!</strong>
+            <div class="payment-msg-center">
+                <!-- Payment Success -->
+                <div id="payment-success" class="alert alert-success" role="alert">
+                    <strong>Payment accepted!</strong>
+                </div>
+                <!-- Payment Failure -->
+                <div id="payment-failure" class="alert alert-danger" role="alert">
+                    <strong>Insuffient Funds!</strong>
+                </div>
             </div>
             <h5 id="amountDueBox">Amount Due: <span id="amountDue">0.00</span></h5>
             <div class="calculator">
