@@ -18,6 +18,7 @@ const logoutBtn = document.querySelector("#logout-btn");
 const mainContainer = document.querySelector('#main-container');
 const mealsTaxBox = document.querySelector('#meals-tax-box');
 const menuItemBtn = document.querySelector(".menu-item");
+const menuTabMain = document.querySelector("#menu-tab-main");
 const menuTabSides = document.querySelector("#menu-tab-sides");
 const modal = document.querySelector('#modal');
 const orderHistoryArea = document.querySelector('.order-history-area');
@@ -43,8 +44,30 @@ let orderNumText = document.querySelector('.orderNumText');
 let orderTotal = 0;
 let subtotalBill = 0;
 
-const changeTabs = () => {
-    console.warn("TAB WAS CLICKED!");
+const changeTabsToSides = (e) => {
+    let allMenuTabs = document.querySelectorAll('.menu-tab');
+    allMenuTabs.forEach(btn => btn.classList.remove("active"));
+
+    let allMainMenu = document.querySelectorAll('.menu-main');
+    allMainMenu.forEach(btn => btn.style.display = "none");
+
+    let allSidesMenu = document.querySelectorAll('.menu-sides');
+    allSidesMenu.forEach(btn => btn.style.display = "");
+
+    e.target.classList.add("active");
+}
+
+const changeTabsToMain = (e) => {
+    let allMenuTabs = document.querySelectorAll('.menu-tab');
+    allMenuTabs.forEach(btn => btn.classList.remove("active"));
+
+    let allMainMenu = document.querySelectorAll('.menu-main');
+    allMainMenu.forEach(btn => btn.style.display = "");
+
+    let allSidesMenu = document.querySelectorAll('.menu-sides');
+    allSidesMenu.forEach(btn => btn.style.display = "none");
+
+    e.target.classList.add("active");
 }
 
 const clearGuestPayment = () => {
@@ -375,17 +398,17 @@ async function getData() {
             steakMenu = res.result.menus[0].menu_sections[7].menu_items;
             sidesMenu = res.result.menus[0].menu_sections[11].menu_items;
 
-            mainMenu.map(function(food, i, array) {
+            mainMenu.map(function(food) {
                 fullMenu.push(food);
-            })
+            });
 
-            steakMenu.map(function(food, i, array) {
+            steakMenu.map(function(food) {
                 fullMenu.push(food);
-            })
+            });
 
-            sidesMenu.map(function(food, i, array) {
+            sidesMenu.map(function(food) {
                 fullMenu.push(food);
-            })
+            });
             console.log("fullMenu is", fullMenu);
 
             // Main Menu
@@ -406,7 +429,7 @@ async function getData() {
                 newMenuOption.setAttribute("type", "button");
                 newMenuOption.setAttribute("name", `${steakMenu[i].name}`);
                 newMenuOption.setAttribute("price", `${steakMenu[i].price}`);
-                newMenuOption.setAttribute("class", "menu-steak btn btn-dark menu-item add-btn");
+                newMenuOption.setAttribute("class", "menu-main menu-steak btn btn-dark menu-item add-btn");
                 newMenuOption.setAttribute("style", "background-color: #3D83CE;");
                 newMenuOption.innerText = `${steakMenu[i].name}`;
                 document.querySelector(".individual-options-area").append(newMenuOption);
@@ -452,4 +475,5 @@ sendOrderBtn.addEventListener("click", addOrderHistory);
 completePaymentBtn.addEventListener("click", completePayment);
 loginBtn.addEventListener("click", login);
 logoutBtn.addEventListener("click", logout);
-menuTabSides.addEventListener("click", changeTabs);
+menuTabSides.addEventListener("click", changeTabsToSides);
+menuTabMain.addEventListener("click", changeTabsToMain);
