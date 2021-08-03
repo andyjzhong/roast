@@ -129,10 +129,29 @@
 -   Style calculator buttons.
 
 #### Other
--   
+-  
 
 ![Day 5 Progress](https://i.imgur.com/tWpTSOJ.png)
 ![Day 5 Progress](https://media.giphy.com/media/msx9rsNgJQGxpw77gL/giphy.gif)
+
+
+</details>
+
+<details>
+     <summary>Day 6</summary>
+
+#### JavaScript
+-   Add functionality to update calculator value when calculator buttons are clicked.
+-   Add clear guest payment functionality.
+
+#### HTML & CSS
+-   Style calculator buttons.
+
+#### Other
+-   Search for valid restaurant data in the DocuMenu API.
+
+![Day 6 Progress](https://i.imgur.com/tWpTSOJ.png)
+![Day 6 Progress](https://media.giphy.com/media/msx9rsNgJQGxpw77gL/giphy.gif)
 
 
 </details>
@@ -143,6 +162,7 @@
 -   Determining how to create an order history seemed challenging but when I stepped away and actually wrote out the pseudocode for it, it made a lot more sense what I needed to achieve. I had to create a new function that takes the activeOrder array and push it into an orderHistory array.
 -   Delete button was more complicated than I thought. I started with removing the selected item by traversing the DOM and using the splice() array method, deleting only the first item on the tab. The difficulty was renumbering the tab items displayed to the user. There seems to also be a race condition happening about 20% of the time where it would not number the items correctly and start with item 0.
 -   Pulling back the data from order history was quite time consuming. It was a step by step process to grab the selected object and refill the tab's table with rows using the data from the selected object. Getting the completePayment function to work was also a challenge but it was much more simple once I broke it down step by step.
+-   Many chain restaurants don't provide menu prices on the DocuMenu API.
 
 ## Time Frames
 

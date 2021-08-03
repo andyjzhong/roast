@@ -46,8 +46,8 @@ const clearGuestPayment = () => {
 }
 
 const addNewMenuItem = (e) => {
-    let index = breakfastMenu.findIndex(item => item.name === e.target.name);
-    activeOrder.push(breakfastMenu[index]);
+    let index = mainMenu.findIndex(item => item.name === e.target.name);
+    activeOrder.push(mainMenu[index]);
 
     let newItem = document.createElement("tr");
 
@@ -358,23 +358,24 @@ const retrieveTicket = (e) => {
 }
 
 async function getData() {
-    fetch("./sampleData.json")
+    fetch("./sampleDataDavios.json")
         .then((res) => {
             return res.json();
         })
         .then(function(res) {
             console.log("Retrieved data successfully.", res);
 
-            breakfastMenu = res.result.menus[0].menu_sections[0].menu_items;
+            mainMenu = res.result.menus[0].menu_sections[6].menu_items;
+            console.log(mainMenu);
 
-            for (let i = 0; i < breakfastMenu.length; i++) {
+            for (let i = 0; i < mainMenu.length; i++) {
                 let newMenuOption = document.createElement("button");
                 newMenuOption.setAttribute("type", "button");
-                newMenuOption.setAttribute("name", `${breakfastMenu[i].name}`);
-                newMenuOption.setAttribute("price", `${breakfastMenu[i].price}`);
+                newMenuOption.setAttribute("name", `${mainMenu[i].name}`);
+                newMenuOption.setAttribute("price", `${mainMenu[i].price}`);
                 newMenuOption.setAttribute("class", "btn btn-dark menu-item add-btn");
                 newMenuOption.setAttribute("style", "background-color: #3D83CE;");
-                newMenuOption.innerText = `${breakfastMenu[i].name}`;
+                newMenuOption.innerText = `${mainMenu[i].name}`;
                 document.querySelector(".individual-options-area").append(newMenuOption);
             }
 
