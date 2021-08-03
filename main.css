@@ -372,3 +372,9 @@ h5{
     transform: translate3d(4px, 0, 0);
   }
 }
+
+@media (max-width: 500px) {
+    #login-modal-textbox {
+        background-color: red;
+    }
+}
