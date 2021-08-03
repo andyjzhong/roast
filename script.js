@@ -18,6 +18,7 @@ const logoutBtn = document.querySelector("#logout-btn");
 const mainContainer = document.querySelector('#main-container');
 const mealsTaxBox = document.querySelector('#meals-tax-box');
 const menuItemBtn = document.querySelector(".menu-item");
+const menuTabSides = document.querySelector("#menu-tab-sides");
 const modal = document.querySelector('#modal');
 const orderHistoryArea = document.querySelector('.order-history-area');
 const orderTicket = document.querySelector(".order-ticket");
@@ -33,6 +34,7 @@ const tbody = document.querySelector("tbody")
 const totalBillBox = document.querySelector("#total-bill-box");
 let activeOrder = [];
 let discount = 0;
+let fullMenu = [];
 let masterSelectedTicket = {};
 let mealsTax = 0;
 let orderHistory = [];
@@ -41,13 +43,17 @@ let orderNumText = document.querySelector('.orderNumText');
 let orderTotal = 0;
 let subtotalBill = 0;
 
+const changeTabs = () => {
+    console.warn("TAB WAS CLICKED!");
+}
+
 const clearGuestPayment = () => {
     guestPaymentBox.value = "";
 }
 
 const addNewMenuItem = (e) => {
-    let index = mainMenu.findIndex(item => item.name === e.target.name);
-    activeOrder.push(mainMenu[index]);
+    let index = fullMenu.findIndex(item => item.name === e.target.name);
+    activeOrder.push(fullMenu[index]);
 
     let newItem = document.createElement("tr");
 
@@ -366,16 +372,55 @@ async function getData() {
             console.log("Retrieved data successfully.", res);
 
             mainMenu = res.result.menus[0].menu_sections[6].menu_items;
-            console.log(mainMenu);
+            steakMenu = res.result.menus[0].menu_sections[7].menu_items;
+            sidesMenu = res.result.menus[0].menu_sections[11].menu_items;
 
+            mainMenu.map(function(food, i, array) {
+                fullMenu.push(food);
+            })
+
+            steakMenu.map(function(food, i, array) {
+                fullMenu.push(food);
+            })
+
+            sidesMenu.map(function(food, i, array) {
+                fullMenu.push(food);
+            })
+            console.log("fullMenu is", fullMenu);
+
+            // Main Menu
             for (let i = 0; i < mainMenu.length; i++) {
                 let newMenuOption = document.createElement("button");
                 newMenuOption.setAttribute("type", "button");
                 newMenuOption.setAttribute("name", `${mainMenu[i].name}`);
                 newMenuOption.setAttribute("price", `${mainMenu[i].price}`);
-                newMenuOption.setAttribute("class", "btn btn-dark menu-item add-btn");
+                newMenuOption.setAttribute("class", "menu-main btn btn-dark menu-item add-btn");
                 newMenuOption.setAttribute("style", "background-color: #3D83CE;");
                 newMenuOption.innerText = `${mainMenu[i].name}`;
+                document.querySelector(".individual-options-area").append(newMenuOption);
+            }
+
+            // Steak Menu
+            for (let i = 0; i < steakMenu.length; i++) {
+                let newMenuOption = document.createElement("button");
+                newMenuOption.setAttribute("type", "button");
+                newMenuOption.setAttribute("name", `${steakMenu[i].name}`);
+                newMenuOption.setAttribute("price", `${steakMenu[i].price}`);
+                newMenuOption.setAttribute("class", "menu-steak btn btn-dark menu-item add-btn");
+                newMenuOption.setAttribute("style", "background-color: #3D83CE;");
+                newMenuOption.innerText = `${steakMenu[i].name}`;
+                document.querySelector(".individual-options-area").append(newMenuOption);
+            }
+
+            // Sides Menu
+            for (let i = 0; i < sidesMenu.length; i++) {
+                let newMenuOption = document.createElement("button");
+                newMenuOption.setAttribute("type", "button");
+                newMenuOption.setAttribute("name", `${sidesMenu[i].name}`);
+                newMenuOption.setAttribute("price", `${sidesMenu[i].price}`);
+                newMenuOption.setAttribute("class", "menu-sides btn btn-dark menu-item add-btn");
+                newMenuOption.setAttribute("style", "background-color: #3D83CE; display: none;");
+                newMenuOption.innerText = `${sidesMenu[i].name}`;
                 document.querySelector(".individual-options-area").append(newMenuOption);
             }
 
@@ -407,3 +452,4 @@ sendOrderBtn.addEventListener("click", addOrderHistory);
 completePaymentBtn.addEventListener("click", completePayment);
 loginBtn.addEventListener("click", login);
 logoutBtn.addEventListener("click", logout);
+menuTabSides.addEventListener("click", changeTabs);
