@@ -27,6 +27,7 @@ const orderHistoryArea = document.querySelector('.order-history-area');
 const orderTicket = document.querySelector(".order-ticket");
 const orderTypeText = document.querySelector('.order-type-value');
 const payBtn = document.querySelector('#openModal');
+const paymentModal = document.querySelector("#modal-textbox");
 const paymentFailureMsg = document.querySelector("#payment-failure");
 const paymentSuccessMsg = document.querySelector("#payment-success");
 const sendOrderBtn = document.querySelector(".send-order");
@@ -283,9 +284,13 @@ const displayPaymentSuccess = () => {
 };
 
 const displayPaymentFailure = () => {
+    paymentModal.classList.add("shake");
     paymentFailureMsg.style.visibility = "visible";
     paymentFailureMsg.style.display = "";
     paymentSuccessMsg.style.display = "none";
+    setTimeout(function() {
+        paymentModal.classList.remove("shake");
+    },1000)
 };
 
 const enableOrdering = () => {
