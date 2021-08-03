@@ -321,11 +321,15 @@ const makeWiggle = () => {
 }
 
 const openModal = () => {
-    if (activeOrder.length > 0) {
+    console.warn("### Order Number is ###", orderNumText.innerText);
+    console.warn("### Order History Count is ###", orderHistory.length);
+    if (activeOrder.length > 0 && (orderNumText.innerText == orderHistory.length)) {
         modal.style.display = 'block';
         amountDueValue.innerText = balanceDueBox.innerText;
+    } else if (activeOrder.length > 0) {
+        alert("Please send an order to the kitchen first.");
     } else {
-        alert("No order selected.");
+        alert("Please select an existing order to make a payment.");
     }
 }
 

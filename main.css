@@ -254,7 +254,7 @@ h5{
 }
 
 #modal-textbox {
-    width: 28rem;
+    width: 30rem;
 }
 
 #payment-success {
@@ -294,6 +294,10 @@ h5{
     width: 6rem;
     font-size: 2rem;
     margin: 5px;
+}
+
+.calc-btn-row {
+    margin-top: 0.25em;
 }
 
 /* Wiggle Animation */
