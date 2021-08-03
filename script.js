@@ -347,16 +347,11 @@ const openModal = () => {
 }
 
 const renumberTable = () => {
-    // let rowTarget = tableBody.children.item(0).children.item(0);
-    // console.log("rowTarget", rowTarget);
-
     if (activeOrder.length > 0) {
-        let rowTargetText = tableBody.children.item(0).children.item(0).innerText;
+        let rowTargetText = 2;
         for (let i = 0; i < activeOrder.length; i++) {
-            // console.error("rowTargetText", rowTargetText);
             let newRowNum = rowTargetText - 1;
 
-            // console.warn("newRowNum", newRowNum);
             tableBody.children.item(i).children.item(0).innerText = newRowNum;
             rowTargetText++;
         }
