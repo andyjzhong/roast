@@ -1,5 +1,6 @@
 'use-strict';
 
+const API_KEY = config.API_KEY;
 const amountDueValue = document.querySelector("#amountDue");
 const balanceDue = document.querySelector("#balanceDue");
 const balanceDueBox = document.querySelector("#balance-due-box");
@@ -398,7 +399,9 @@ const retrieveTicket = (e) => {
 }
 
 async function getData() {
-    fetch("./sampleDataDavios.json")
+    let url = `https://api.documenu.com/v2/restaurant/4235058471070138?key=${API_KEY}`;
+
+    fetch(url)
         .then((res) => {
             return res.json();
         })

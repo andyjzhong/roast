@@ -147,6 +147,7 @@
 #### Other
 -   Search for valid restaurant data in the DocuMenu API.
 -   Pull back more than one menu section and display all menu items in selection area.
+-   Set up secret key in local config.js file.
 
 ![Day 6 Progress](https://i.imgur.com/tWpTSOJ.png)
 ![Day 6 Progress](https://media.giphy.com/media/msx9rsNgJQGxpw77gL/giphy.gif)
@@ -167,7 +168,7 @@
 | Task                       | Day 1       | Day 2       | Day 3        | Day 4       | Day 5       | Day 6     | Day 7     |
 | -------------------------- | ----------- | ----------- | ------------ | ----------- | ----------- | --------- | --------- |
 | Set Up Framework & HTML    | 2.0 hrs     | 0.5 hrs     | 0.5 hrs      | 0.5 hrs     | 0.5 hrs     | 0 hr      | 0 hr      |
-| Connecting to API & Render | 1 hrs       | 0.5 hrs     | 0 hrs        | 0 hr        | 0 hr        | 1 hr      | 0 hr      |
+| Connecting to API & Render | 1 hrs       | 0.5 hrs     | 0 hrs        | 0 hr        | 0 hr        | 1.5 hrs   | 0 hr      |
 | Add Application Logic      | 5.5 hrs     | 5.0 hrs     | 5.5 hrs      | 4.5 hrs     | 1 hrs       | 0 hr      | 0 hr      |
 | Styling                    | 0.5 hrs     | 3.0 hrs     | 3.0 hrs      | 2.0 hrs     | 1 hrs       | 0 hr      | 0 hr      |
 | Responsive Styling         | 0 hrs       | 0 hrs       | 0.5 hrs      | 0 hr        | 0.5 hr      | 0 hr      | 0 hr      |
