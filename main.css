@@ -44,7 +44,7 @@ h5{
 /* Login Screen */
 .login-title {
     color: #F24A07;
-    font-size: 3rem;
+    font-size: 2.75rem;
     padding: 60px;
 }
 
@@ -246,8 +246,8 @@ h5{
 
 #login-modal-textbox, #modal-textbox {
     background-color: #FFF;
-    height: 70vh;
-    width: 500px;
+    height: 80%;
+    width: 26rem;
     border-radius: 2px;
     margin: 100px auto;
     padding: 2%;
@@ -417,7 +417,7 @@ h5{
     }
 
     .login-container {
-        bottom: 10rem;
+        bottom: 6rem;
     }
 
     .navbar {
