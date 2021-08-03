@@ -84,11 +84,11 @@ const addNewMenuItem = (e) => {
     let newItem = document.createElement("tr");
 
     let itemHtml = `
-        <td class="trow" scope="row">${activeOrder.length}</th>
+        <td class="trow" scope="row" style="text-align: center;">${activeOrder.length}</th>
         <td>${e.target.name}</td>
-        <td>1</td>
-        <td>$${(Math.round(e.target.getAttribute("price") * 100) / 100).toFixed(2)}</td>
-        <td>$${(Math.round(e.target.getAttribute("price") * 100) / 100).toFixed(2)}</td>
+        <td style="text-align: center;">1</td>
+        <td style="text-align: right;">$${(Math.round(e.target.getAttribute("price") * 100) / 100).toFixed(2)}</td>
+        <td style="text-align: right;">$${(Math.round(e.target.getAttribute("price") * 100) / 100).toFixed(2)}</td>
         <td>
             <button class="remove-btn btn btn-outline-danger btn-sm">
                 <i class="far fa-trash-alt"></i>
@@ -373,11 +373,11 @@ const retrieveTicket = (e) => {
         let ticketItem = document.createElement("tr");
 
         let ticketItemHtml = `
-            <td class="trow" scope="row">${i + 1}</th>
+            <td class="trow" scope="row" style="text-align: center;">${i + 1}</th>
             <td>${selectedTicketOrder[i].name}</td>
-            <td>1</td>
-            <td>${(Math.round((selectedTicketOrder[i].price) * 100) / 100).toFixed(2)}</td>
-            <td>${(Math.round((selectedTicketOrder[i].price) * 100) / 100).toFixed(2)}</td>
+            <td style="text-align: center;">1</td>
+            <td style="text-align: right;">${(Math.round((selectedTicketOrder[i].price) * 100) / 100).toFixed(2)}</td>
+            <td style="text-align: right;">${(Math.round((selectedTicketOrder[i].price) * 100) / 100).toFixed(2)}</td>
             <td>
                 <button class="remove-btn btn btn-outline-danger btn-sm">
                     <i class="far fa-trash-alt"></i>
