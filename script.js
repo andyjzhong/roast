@@ -135,8 +135,6 @@ const checkPayment = () => {
 }
 
 const completePayment = () => {
-    //TODO
-
     if (Number(guestPaymentBox.value) >= Number(balanceDueBox.innerText)) {
         displayPaymentSuccess();
 
@@ -338,8 +336,6 @@ const makeWiggle = () => {
 }
 
 const openModal = () => {
-    console.warn("### Order Number is ###", orderNumText.innerText);
-    console.warn("### Order History Count is ###", orderHistory.length);
     if (activeOrder.length > 0 && (orderNumText.innerText == orderHistory.length)) {
         modal.style.display = 'block';
         amountDueValue.innerText = balanceDueBox.innerText;
@@ -369,7 +365,6 @@ const renumberTable = () => {
 
 const retrieveTicket = (e) => {
     masterSelectedTicket = e.target;
-    // TODO: If activeOrder.length > 0, Are you sure you want to cancel the current order?
     clearOrder();
     orderTypeText.innerText = "Existing Order";
     selectedTicketIndex = e.target.value;
@@ -430,7 +425,6 @@ async function getData() {
             sidesMenu.map(function(food) {
                 fullMenu.push(food);
             });
-            console.log("fullMenu is", fullMenu);
 
             // Main Menu
             for (let i = 0; i < mainMenu.length; i++) {
@@ -479,7 +473,6 @@ async function getData() {
 getData();
 
 const updateCalculator = (e) => {
-    console.log(e.target.innerText);
     guestPaymentBox.value = guestPaymentBox.value.toString() + e.target.innerText.toString();
 }
 
