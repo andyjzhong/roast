@@ -290,7 +290,7 @@ const displayPaymentFailure = () => {
     paymentSuccessMsg.style.display = "none";
     setTimeout(function() {
         paymentModal.classList.remove("shake");
-    },1000)
+    }, 1000)
 };
 
 const enableOrdering = () => {

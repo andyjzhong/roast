@@ -148,6 +148,7 @@
 -   Search for valid restaurant data in the DocuMenu API.
 -   Pull back more than one menu section and display all menu items in selection area.
 -   Set up secret key in local config.js file.
+-   Add a shake response when payment is insufficient.
 
 ![Day 6 Progress](https://i.imgur.com/tWpTSOJ.png)
 ![Day 6 Progress](https://media.giphy.com/media/msx9rsNgJQGxpw77gL/giphy.gif)
@@ -173,5 +174,5 @@
 | Styling                    | 0.5 hrs     | 3.0 hrs     | 3.0 hrs      | 2.0 hrs     | 1 hrs       | 0 hr      | 0 hr      |
 | Responsive Styling         | 0 hrs       | 0 hrs       | 0.5 hrs      | 0 hr        | 0.5 hr      | 0 hr      | 0 hr      |
 | **MVP Total**              | **9 hrs**   | **9 hrs**   | **9.5 hrs**  | **7.0 hrs** | **3 hrs**   | **0 hrs** | **0 hrs** |
-| Stretch Goals              | 0 hrs       | 0 hrs       | 1.5 hrs      | 0.5 hrs     | 0 hr        | 3 hrs     | 0 hr      |
+| Stretch Goals              | 0 hrs       | 0 hrs       | 1.5 hrs      | 0.5 hrs     | 0 hr        | 3.5 hrs   | 0 hr      |
 | **Project Total**          | **9.0 hrs** | **9.0 hrs** | **11.0 hrs** | **7.5 hrs** | **3.0 hrs** | **0 hrs** | **0 hrs** |
