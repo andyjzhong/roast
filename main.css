@@ -373,8 +373,25 @@ h5{
   }
 }
 
-@media (max-width: 500px) {
+@media (max-device-width: 576px) {
     #login-modal-textbox {
-        background-color: red;
+        margin: 1rem auto;
+        width: 90%;
+    }
+
+    .login-title {
+        font-size: 6rem;
+    }
+
+    #login-welcome {
+        font-size: 4rem;
+    }
+
+    #login-msg {
+        font-size: 3rem;
+    }
+
+    #pin-input {
+        height: 3rem;
     }
 }
