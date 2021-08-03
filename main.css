@@ -374,6 +374,15 @@ h5{
 }
 
 @media (max-device-width: 576px) {
+    .navbar {
+        height: 10rem;
+    }
+
+    .navbar-brand {
+        font-size: 4rem;
+        padding: 1rem 1rem 0.25rem 1rem;
+    }
+
     #login-modal-textbox {
         margin: 1rem auto;
         width: 90%;
@@ -418,5 +427,19 @@ h5{
 
     .login-container {
         bottom: 6rem;
+    }
+
+    #main-container {
+        font-size: 2.5rem;
+    }
+
+    .orderNum {
+        padding: 1rem 1rem 0.25rem 1rem;
+    }
+
+    .fa-sign-out-alt, .fa-cog {
+        height: 2.5rem;
+        width: 2.5rem;
+        font-size: 2.5rem;
     }
 }
