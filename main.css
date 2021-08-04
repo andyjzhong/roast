@@ -3,12 +3,11 @@ body {
     padding: 0;
     height: 10vh;
     overflow: hidden;
-    background-color: lightblue;
-    /* background: url("./keith-misner-wood.jpg") no-repeat center center fixed;
+    background: url("./keith-misner-wood.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: 100%; */
+    background-size: 100%;
     font-family: 'Source Sans Pro', sans-serif;
 }
 

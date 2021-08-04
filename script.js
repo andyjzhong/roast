@@ -232,7 +232,7 @@ const createOrderCard = () => {
     let newCard = document.createElement("button");
     newCard.setAttribute("class", "btn btn-dark order-ticket");
     newCard.setAttribute("value", dynaIndex);
-    newCard.setAttribute("style", "height: 90%; width: 12rem; margin: 10px; background-color: #FFB740; color: #000;");
+    newCard.setAttribute("style", "height: 84%; width: 12rem; margin: 10px; background-color: lightblue; color: #000;");
 
     let cardHtml = `
         <div class="order-ticket-content" style="pointer-events: none;">
