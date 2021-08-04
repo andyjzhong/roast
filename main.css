@@ -494,10 +494,10 @@ h5{
         margin-top: 10rem;
     }
 
-    /* #order-history-section {
+    #order-history-section {
         overflow: auto;
         white-space: normal;
-    } */
+    }
 
     .order-ticket {
         width: 90vw !important;
@@ -505,10 +505,57 @@ h5{
     }
 
 
-    .modal-textbox {
+    #modal-textbox {
         margin: 1rem auto;
         width: 90%;
         height: 80vh !important;
+    }
+
+    #payment-success, #payment-failure {
+        height: 6rem;
+        font-size: 5rem;
+        padding-top: 2rem;
+    }
+
+    #payment-success > strong, #payment-failure > strong {
+        font-size: 3rem;
+        padding-top: 0rem;
+    }
+
+    #amountDueBox {
+        height: 10rem;
+        font-size: 5rem;
+        margin-top: 10rem;
+    }
+
+    #guestPayment {
+        height: 7rem;
+        font-size: 7rem;
+    }
+
+    .calculator {
+        height: 90%;
+    }
+
+    .calculator > div {
+        height: 10rem;
+        margin: 1rem 0;
+    }
+
+    .calc-btn {
+        height: 10rem;
+        width: 14rem;
+        font-size: 6rem;
+    }
+
+    .calc-btn-row {
+        height: 10rem;
+    }
+
+    #cancel-payment, #complete-payment {
+        font-size: 4rem;
+        height: 8rem;
+        margin-top: 10rem;
     }
 
     .order-ticket-content, .ticket-title {
