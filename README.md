@@ -1,4 +1,7 @@
 # Roast Tab
+
+![Login Page](httpshttps://i.imgur.com/NHiR3es.jpg)
+
 A Point of Sale web application called Roast Tab (inspired by Toast Tab) used by restaurant staff to place food orders and maintain a running tab. To start an order, the user selects food items from the menu. The end result allows users to tabulate a total balance of the order so the restaurant guest is aware of how much to pay at the end of a visit.
 
 ## Background
