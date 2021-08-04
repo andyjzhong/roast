@@ -620,4 +620,3 @@ logoutBtn.addEventListener("click", logout);
 menuTabSides.addEventListener("click", changeTabsToSides);
 menuTabMain.addEventListener("click", changeTabsToMain);
 menuTabApps.addEventListener("click", changeTabsToApps);
-document.querySelector("body").bind('touchmove', false);
