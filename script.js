@@ -1,6 +1,6 @@
 'use-strict';
 
-const API_KEY = config.API_KEY;
+// const API_KEY = config.API_KEY;
 const RESTAURANT_ID = "4235058471070138";
 const amountDueValue = document.querySelector("#amountDue");
 const balanceDue = document.querySelector("#balanceDue");
