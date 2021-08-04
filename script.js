@@ -49,6 +49,7 @@ let orderTotal = 0;
 let subtotalBill = 0;
 
 const changeTabsToSides = (e) => {
+    e.preventDefault();
     let allMenuTabs = document.querySelectorAll('.menu-tab');
     allMenuTabs.forEach(btn => btn.classList.remove("active"));
 
@@ -62,6 +63,7 @@ const changeTabsToSides = (e) => {
 }
 
 const changeTabsToMain = (e) => {
+    e.preventDefault();
     let allMenuTabs = document.querySelectorAll('.menu-tab');
     allMenuTabs.forEach(btn => btn.classList.remove("active"));
 
