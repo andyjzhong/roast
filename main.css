@@ -44,7 +44,7 @@ h5{
 .login-title {
     color: #F24A07;
     font-size: 2.75rem;
-    padding: 60px;
+    padding: 60px 10px;
 }
 
 .login-content {
@@ -130,7 +130,7 @@ h5{
 
 .send-order, .cancel-order, .start-order, .make-payment, .add-discount {
     margin-right: 10px;
-    width: 140px;
+    width: 25%;
 }
 
 .cancel-order, .send-order {
