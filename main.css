@@ -471,7 +471,7 @@ h5{
         font-size: 4.25rem;
     }
 
-    #tab-section {
+    #tab-section, #menu-section {
         height: 90vh;
     }
 
@@ -483,5 +483,25 @@ h5{
         height: 20rem;
         width: 45%;
         font-size: 3rem;
+    }
+
+    #history-msg {
+        font-size: 3rem;
+        margin-top: 10rem;
+    }
+
+    #order-history-section {
+        overflow: auto;
+        white-space: normal;
+    }
+
+    .order-ticket {
+        width: 90vw !important;
+        height: 10rem !important;
+    }
+
+    .order-ticket-content, .ticket-title {
+        display: inline !important;
+        font-size: 2rem !important;
     }
 }
