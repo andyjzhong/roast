@@ -52,7 +52,7 @@ h5{
     text-align: center;
     height: 70vh !important;
     position: relative;
-    transition: all 1s;
+    transition: all 2s;
 }
 
 #login-welcome {
@@ -396,7 +396,7 @@ h5{
     }
 
     #login-modal {
-        margin-top: 4rem;
+        margin-top: 10rem;
     }
 
     .login-title {
@@ -564,7 +564,7 @@ h5{
     #cancel-payment, #complete-payment {
         font-size: 4rem;
         height: 8rem;
-        margin-top: 10rem;
+        margin-top: 6rem;
     }
 
     .order-ticket-content, .ticket-title {
