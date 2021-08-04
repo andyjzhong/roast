@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    height: 10vh;
+    height: 100vh;
     overflow: hidden;
     background: url("./keith-misner-wood.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;

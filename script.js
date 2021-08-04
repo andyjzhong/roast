@@ -328,7 +328,7 @@ const enableOrdering = () => {
 const login = (e) => {
     e.preventDefault();
     loginModal.style.display = "none";
-    mainContainer.style.display = "";
+    mainContainer.style.display = "block";
     mainContainer.style.opacity = 1;
     body.style.overflow = "scroll";
 }
