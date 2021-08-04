@@ -232,7 +232,7 @@ const createOrderCard = () => {
     let newCard = document.createElement("button");
     newCard.setAttribute("class", "btn btn-dark order-ticket");
     newCard.setAttribute("value", dynaIndex);
-    newCard.setAttribute("style", "height: 84%; width: 12rem; margin: 10px; background-color: lightblue; color: #000;");
+    newCard.setAttribute("style", "height: 84%; width: 12rem; margin: 10px; background-color: #FF7043; color: #000;");
 
     let cardHtml = `
         <div class="order-ticket-content" style="pointer-events: none;">
@@ -327,6 +327,11 @@ const enableOrdering = () => {
 
 const login = (e) => {
     e.preventDefault();
+
+    if (fullMenu.length === 0) {
+        getData();
+    }
+
     loginModal.style.display = "none";
     mainContainer.style.opacity = 1;
     body.style.overflow = "scroll";
@@ -481,8 +486,6 @@ async function getData() {
             console.log("Failed to retrieve data.", err);
         })
 }
-
-getData();
 
 const updateCalculator = (e) => {
     guestPaymentBox.value = guestPaymentBox.value.toString() + e.target.innerText.toString();
