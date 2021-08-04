@@ -448,18 +448,18 @@ async function getData() {
             return res.json();
         })
         .then(function(res) {
-            console.log("Retrieved data successfully.", res);
+            console.warn("Retrieved data successfully.", res);
 
             antiPastiMenu = res.result.menus[0].menu_sections[0].menu_items;
             eggrollsMenu = res.result.menus[0].menu_sections[1].menu_items;
-            appsMenu = res.result.menus[0].menu_sections[4].menu_items;
-            mainMenu = res.result.menus[0].menu_sections[6].menu_items;
-            steakMenu = res.result.menus[0].menu_sections[7].menu_items;
-            sidesMenu = res.result.menus[0].menu_sections[11].menu_items;
-            classicsMenu = res.result.menus[0].menu_sections[5].menu_items;
             saladMenu = res.result.menus[0].menu_sections[2].menu_items;
             starchesMenu = res.result.menus[0].menu_sections[3].menu_items;
+            appsMenu = res.result.menus[0].menu_sections[4].menu_items;
+            classicsMenu = res.result.menus[0].menu_sections[5].menu_items;
+            mainMenu = res.result.menus[0].menu_sections[6].menu_items;
+            steakMenu = res.result.menus[0].menu_sections[7].menu_items;
             seafoodMenu = res.result.menus[0].menu_sections[8].menu_items;
+            sidesMenu = res.result.menus[0].menu_sections[11].menu_items;
 
             antiPastiMenu.map(food => fullMenu.push(food));
             eggrollsMenu.map(food => fullMenu.push(food));
