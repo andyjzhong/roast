@@ -48,7 +48,7 @@
 
     <div id="main-container" class="row container-fluid">
         <!-- Tab Section -->
-        <section id="tab-section" class="col-sm-12 col-xl-5">
+        <div id="tab-section" class="col-sm-12 col-xl-5">
 
             <div class="tab-container">
                 <p class="orderNum">Order #<span class="orderNumText">1</span><span id="order-type">Type: <span class="order-type-value">New Order</span></span></p>
@@ -98,19 +98,19 @@
                 </div>
 
             </div>
-        </section>
+        </div>
         <!-- Menu Section -->
-        <section id="menu-section" class="col-sm-12 col-xl-7">
+        <div id="menu-section" class="col-sm-12 col-xl-7">
             <div id="menu-area" class="col-12">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a id="menu-tab-main" class="menu-tab nav-link active" aria-current="page" href="#">Main</a>
+                        <a id="menu-tab-main" class="menu-tab nav-link active" aria-current="page">Main</a>
                     </li>
                     <li class="nav-item">
-                        <a id="menu-tab-apps" class="menu-tab nav-link" aria-current="page" href="#">Appetizers</a>
+                        <a id="menu-tab-apps" class="menu-tab nav-link" aria-current="page">Appetizers</a>
                     </li>
                     <li class="nav-item">
-                        <a id="menu-tab-sides" class="menu-tab nav-link" aria-current="page" href="#">Sides</a>
+                        <a id="menu-tab-sides" class="menu-tab nav-link" aria-current="page">Sides</a>
                     </li>
                 </ul>
                 <div class="individual-options-area"></div>
@@ -121,7 +121,7 @@
                 </div>
             </div>
             <br />
-        </section>
+        </div>
     </div>
 
     <!-- Payment Modal -->
@@ -140,7 +140,7 @@
             <h5 id="amountDueBox">Amount Due: $<span id="amountDue">0.00</span></h5>
             <div class="calculator">
 
-                <input id="guestPayment" type="form" name="" value="">
+                <input id="guestPayment" type="number" value="">
 
                 <div class="">
                     <button type="button" name="button" class="btn btn-light calc-btn digit">1</button>
