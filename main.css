@@ -474,4 +474,8 @@ h5{
     #tab-section {
         height: 90vh;
     }
+
+    #menu-area {
+        font-size: 3rem;
+    }
 }
