@@ -497,13 +497,17 @@ h5{
     #order-history-section {
         overflow: auto;
         white-space: normal;
+        text-align: center;
     }
 
     .order-ticket {
-        width: 90vw !important;
+        width: 80vw !important;
         height: 10rem !important;
     }
 
+    .order-ticket:nth-child(2) {
+        padding-top: 1rem;
+    }
 
     #modal-textbox {
         margin: 1rem auto;
@@ -566,5 +570,11 @@ h5{
     .individual-options-area {
         height: 58vh;
         margin-top: 2rem;
+    }
+
+    .ticket-title {
+        float: left;
+        font-size: 3rem !important;
+        padding: 1rem 3rem;
     }
 }
