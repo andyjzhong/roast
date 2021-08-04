@@ -550,7 +550,7 @@ async function getData() {
                 newMenuOption.setAttribute("name", `${sidesMenu[i].name}`);
                 newMenuOption.setAttribute("price", `${sidesMenu[i].price}`);
                 newMenuOption.setAttribute("class", "menu-sides btn btn-dark menu-item add-btn");
-                newMenuOption.setAttribute("style", "background-color: #3D83CE; display: none;");
+                newMenuOption.setAttribute("style", "background-color: #F46233; display: none;");
                 newMenuOption.innerText = `${sidesMenu[i].name}`;
                 document.querySelector(".individual-options-area").append(newMenuOption);
             }
@@ -562,7 +562,7 @@ async function getData() {
                 newMenuOption.setAttribute("name", `${appsMenu[i].name}`);
                 newMenuOption.setAttribute("price", `${appsMenu[i].price}`);
                 newMenuOption.setAttribute("class", "menu-apps btn btn-dark menu-item add-btn");
-                newMenuOption.setAttribute("style", "background-color: #3D83CE; display: none;");
+                newMenuOption.setAttribute("style", "background-color: #2E7C86; display: none;");
                 newMenuOption.innerText = `${appsMenu[i].name}`;
                 document.querySelector(".individual-options-area").append(newMenuOption);
             }
@@ -574,7 +574,7 @@ async function getData() {
                 newMenuOption.setAttribute("name", `${eggrollsMenu[i].name}`);
                 newMenuOption.setAttribute("price", `${eggrollsMenu[i].price}`);
                 newMenuOption.setAttribute("class", "menu-apps btn btn-dark menu-item add-btn");
-                newMenuOption.setAttribute("style", "background-color: #3D83CE; display: none;");
+                newMenuOption.setAttribute("style", "background-color: #2E7C86; display: none;");
                 newMenuOption.innerText = `${eggrollsMenu[i].name}`;
                 document.querySelector(".individual-options-area").append(newMenuOption);
             }
@@ -586,7 +586,7 @@ async function getData() {
                 newMenuOption.setAttribute("name", `${antiPastiMenu[i].name}`);
                 newMenuOption.setAttribute("price", `${antiPastiMenu[i].price}`);
                 newMenuOption.setAttribute("class", "menu-apps btn btn-dark menu-item add-btn");
-                newMenuOption.setAttribute("style", "background-color: #3D83CE; display: none;");
+                newMenuOption.setAttribute("style", "background-color: #2E7C86; display: none;");
                 newMenuOption.innerText = `${antiPastiMenu[i].name}`;
                 document.querySelector(".individual-options-area").append(newMenuOption);
             }
