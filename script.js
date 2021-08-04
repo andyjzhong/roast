@@ -410,7 +410,7 @@ const retrieveTicket = (e) => {
 }
 
 async function getData() {
-    let liveUrl = `https://api.documenu.com/v2/restaurant/${RESTAURANT_ID}?key=${API_KEY}`;
+    // let liveUrl = `https://api.documenu.com/v2/restaurant/${RESTAURANT_ID}?key=${API_KEY}`;
     let mode = "demo";
     console.warn(`Initiating ${mode} mode.`);
     let url = (mode == "live") ? liveUrl : `./sampleData.json`;
