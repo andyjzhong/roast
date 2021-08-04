@@ -447,14 +447,30 @@ h5{
         font-size: 2rem;
     }
 
-    .tab-commands {
+    .tab-commands, .total-commands {
         height: 10rem;
         padding-top: 2rem;
     }
 
-    .start-order, .cancel-order, .send-order {
+    .total-commands {
+        padding-top: 1rem;
+    }
+
+    .start-order, .cancel-order, .send-order, .make-payment, .add-discount {
         height: 10rem;
         font-size: 3rem;
         width: 25%;
+    }
+
+    #total-area {
+        font-size: 2.75rem;
+    }
+
+    #total{
+        font-size: 4.5rem;
+    }
+
+    #tab-section {
+        height: 90vh;
     }
 }
