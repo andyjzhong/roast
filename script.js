@@ -453,22 +453,16 @@ async function getData() {
             steakMenu = res.result.menus[0].menu_sections[7].menu_items;
             sidesMenu = res.result.menus[0].menu_sections[11].menu_items;
             appsMenu = res.result.menus[0].menu_sections[4].menu_items;
+            eggrollsMenu = res.result.menus[0].menu_sections[1].menu_items;
+            antiPastiMenu = res.result.menus[0].menu_sections[0].menu_items;
 
-            mainMenu.map(function(food) {
-                fullMenu.push(food);
-            });
+            mainMenu.map(food => fullMenu.push(food));
+            steakMenu.map(food => fullMenu.push(food));
+            sidesMenu.map(food => fullMenu.push(food));
+            appsMenu.map(food => fullMenu.push(food));
+            eggrollsMenu.map(food => fullMenu.push(food));
+            antiPastiMenu.map(food => fullMenu.push(food));
 
-            steakMenu.map(function(food) {
-                fullMenu.push(food);
-            });
-
-            sidesMenu.map(function(food) {
-                fullMenu.push(food);
-            });
-
-            appsMenu.map(function(food) {
-                fullMenu.push(food);
-            });
 
             // Main Menu
             for (let i = 0; i < mainMenu.length; i++) {
@@ -515,6 +509,30 @@ async function getData() {
                 newMenuOption.setAttribute("class", "menu-apps btn btn-dark menu-item add-btn");
                 newMenuOption.setAttribute("style", "background-color: #3D83CE; display: none;");
                 newMenuOption.innerText = `${appsMenu[i].name}`;
+                document.querySelector(".individual-options-area").append(newMenuOption);
+            }
+
+            // Eggrolls Menu
+            for (let i = 0; i < eggrollsMenu.length; i++) {
+                let newMenuOption = document.createElement("button");
+                newMenuOption.setAttribute("type", "button");
+                newMenuOption.setAttribute("name", `${eggrollsMenu[i].name}`);
+                newMenuOption.setAttribute("price", `${eggrollsMenu[i].price}`);
+                newMenuOption.setAttribute("class", "menu-apps btn btn-dark menu-item add-btn");
+                newMenuOption.setAttribute("style", "background-color: #3D83CE; display: none;");
+                newMenuOption.innerText = `${eggrollsMenu[i].name}`;
+                document.querySelector(".individual-options-area").append(newMenuOption);
+            }
+
+            // Antipasti Menu
+            for (let i = 0; i < antiPastiMenu.length; i++) {
+                let newMenuOption = document.createElement("button");
+                newMenuOption.setAttribute("type", "button");
+                newMenuOption.setAttribute("name", `${antiPastiMenu[i].name}`);
+                newMenuOption.setAttribute("price", `${antiPastiMenu[i].price}`);
+                newMenuOption.setAttribute("class", "menu-apps btn btn-dark menu-item add-btn");
+                newMenuOption.setAttribute("style", "background-color: #3D83CE;");
+                newMenuOption.innerText = `${antiPastiMenu[i].name}`;
                 document.querySelector(".individual-options-area").append(newMenuOption);
             }
 
