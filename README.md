@@ -143,6 +143,7 @@
 
 #### HTML & CSS
 -   Style menu tabs and calculator buttons.
+-   Responsive styling for mobile devices.
 
 #### Other
 -   Search for valid restaurant data in the DocuMenu API.
@@ -163,16 +164,17 @@
 -   Delete button was more complicated than I thought. I started with removing the selected item by traversing the DOM and using the splice() array method, deleting only the first item on the tab. The difficulty was renumbering the tab items displayed to the user. There seems to also be a race condition happening about 20% of the time where it would not number the items correctly and start with item 0.
 -   Pulling back the data from order history was quite time consuming. It was a step by step process to grab the selected object and refill the tab's table with rows using the data from the selected object. Getting the completePayment function to work was also a challenge but it was much more simple once I broke it down step by step.
 -   Many chain restaurants don't provide menu prices on the DocuMenu API.
+-   Responsive styling is quite tedious and is definitely an art.
 
 ## Time Frames
 
-| Task                       | Day 1       | Day 2       | Day 3        | Day 4       | Day 5       | Day 6     | Day 7     |
-| -------------------------- | ----------- | ----------- | ------------ | ----------- | ----------- | --------- | --------- |
-| Set Up Framework & HTML    | 2.0 hrs     | 0.5 hrs     | 0.5 hrs      | 0.5 hrs     | 0.5 hrs     | 0 hr      | 0 hr      |
-| Connecting to API & Render | 1 hrs       | 0.5 hrs     | 0 hrs        | 0 hr        | 0 hr        | 1.5 hrs   | 0 hr      |
-| Add Application Logic      | 5.5 hrs     | 5.0 hrs     | 5.5 hrs      | 4.5 hrs     | 1 hrs       | 0.5 hrs   | 0 hr      |
-| Styling                    | 0.5 hrs     | 3.0 hrs     | 3.0 hrs      | 2.0 hrs     | 1 hrs       | 0 hr      | 0 hr      |
-| Responsive Styling         | 0 hrs       | 0 hrs       | 0.5 hrs      | 0 hr        | 0.5 hr      | 0 hr      | 0 hr      |
-| **MVP Total**              | **9 hrs**   | **9 hrs**   | **9.5 hrs**  | **7.0 hrs** | **3 hrs**   | **0 hrs** | **0 hrs** |
-| Stretch Goals              | 0 hrs       | 0 hrs       | 1.5 hrs      | 0.5 hrs     | 0 hr        | 3.0 hrs   | 0 hr      |
-| **Project Total**          | **9.0 hrs** | **9.0 hrs** | **11.0 hrs** | **7.5 hrs** | **3.0 hrs** | **0 hrs** | **0 hrs** |
+| Task                       | Day 1       | Day 2       | Day 3        | Day 4       | Day 5       | Day 6       | Day 7     |
+| -------------------------- | ----------- | ----------- | ------------ | ----------- | ----------- | ----------- | --------- |
+| Set Up Framework & HTML    | 2.0 hrs     | 0.5 hrs     | 0.5 hrs      | 0.5 hrs     | 0.5 hrs     | 0 hr        | 0 hr      |
+| Connecting to API & Render | 1 hrs       | 0.5 hrs     | 0 hrs        | 0 hr        | 0 hr        | 1.5 hrs     | 0 hr      |
+| Add Application Logic      | 5.5 hrs     | 5.0 hrs     | 5.5 hrs      | 4.5 hrs     | 1 hrs       | 0.5 hrs     | 0 hr      |
+| Styling                    | 0.5 hrs     | 3.0 hrs     | 3.0 hrs      | 2.0 hrs     | 1 hrs       | 0 hr        | 0 hr      |
+| Responsive Styling         | 0 hrs       | 0 hrs       | 0.5 hrs      | 0 hr        | 0.5 hr      | 4.0 hrs     | 0 hr      |
+| **MVP Total**              | **9 hrs**   | **9 hrs**   | **9.5 hrs**  | **7.0 hrs** | **3.0 hrs** | **6.0 hrs** | **0 hrs** |
+| Stretch Goals              | 0 hrs       | 0 hrs       | 1.5 hrs      | 0.5 hrs     | 0 hr        | 3.0 hrs     | 0 hr      |
+| **Project Total**          | **9.0 hrs** | **9.0 hrs** | **11.0 hrs** | **7.5 hrs** | **3.0 hrs** | **9.0 hrs** | **0 hrs** |
