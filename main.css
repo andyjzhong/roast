@@ -1,5 +1,4 @@
 body {
-    background-color: #96BAFF;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -298,10 +297,10 @@ h5{
 
 #guestPayment {
     width: 85%;
-    font-size: 2.5rem;
+    font-size: 2.5em;
     text-align: right;
     margin: .25em auto;
-    height: 3rem;
+    height: 6rem;
     margin-bottom: 2rem;
 }
 
@@ -379,6 +378,19 @@ h5{
 }
 
 @media (max-device-width: 576px) {
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        overflow: hidden;
+        background: url("./keith-misner-wood.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
     .navbar {
         height: 10rem;
     }
@@ -512,11 +524,11 @@ h5{
     #modal-textbox {
         margin: 1rem auto;
         width: 90%;
-        height: 80vh !important;
+        height: 95vh !important;
     }
 
     #payment-success, #payment-failure {
-        height: 6rem;
+        height: 7rem;
         font-size: 5rem;
         padding-top: 2rem;
     }
@@ -533,8 +545,11 @@ h5{
     }
 
     #guestPayment {
-        height: 7rem;
+        height: 12rem;
+        width: 84%;
         font-size: 7rem;
+        margin-bottom: 7rem;
+        padding: 0 2rem;
     }
 
     .calculator {
