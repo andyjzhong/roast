@@ -352,6 +352,7 @@ const enableOrdering = () => {
 
 const login = (e) => {
     e.preventDefault();
+    window.scrollTo(0, 0);
 
     if (fullMenu.length === 0) {
         getData();
