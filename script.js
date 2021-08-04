@@ -350,11 +350,11 @@ const makeWiggle = () => {
 }
 
 const openModal = () => {
-    if (activeOrder.length > 0 && (orderNumText.innerText == orderHistory.length)) {
+    if (orderNumText.innerText > orderHistory.length) {
+        alert("Please send an order to the kitchen first.");
+    } else if (activeOrder.length > 0) {
         modal.style.display = 'block';
         amountDueValue.innerText = balanceDueBox.innerText;
-    } else if (activeOrder.length > 0) {
-        alert("Please send an order to the kitchen first.");
     } else {
         alert("Please select an existing order to make a payment.");
     }
@@ -373,15 +373,12 @@ const renumberTable = () => {
 }
 
 const retrieveTicket = (e) => {
-    console.log("e", e.target);
     masterSelectedTicket = e.target;
     clearOrder();
     orderTypeText.innerText = "Existing Order";
     selectedTicketIndex = e.target.value;
-    console.log(selectedTicketIndex);
     orderNumText.innerText = `${Number(selectedTicketIndex) + 1}`;
     selectedTicketOrder = orderHistory[selectedTicketIndex];
-    console.log(selectedTicketOrder);
 
     for (let i = 0; i < selectedTicketOrder.length; i++) {
 
