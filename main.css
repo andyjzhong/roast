@@ -93,7 +93,6 @@ h5{
     transition: all 1s;
     padding: 10px 10px 0 10px;
     margin: 0 auto;
-    display: none;
 }
 
 /* Tab Section */
@@ -396,7 +395,7 @@ h5{
     }
 
     #login-modal {
-        margin-top: 10rem;
+        margin-top: 4rem;
     }
 
     .login-title {
