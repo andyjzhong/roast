@@ -34,6 +34,8 @@ By developing this project, I have a better understanding of the components that
 -   Allow editing of existing orders; currently existing orders have editing features disabled.
 -   Allow users to Send and Pay at the same time; currently the user must send the order to the order history first.
 -   Create user profiles based on username and login functionality.
+-   Iterate over item quantities; currently if you want the same dish, it's listed twice.
+-   Ability to customize menu options (i.e. add ketchup on the side).
 -   Make a separate modal for discounts input; currently it's a prompt.
 -   Add timestamps to each order.
 -   Add analytics and metrics based on timestamps.
