@@ -22,6 +22,7 @@ const mealsTaxBox = document.querySelector('#meals-tax-box');
 const menuItemBtn = document.querySelector(".menu-item");
 const menuTabMain = document.querySelector("#menu-tab-main");
 const menuTabSides = document.querySelector("#menu-tab-sides");
+const menuTabApps = document.querySelector("#menu-tab-apps");
 const modal = document.querySelector('#modal');
 const orderHistoryArea = document.querySelector('.order-history-area');
 const orderTicket = document.querySelector(".order-ticket");
@@ -48,6 +49,23 @@ let orderNumText = document.querySelector('.orderNumText');
 let orderTotal = 0;
 let subtotalBill = 0;
 
+const changeTabsToApps = (e) => {
+    e.preventDefault();
+    let allMenuTabs = document.querySelectorAll('.menu-tab');
+    allMenuTabs.forEach(btn => btn.classList.remove("active"));
+
+    let allMainMenu = document.querySelectorAll('.menu-main');
+    allMainMenu.forEach(btn => btn.style.display = "none");
+
+    let allSidesMenu = document.querySelectorAll('.menu-sides');
+    allSidesMenu.forEach(btn => btn.style.display = "none");
+
+    let allAppsMenu = document.querySelectorAll('.menu-apps');
+    allAppsMenu.forEach(btn => btn.style.display = "");
+
+    e.target.classList.add("active");
+}
+
 const changeTabsToSides = (e) => {
     e.preventDefault();
     let allMenuTabs = document.querySelectorAll('.menu-tab');
@@ -55,6 +73,9 @@ const changeTabsToSides = (e) => {
 
     let allMainMenu = document.querySelectorAll('.menu-main');
     allMainMenu.forEach(btn => btn.style.display = "none");
+
+    let allAppsMenu = document.querySelectorAll('.menu-apps');
+    allAppsMenu.forEach(btn => btn.style.display = "none");
 
     let allSidesMenu = document.querySelectorAll('.menu-sides');
     allSidesMenu.forEach(btn => btn.style.display = "");
@@ -69,6 +90,9 @@ const changeTabsToMain = (e) => {
 
     let allMainMenu = document.querySelectorAll('.menu-main');
     allMainMenu.forEach(btn => btn.style.display = "");
+
+    let allAppsMenu = document.querySelectorAll('.menu-apps');
+    allAppsMenu.forEach(btn => btn.style.display = "none");
 
     let allSidesMenu = document.querySelectorAll('.menu-sides');
     allSidesMenu.forEach(btn => btn.style.display = "none");
@@ -229,6 +253,7 @@ const createOrderCard = () => {
     numOfItems = orderHistory[dynaIndex].itemCount;
     ticketId = orderHistory[dynaIndex].ticketId;
     payStatus = orderHistory[dynaIndex].payStatus;
+
     let newCard = document.createElement("button");
     newCard.setAttribute("class", "btn btn-dark order-ticket");
     newCard.setAttribute("value", dynaIndex);
@@ -427,6 +452,7 @@ async function getData() {
             mainMenu = res.result.menus[0].menu_sections[6].menu_items;
             steakMenu = res.result.menus[0].menu_sections[7].menu_items;
             sidesMenu = res.result.menus[0].menu_sections[11].menu_items;
+            appsMenu = res.result.menus[0].menu_sections[4].menu_items;
 
             mainMenu.map(function(food) {
                 fullMenu.push(food);
@@ -437,6 +463,10 @@ async function getData() {
             });
 
             sidesMenu.map(function(food) {
+                fullMenu.push(food);
+            });
+
+            appsMenu.map(function(food) {
                 fullMenu.push(food);
             });
 
@@ -476,6 +506,18 @@ async function getData() {
                 document.querySelector(".individual-options-area").append(newMenuOption);
             }
 
+            // Apps Menu
+            for (let i = 0; i < appsMenu.length; i++) {
+                let newMenuOption = document.createElement("button");
+                newMenuOption.setAttribute("type", "button");
+                newMenuOption.setAttribute("name", `${appsMenu[i].name}`);
+                newMenuOption.setAttribute("price", `${appsMenu[i].price}`);
+                newMenuOption.setAttribute("class", "menu-apps btn btn-dark menu-item add-btn");
+                newMenuOption.setAttribute("style", "background-color: #3D83CE; display: none;");
+                newMenuOption.innerText = `${appsMenu[i].name}`;
+                document.querySelector(".individual-options-area").append(newMenuOption);
+            }
+
             let allAddBtns = document.querySelectorAll('.add-btn');
             allAddBtns.forEach(btn => btn.addEventListener("click", addNewMenuItem));
         })
@@ -503,3 +545,4 @@ loginBtn.addEventListener("click", login);
 logoutBtn.addEventListener("click", logout);
 menuTabSides.addEventListener("click", changeTabsToSides);
 menuTabMain.addEventListener("click", changeTabsToMain);
+menuTabApps.addEventListener("click", changeTabsToApps);
