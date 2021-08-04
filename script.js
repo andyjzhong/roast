@@ -328,6 +328,7 @@ const enableOrdering = () => {
 const login = (e) => {
     e.preventDefault();
     loginModal.style.display = "none";
+    mainContainer.style.display = "";
     mainContainer.style.opacity = 1;
     body.style.overflow = "scroll";
 }
@@ -336,6 +337,7 @@ const logout = (e) => {
     e.preventDefault();
     loginModal.style.display = "block";
     mainContainer.style.opacity = 0;
+    mainContainer.style.display = "none";
     body.style.overflow = "hidden";
 }
 
