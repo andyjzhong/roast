@@ -7,7 +7,7 @@ body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: 100%;
+    background-size: cover;
     font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -89,10 +89,11 @@ h5{
 
 /* Main Container */
 #main-container {
-    opacity: 0;
+    opacity: 0.5;
     transition: all 1s;
     padding: 10px 10px 0 10px;
     margin: 0 auto;
+    /* display: none; */
 }
 
 /* Tab Section */
