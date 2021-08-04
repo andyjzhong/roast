@@ -480,7 +480,7 @@ async function getData() {
             allAddBtns.forEach(btn => btn.addEventListener("click", addNewMenuItem));
         })
         .catch(function(err) {
-            console.log("Failed to retrieve data.", err);
+            console.error("Failed to retrieve data.", err);
         })
 }
 
