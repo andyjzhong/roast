@@ -217,13 +217,13 @@ By developing this project, I have a better understanding of the components that
 
 ## Time Frames
 
-| Task                       | Day 1       | Day 2       | Day 3        | Day 4       | Day 5       | Day 6       | Day 7       | Total       |
-| -------------------------- | ----------- | ----------- | ------------ | ----------- | ----------- | ----------- | ----------- | ----------- |
-| Set Up Framework & HTML    | 2.0 hrs     | 0.5 hrs     | 0.5 hrs      | 0.5 hrs     | 0.5 hrs     | 0 hr        | 0 hr        | 4 hrs       |
-| Connecting to API & Render | 1 hrs       | 0.5 hrs     | 0 hrs        | 0 hr        | 0 hr        | 1.5 hrs     | 1 hr        | 4 hrs       |
-| Add Application Logic      | 5.5 hrs     | 5.0 hrs     | 5.5 hrs      | 4.5 hrs     | 1 hrs       | 0.5 hrs     | 0 hr        | 22 hrs      |
-| Styling                    | 0.5 hrs     | 3.0 hrs     | 3.0 hrs      | 2.0 hrs     | 1 hrs       | 0 hr        | 0 hr        | 9.5 hrs     |
-| Responsive Styling         | 0 hrs       | 0 hrs       | 0.5 hrs      | 0 hr        | 0.5 hr      | 4.0 hrs     | 3.0 hrs     | 8 hrs       |
-| **MVP Total**              | **9 hrs**   | **9 hrs**   | **9.5 hrs**  | **7.0 hrs** | **3.0 hrs** | **6.0 hrs** | **4.0 hrs** | **47.5 hrs**|
-| Stretch Goals              | 0 hrs       | 0 hrs       | 1.5 hrs      | 0.5 hrs     | 0 hr        | 3.0 hrs     | 0.5 hrs     | 5.5 hrs     |
-| **Project Total**          | **9.0 hrs** | **9.0 hrs** | **11.0 hrs** | **7.5 hrs** | **3.0 hrs** | **9.0 hrs** | **0 hrs**   | **53 hrs**  |
+| Task                    | Day 1      | Day 2      | Day 3       | Day 4      | Day 5      | Day 6      | Day 7      | Total       |
+| ----------------------- | ---------- | ---------- | ----------- | ---------- | ---------- | ---------- | ---------- | ----------- |
+| Set Up Framework & HTML | 2.0 hrs    | 0.5 hrs    | 0.5 hrs     | 0.5 hrs    | 0.5 hrs    | 0 hr       | 0 hr       | 4 hrs       |
+| Connect to API & Render | 1 hrs      | 0.5 hrs    | 0 hrs       | 0 hr       | 0 hr       | 1.5 hrs    | 1 hr       | 4 hrs       |
+| Add Application Logic   | 5.5 hrs    | 5.0 hrs    | 5.5 hrs     | 4.5 hrs    | 1 hrs      | 0.5 hrs    | 0 hr       | 22 hrs      |
+| Styling                 | 0.5 hrs    | 3.0 hrs    | 3.0 hrs     | 2.0 hrs    | 1 hrs      | 0 hr       | 0 hr       | 9.5 hrs     |
+| Responsive Styling      | 0 hrs      | 0 hrs      | 0.5 hrs     | 0 hr       | 0.5 hr     | 4.0 hrs    | 3.0 hrs    | 8 hrs       |
+| **MVP Total**           | **9 hrs**  | **9 hrs**  | **9.5 hrs** | **7.0 hrs**| **3.0 hrs**| **6.0 hrs**| **4.0 hrs**| **47.5 hrs**|
+| Stretch Goals           | 0 hrs      | 0 hrs      | 1.5 hrs     | 0.5 hrs    | 0 hr       | 3.0 hrs    | 0.5 hrs    | 5.5 hrs     |
+| **Project Total**       | **9.0 hrs**| **9.0 hrs**| **11.0 hrs**| **7.5 hrs**| **3.0 hrs**| **9.0 hrs**| **0 hrs**  | **53 hrs**  |
