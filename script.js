@@ -368,12 +368,15 @@ const renumberTable = () => {
 }
 
 const retrieveTicket = (e) => {
+    console.log("e", e.target);
     masterSelectedTicket = e.target;
     clearOrder();
     orderTypeText.innerText = "Existing Order";
     selectedTicketIndex = e.target.value;
+    console.log(selectedTicketIndex);
     orderNumText.innerText = `${Number(selectedTicketIndex) + 1}`;
     selectedTicketOrder = orderHistory[selectedTicketIndex];
+    console.log(selectedTicketOrder);
 
     for (let i = 0; i < selectedTicketOrder.length; i++) {
 
