@@ -449,20 +449,51 @@ async function getData() {
         .then(function(res) {
             console.log("Retrieved data successfully.", res);
 
+            antiPastiMenu = res.result.menus[0].menu_sections[0].menu_items;
+            eggrollsMenu = res.result.menus[0].menu_sections[1].menu_items;
+            appsMenu = res.result.menus[0].menu_sections[4].menu_items;
             mainMenu = res.result.menus[0].menu_sections[6].menu_items;
             steakMenu = res.result.menus[0].menu_sections[7].menu_items;
             sidesMenu = res.result.menus[0].menu_sections[11].menu_items;
-            appsMenu = res.result.menus[0].menu_sections[4].menu_items;
-            eggrollsMenu = res.result.menus[0].menu_sections[1].menu_items;
-            antiPastiMenu = res.result.menus[0].menu_sections[0].menu_items;
+            classicsMenu = res.result.menus[0].menu_sections[5].menu_items;
+            saladMenu = res.result.menus[0].menu_sections[2].menu_items;
+            starchesMenu = res.result.menus[0].menu_sections[3].menu_items;
+            seafoodMenu = res.result.menus[0].menu_sections[8].menu_items;
 
+            antiPastiMenu.map(food => fullMenu.push(food));
+            eggrollsMenu.map(food => fullMenu.push(food));
+            appsMenu.map(food => fullMenu.push(food));
             mainMenu.map(food => fullMenu.push(food));
             steakMenu.map(food => fullMenu.push(food));
             sidesMenu.map(food => fullMenu.push(food));
-            appsMenu.map(food => fullMenu.push(food));
-            eggrollsMenu.map(food => fullMenu.push(food));
-            antiPastiMenu.map(food => fullMenu.push(food));
+            classicsMenu.map(food => fullMenu.push(food));
+            saladMenu.map(food => fullMenu.push(food));
+            starchesMenu.map(food => fullMenu.push(food));
+            seafoodMenu.map(food => fullMenu.push(food));
 
+            // Salad Menu
+            for (let i = 0; i < saladMenu.length; i++) {
+                let newMenuOption = document.createElement("button");
+                newMenuOption.setAttribute("type", "button");
+                newMenuOption.setAttribute("name", `${saladMenu[i].name}`);
+                newMenuOption.setAttribute("price", `${saladMenu[i].price}`);
+                newMenuOption.setAttribute("class", "menu-main btn btn-dark menu-item add-btn");
+                newMenuOption.setAttribute("style", "background-color: #3D83CE;");
+                newMenuOption.innerText = `${saladMenu[i].name}`;
+                document.querySelector(".individual-options-area").append(newMenuOption);
+            }
+
+            // Classics Menu
+            for (let i = 0; i < classicsMenu.length; i++) {
+                let newMenuOption = document.createElement("button");
+                newMenuOption.setAttribute("type", "button");
+                newMenuOption.setAttribute("name", `${classicsMenu[i].name}`);
+                newMenuOption.setAttribute("price", `${classicsMenu[i].price}`);
+                newMenuOption.setAttribute("class", "menu-main btn btn-dark menu-item add-btn");
+                newMenuOption.setAttribute("style", "background-color: #3D83CE;");
+                newMenuOption.innerText = `${classicsMenu[i].name}`;
+                document.querySelector(".individual-options-area").append(newMenuOption);
+            }
 
             // Main Menu
             for (let i = 0; i < mainMenu.length; i++) {
@@ -485,6 +516,30 @@ async function getData() {
                 newMenuOption.setAttribute("class", "menu-main menu-steak btn btn-dark menu-item add-btn");
                 newMenuOption.setAttribute("style", "background-color: #3D83CE;");
                 newMenuOption.innerText = `${steakMenu[i].name}`;
+                document.querySelector(".individual-options-area").append(newMenuOption);
+            }
+
+            // Starch Menu
+            for (let i = 0; i < starchesMenu.length; i++) {
+                let newMenuOption = document.createElement("button");
+                newMenuOption.setAttribute("type", "button");
+                newMenuOption.setAttribute("name", `${starchesMenu[i].name}`);
+                newMenuOption.setAttribute("price", `${starchesMenu[i].price}`);
+                newMenuOption.setAttribute("class", "menu-main menu-steak btn btn-dark menu-item add-btn");
+                newMenuOption.setAttribute("style", "background-color: #3D83CE;");
+                newMenuOption.innerText = `${starchesMenu[i].name}`;
+                document.querySelector(".individual-options-area").append(newMenuOption);
+            }
+
+            // Seafood Menu
+            for (let i = 0; i < seafoodMenu.length; i++) {
+                let newMenuOption = document.createElement("button");
+                newMenuOption.setAttribute("type", "button");
+                newMenuOption.setAttribute("name", `${seafoodMenu[i].name}`);
+                newMenuOption.setAttribute("price", `${seafoodMenu[i].price}`);
+                newMenuOption.setAttribute("class", "menu-main menu-steak btn btn-dark menu-item add-btn");
+                newMenuOption.setAttribute("style", "background-color: #3D83CE;");
+                newMenuOption.innerText = `${seafoodMenu[i].name}`;
                 document.querySelector(".individual-options-area").append(newMenuOption);
             }
 
@@ -531,7 +586,7 @@ async function getData() {
                 newMenuOption.setAttribute("name", `${antiPastiMenu[i].name}`);
                 newMenuOption.setAttribute("price", `${antiPastiMenu[i].price}`);
                 newMenuOption.setAttribute("class", "menu-apps btn btn-dark menu-item add-btn");
-                newMenuOption.setAttribute("style", "background-color: #3D83CE;");
+                newMenuOption.setAttribute("style", "background-color: #3D83CE; display: none;");
                 newMenuOption.innerText = `${antiPastiMenu[i].name}`;
                 document.querySelector(".individual-options-area").append(newMenuOption);
             }
