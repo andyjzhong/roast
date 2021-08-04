@@ -38,6 +38,7 @@ const tabArea = document.querySelector(".tab-area");
 const tableBody = document.querySelector(".table-body");
 const tbody = document.querySelector("tbody")
 const totalBillBox = document.querySelector("#total-bill-box");
+let allCalcDigitBtns = document.querySelectorAll('.digit');
 let activeOrder = [];
 let discount = 0;
 let fullMenu = [];
@@ -48,6 +49,93 @@ let orderNumber = 1;
 let orderNumText = document.querySelector('.orderNumText');
 let orderTotal = 0;
 let subtotalBill = 0;
+
+const addNewMenuItem = (e) => {
+    let index = fullMenu.findIndex(item => item.name === e.target.name);
+    activeOrder.push(fullMenu[index]);
+
+    let newItem = document.createElement("tr");
+
+    let itemHtml = `
+        <td class="trow" scope="row" style="text-align: center;">${activeOrder.length}</th>
+        <td>${e.target.name}</td>
+        <td style="text-align: center;">1</td>
+        <td style="text-align: right;">$${(Math.round(e.target.getAttribute("price") * 100) / 100).toFixed(2)}</td>
+        <td style="text-align: right;">$${(Math.round(e.target.getAttribute("price") * 100) / 100).toFixed(2)}</td>
+        <td>
+            <button class="remove-btn btn btn-outline-danger btn-sm">
+                <i class="far fa-trash-alt"></i>
+            </button>
+        </td>
+      `;
+
+    newItem.innerHTML = `${itemHtml}`;
+    tbody.append(newItem);
+
+    let allRemoveBtns = document.querySelectorAll('.remove-btn');
+    allRemoveBtns.forEach(btn => btn.addEventListener("click", deleteItem));
+
+    calcSubtotal();
+}
+
+const addOrderHistory = () => {
+    if (activeOrder.length > 0) {
+        orderNumber++;
+        orderNumText.innerText = orderNumber;
+        activeOrder.itemCount = activeOrder.length;
+        activeOrder.ticketId = orderNumber - 1;
+        activeOrder.payStatus = "Active";
+        orderHistory.push(activeOrder);
+        createOrderCard();
+        clearOrder();
+    } else {
+        alert("No items have been added yet.");
+    }
+}
+
+const calcBill = () => {
+    orderTotal = Number(subtotalBill) - Number(discount) + Number(mealsTax);
+    totalBillBox.innerText = (Math.round(orderTotal * 100) / 100).toFixed(2);
+    balanceDueBox.innerText = (Math.round(orderTotal * 100) / 100).toFixed(2);
+
+    if (payBtn.innerText === "Paid") {
+        balanceDue.style.color = "#28A745";
+        balanceDueBox.innerText = "0.00";
+    } else if (payBtn.innerText === "Pay" && totalBillBox.innerText == 0) {
+        balanceDue.style.color = "#000";
+    } else {
+        balanceDue.style.color = "#DC3444";
+    }
+}
+
+const calcDiscount = () => {
+    discount = prompt("Enter a discount amount.")
+
+    if (discount !== 0) {
+        discountBox.innerText = (Math.round(discount * 100) / 100).toFixed(2);
+    }
+    calcMealsTax();
+}
+
+const calcMealsTax = () => {
+    mealsTax = (Math.round(((subtotalBill - discount) * 0.0625) * 100) / 100).toFixed(2);
+    mealsTaxBox.innerText = mealsTax;
+    calcBill();
+}
+
+const calcSubtotal = () => {
+    let orderPricesArray = activeOrder.map(function(food) {
+        return food.price;
+    });
+
+    subtotalBill = orderPricesArray.reduce(function(acc, price) {
+        return acc += price;
+    }, 0)
+
+    subtotalBill = (Math.round(subtotalBill * 100) / 100).toFixed(2);
+    subtotalBillBox.innerText = subtotalBill;
+    calcMealsTax();
+}
 
 const changeTabsToApps = (e) => {
     e.preventDefault();
@@ -100,53 +188,6 @@ const changeTabsToMain = (e) => {
     e.target.classList.add("active");
 }
 
-const clearGuestPayment = () => {
-    guestPaymentBox.value = "";
-}
-
-const addNewMenuItem = (e) => {
-    let index = fullMenu.findIndex(item => item.name === e.target.name);
-    activeOrder.push(fullMenu[index]);
-
-    let newItem = document.createElement("tr");
-
-    let itemHtml = `
-        <td class="trow" scope="row" style="text-align: center;">${activeOrder.length}</th>
-        <td>${e.target.name}</td>
-        <td style="text-align: center;">1</td>
-        <td style="text-align: right;">$${(Math.round(e.target.getAttribute("price") * 100) / 100).toFixed(2)}</td>
-        <td style="text-align: right;">$${(Math.round(e.target.getAttribute("price") * 100) / 100).toFixed(2)}</td>
-        <td>
-            <button class="remove-btn btn btn-outline-danger btn-sm">
-                <i class="far fa-trash-alt"></i>
-            </button>
-        </td>
-      `;
-
-    newItem.innerHTML = `${itemHtml}`;
-    tbody.append(newItem);
-
-    let allRemoveBtns = document.querySelectorAll('.remove-btn');
-    allRemoveBtns.forEach(btn => btn.addEventListener("click", deleteItem));
-
-    calcSubtotal();
-}
-
-const addOrderHistory = () => {
-    if (activeOrder.length > 0) {
-        orderNumber++;
-        orderNumText.innerText = orderNumber;
-        activeOrder.itemCount = activeOrder.length;
-        activeOrder.ticketId = orderNumber - 1;
-        activeOrder.payStatus = "Active";
-        orderHistory.push(activeOrder);
-        createOrderCard();
-        clearOrder();
-    } else {
-        alert("No items have been added yet.");
-    }
-}
-
 const checkPayment = () => {
     let targetButtonPayStatusValue = masterSelectedTicket.children.item(0).children.item(2).children.item(0).innerHTML;
 
@@ -161,6 +202,23 @@ const checkPayment = () => {
         payBtn.innerText = "Pay";
         discountBtn.style.visibility = "visible";
     }
+}
+
+const clearOrder = () => {
+    tableBody.innerHTML = "";
+    activeOrder = [];
+    discount = 0;
+    discountBox.innerText = "0.00";
+    mealsTax = 0;
+    subtotalBill = 0;
+    calcSubtotal();
+}
+
+const clearGuestPayment = () => { guestPaymentBox.value = "" };
+
+const closeModal = () => {
+    modal.style.display = 'none';
+    clearGuestPayment();
 }
 
 const completePayment = () => {
@@ -186,65 +244,6 @@ const completePayment = () => {
     } else {
         displayPaymentFailure();
     }
-}
-
-const calcBill = () => {
-    orderTotal = Number(subtotalBill) - Number(discount) + Number(mealsTax);
-    totalBillBox.innerText = (Math.round(orderTotal * 100) / 100).toFixed(2);
-    balanceDueBox.innerText = (Math.round(orderTotal * 100) / 100).toFixed(2);
-
-    if (payBtn.innerText === "Paid") {
-        balanceDue.style.color = "#28A745";
-        balanceDueBox.innerText = "0.00";
-    } else if (payBtn.innerText === "Pay" && totalBillBox.innerText == 0) {
-        balanceDue.style.color = "#000";
-    } else {
-        balanceDue.style.color = "#DC3444";
-    }
-}
-
-const calcDiscount = () => {
-    discount = prompt("Enter a discount amount.")
-
-    if (discount !== 0) {
-        discountBox.innerText = (Math.round(discount * 100) / 100).toFixed(2);
-    }
-    calcMealsTax();
-}
-
-const calcMealsTax = () => {
-    mealsTax = (Math.round(((subtotalBill - discount) * 0.0625) * 100) / 100).toFixed(2);
-    mealsTaxBox.innerText = mealsTax;
-    calcBill();
-}
-
-const calcSubtotal = () => {
-    let orderPricesArray = activeOrder.map(function(food) {
-        return food.price;
-    });
-
-    subtotalBill = orderPricesArray.reduce(function(acc, price) {
-        return acc += price;
-    }, 0)
-
-    subtotalBill = (Math.round(subtotalBill * 100) / 100).toFixed(2);
-    subtotalBillBox.innerText = subtotalBill;
-    calcMealsTax();
-}
-
-const clearOrder = () => {
-    tableBody.innerHTML = "";
-    activeOrder = [];
-    discount = 0;
-    discountBox.innerText = "0.00";
-    mealsTax = 0;
-    subtotalBill = 0;
-    calcSubtotal();
-}
-
-const closeModal = () => {
-    modal.style.display = 'none';
-    clearGuestPayment();
 }
 
 const createOrderCard = () => {
@@ -604,19 +603,17 @@ const updateCalculator = (e) => {
     guestPaymentBox.value = guestPaymentBox.value.toString() + e.target.innerText.toString();
 }
 
-let allCalcDigitBtns = document.querySelectorAll('.digit');
-    allCalcDigitBtns.forEach(btn => btn.addEventListener("click", updateCalculator));
-
-startOrderBtn.addEventListener("click", enableOrdering);
+allCalcDigitBtns.forEach(btn => btn.addEventListener("click", updateCalculator));
 cancelOrderBtn.addEventListener("click", clearOrder);
 clearGuestPaymentBtn.addEventListener("click", clearGuestPayment);
 closeModalBtn.addEventListener('click', closeModal);
-payBtn.addEventListener('click', openModal);
-discountBtn.addEventListener('click', calcDiscount);
-sendOrderBtn.addEventListener("click", addOrderHistory);
 completePaymentBtn.addEventListener("click", completePayment);
+discountBtn.addEventListener('click', calcDiscount);
 loginBtn.addEventListener("click", login);
 logoutBtn.addEventListener("click", logout);
 menuTabSides.addEventListener("click", changeTabsToSides);
 menuTabMain.addEventListener("click", changeTabsToMain);
 menuTabApps.addEventListener("click", changeTabsToApps);
+payBtn.addEventListener('click', openModal);
+sendOrderBtn.addEventListener("click", addOrderHistory);
+startOrderBtn.addEventListener("click", enableOrdering);
