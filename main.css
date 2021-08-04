@@ -300,8 +300,9 @@ h5{
     font-size: 2.5em;
     text-align: right;
     margin: .25em auto;
-    height: 6rem;
+    height: 3rem;
     margin-bottom: 2rem;
+    padding: 0 1rem;
 }
 
 .calc-btn {
@@ -464,17 +465,18 @@ h5{
         font-size: 2rem;
     }
 
-    .tab-commands, .total-commands {
-        height: 10rem;
+    .tab-commands {
+        height: 8vh;
         padding-top: 2rem;
     }
 
     .total-commands {
         padding-top: .5rem;
+        height: 8vh;
     }
 
     .start-order, .cancel-order, .send-order, .make-payment, .add-discount {
-        height: 2em;
+        height: 90%;
         font-size: 3rem;
         width: 25%;
     }
