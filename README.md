@@ -1,12 +1,35 @@
 # Roast Tab
 -   A Point of Sale web application called Roast Tab (inspired by Toast Tab) used by restaurant staff to place food orders and maintain a running tab. To start an order, the user selects food items from the menu. The end result allows users to tabulate a total balance of the order so the restaurant guest is aware of how much to pay at the end of a visit.
 
+## Installation
+-   [DocuMenu](https://documenu.com/) API Key is required to run locally.
+
 ## Tech Stack
 -   Built with HTML, CSS, and JavaScript
 -   DocuMenu API
 -   Bootstrap
 -   FontAwesome
 -   Google Fonts
+
+## Features List
+-   Log in and Log out functionality displays and hides the main content of the application.
+-   Create new orders, cancel existing order, and option to save the order into the order history section.
+-   Add items from the menu selection area to the tab and have the cost displayed to user.
+-   Remove items from the tab area individually.
+-   Ability to pull back order data and display it in the tab section.
+-   Subtotals do math and discounts subtract from the subtotal.
+-   Selecting the Pay button opens a new calculator modal for users to input amount tendered.
+-   Validation for when payment amount doesn't surpass the balance due.
+-   Confirming payment will disable order ticket from repeat payments.
+-   Select from multiple tabs of menu sections.
+
+## Future Enhancements
+-   Allow editing of existing orders; currently existing orders have editing features disabled.
+-   Allow users to Send and Pay at the same time; currently the user must send the order to the order history first.
+-   Create user profiles based on username and login functionality.
+-   Make a separate modal for discounts input; currently it's a prompt.
+-   Make use of cogwheel settings button.
+-   Add a dark mode.
 
 ## Journal
 
@@ -167,7 +190,7 @@
 -   Responsive styling for mobile devices.
 
 #### Other
--   
+-   Add signature and link to portfolio from login page.
 
 ![Day 7 Progress](https://i.imgur.com/szfYhXI.png)
 ![Day 7 Progress](https://i.imgur.com/HbRjKYo.png)
