@@ -383,6 +383,10 @@ h5{
 }
 
 @media (max-device-width: 576px) {
+    body {
+        overflow: hidden;
+    }
+
     .navbar {
         height: 10rem;
     }
