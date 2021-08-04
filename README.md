@@ -28,6 +28,7 @@
 -   Allow users to Send and Pay at the same time; currently the user must send the order to the order history first.
 -   Create user profiles based on username and login functionality.
 -   Make a separate modal for discounts input; currently it's a prompt.
+-   Add timestamps to each order.
 -   Make use of cogwheel settings button.
 -   Add a dark mode.
 
