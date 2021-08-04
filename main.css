@@ -476,6 +476,10 @@ h5{
         font-size: 4.25rem;
     }
 
+    .right-panel {
+        padding-left: 0;
+    }
+
     #tab-section, #menu-section {
         height: 90vh;
     }
