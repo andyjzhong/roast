@@ -41,6 +41,7 @@ By developing this project, I have a better understanding of the components that
 -   Add analytics and metrics based on timestamps.
 -   Make use of cogwheel settings button.
 -   Add a dark mode.
+-   Figure out how to disable scrolling on a mobile device.
 
 ## Journal
 
@@ -200,6 +201,7 @@ By developing this project, I have a better understanding of the components that
 
 #### HTML & CSS
 -   Responsive styling for mobile devices.
+-   Clean up HTML code.
 
 #### Other
 -   Add signature and link to portfolio from login page.
