@@ -1,5 +1,12 @@
 # Roast Tab
--   A Point of Sale web application called Roast Tab (inspired by Toast Tab) used by restaurant staff to place food orders and maintain a running tab. To start an order, the user selects food items from the menu. The end result allows users to tabulate a total balance of the order so the restaurant guest is aware of how much to pay at the end of a visit.
+A Point of Sale web application called Roast Tab (inspired by Toast Tab) used by restaurant staff to place food orders and maintain a running tab. To start an order, the user selects food items from the menu. The end result allows users to tabulate a total balance of the order so the restaurant guest is aware of how much to pay at the end of a visit.
+
+## Background
+I have a passion for fintech and food, which led me to learning more about Toast and its POS systems. I've always found POS systems quite interesting because it helps restaurant workers maintain order in an otherwise chaotic environment. POS systems typically also help track analytics to allow managers to better assess the efficiency and performance of the day-to-day operations.
+
+By developing this project, I have a better understanding of the components that power POS systems and I can demonstrate my knowledge of HTML, CSS, JavaScript, and integrations to 3rd Party APIs.
+
+[Deployed Website](https://andyjzhong.github.io/roast/)
 
 ## Installation
 -   [DocuMenu](https://documenu.com/) API Key is required to run locally.
@@ -29,6 +36,7 @@
 -   Create user profiles based on username and login functionality.
 -   Make a separate modal for discounts input; currently it's a prompt.
 -   Add timestamps to each order.
+-   Add analytics and metrics based on timestamps.
 -   Make use of cogwheel settings button.
 -   Add a dark mode.
 
@@ -193,9 +201,7 @@
 #### Other
 -   Add signature and link to portfolio from login page.
 
-![Day 7 Progress](https://i.imgur.com/szfYhXI.png)
-![Day 7 Progress](https://i.imgur.com/HbRjKYo.png)
-![Day 7 Progress](https://media.giphy.com/media/ZaIftQgWY9jTnvHKYl/giphy.gif)
+![Day 7 Progress](https://i.imgur.com/GqkcOvI.png)
 
 
 </details>
@@ -211,13 +217,13 @@
 
 ## Time Frames
 
-| Task                       | Day 1       | Day 2       | Day 3        | Day 4       | Day 5       | Day 6       | Day 7     |
-| -------------------------- | ----------- | ----------- | ------------ | ----------- | ----------- | ----------- | --------- |
-| Set Up Framework & HTML    | 2.0 hrs     | 0.5 hrs     | 0.5 hrs      | 0.5 hrs     | 0.5 hrs     | 0 hr        | 0 hr      |
-| Connecting to API & Render | 1 hrs       | 0.5 hrs     | 0 hrs        | 0 hr        | 0 hr        | 1.5 hrs     | 0 hr      |
-| Add Application Logic      | 5.5 hrs     | 5.0 hrs     | 5.5 hrs      | 4.5 hrs     | 1 hrs       | 0.5 hrs     | 0 hr      |
-| Styling                    | 0.5 hrs     | 3.0 hrs     | 3.0 hrs      | 2.0 hrs     | 1 hrs       | 0 hr        | 0 hr      |
-| Responsive Styling         | 0 hrs       | 0 hrs       | 0.5 hrs      | 0 hr        | 0.5 hr      | 4.0 hrs     | 0 hr      |
-| **MVP Total**              | **9 hrs**   | **9 hrs**   | **9.5 hrs**  | **7.0 hrs** | **3.0 hrs** | **6.0 hrs** | **0 hrs** |
-| Stretch Goals              | 0 hrs       | 0 hrs       | 1.5 hrs      | 0.5 hrs     | 0 hr        | 3.0 hrs     | 0 hr      |
-| **Project Total**          | **9.0 hrs** | **9.0 hrs** | **11.0 hrs** | **7.5 hrs** | **3.0 hrs** | **9.0 hrs** | **0 hrs** |
+| Task                       | Day 1       | Day 2       | Day 3        | Day 4       | Day 5       | Day 6       | Day 7       | Total       |
+| -------------------------- | ----------- | ----------- | ------------ | ----------- | ----------- | ----------- | ----------- | ----------- |
+| Set Up Framework & HTML    | 2.0 hrs     | 0.5 hrs     | 0.5 hrs      | 0.5 hrs     | 0.5 hrs     | 0 hr        | 0 hr        | 4 hrs       |
+| Connecting to API & Render | 1 hrs       | 0.5 hrs     | 0 hrs        | 0 hr        | 0 hr        | 1.5 hrs     | 1 hr        | 4 hrs       |
+| Add Application Logic      | 5.5 hrs     | 5.0 hrs     | 5.5 hrs      | 4.5 hrs     | 1 hrs       | 0.5 hrs     | 0 hr        | 22 hrs      |
+| Styling                    | 0.5 hrs     | 3.0 hrs     | 3.0 hrs      | 2.0 hrs     | 1 hrs       | 0 hr        | 0 hr        | 9.5 hrs     |
+| Responsive Styling         | 0 hrs       | 0 hrs       | 0.5 hrs      | 0 hr        | 0.5 hr      | 4.0 hrs     | 3.0 hrs     | 8 hrs       |
+| **MVP Total**              | **9 hrs**   | **9 hrs**   | **9.5 hrs**  | **7.0 hrs** | **3.0 hrs** | **6.0 hrs** | **4.0 hrs** | **47.5 hrs**|
+| Stretch Goals              | 0 hrs       | 0 hrs       | 1.5 hrs      | 0.5 hrs     | 0 hr        | 3.0 hrs     | 0.5 hrs     | 5.5 hrs     |
+| **Project Total**          | **9.0 hrs** | **9.0 hrs** | **11.0 hrs** | **7.5 hrs** | **3.0 hrs** | **9.0 hrs** | **0 hrs**   | **53 hrs**  |
