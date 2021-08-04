@@ -44,7 +44,11 @@ h5{
 .login-title {
     color: #F24A07;
     font-size: 2.75rem;
-    padding: 60px 10px;
+    padding: 60px 10px 0 10px;
+}
+
+.signature {
+    padding: 20px 10px 40px 10px;
 }
 
 .login-content {
@@ -584,5 +588,10 @@ h5{
         float: left;
         font-size: 3rem !important;
         padding: 1rem 3rem;
+    }
+
+    .signature {
+        padding: 20px 10px 200px 10px;
+        font-size: 3rem;
     }
 }
