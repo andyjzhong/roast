@@ -504,8 +504,14 @@ h5{
         height: 10rem !important;
     }
 
+
+    .modal-textbox {
+        margin: 1rem auto;
+        width: 90%;
+        height: 80vh !important;
+    }
+
     .order-ticket-content, .ticket-title {
-        display: inline !important;
         font-size: 2rem !important;
         pointer-events: none !important;
     }
