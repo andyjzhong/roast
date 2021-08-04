@@ -117,6 +117,7 @@ h5{
     text-align: right;
     margin-right: 10px;
     width: 100%;
+    margin-top: 10px;
 }
 
 .start-order {
@@ -453,11 +454,11 @@ h5{
     }
 
     .total-commands {
-        padding-top: 1rem;
+        padding-top: .5rem;
     }
 
     .start-order, .cancel-order, .send-order, .make-payment, .add-discount {
-        height: 10rem;
+        height: 2em;
         font-size: 3rem;
         width: 25%;
     }
@@ -467,7 +468,7 @@ h5{
     }
 
     #total{
-        font-size: 4.5rem;
+        font-size: 4.25rem;
     }
 
     #tab-section {
