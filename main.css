@@ -449,6 +449,7 @@ h5{
 
     #main-container {
         font-size: 2.5rem;
+        display: none;
     }
 
     .orderNum {
