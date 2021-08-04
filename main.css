@@ -478,4 +478,10 @@ h5{
     #menu-area {
         font-size: 3rem;
     }
+
+    .add-btn {
+        height: 20rem;
+        width: 45%;
+        font-size: 3rem;
+    }
 }
