@@ -151,8 +151,27 @@
 -   Set up secret key in local config.js file.
 -   Add a shake response when payment is insufficient.
 
-![Day 6 Progress](https://i.imgur.com/tWpTSOJ.png)
-![Day 6 Progress](https://media.giphy.com/media/msx9rsNgJQGxpw77gL/giphy.gif)
+![Day 6 Progress](https://i.imgur.com/szfYhXI.png)
+![Day 6 Progress](https://i.imgur.com/HbRjKYo.png)
+![Day 6 Progress](https://media.giphy.com/media/ZaIftQgWY9jTnvHKYl/giphy.gif)
+
+
+</details>
+
+<details>
+     <summary>Day 7</summary>
+
+#### JavaScript
+
+#### HTML & CSS
+-   Responsive styling for mobile devices.
+
+#### Other
+-   
+
+![Day 7 Progress](https://i.imgur.com/szfYhXI.png)
+![Day 7 Progress](https://i.imgur.com/HbRjKYo.png)
+![Day 7 Progress](https://media.giphy.com/media/ZaIftQgWY9jTnvHKYl/giphy.gif)
 
 
 </details>
