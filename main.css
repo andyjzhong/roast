@@ -49,6 +49,8 @@ h5{
 
 .signature {
     padding: 20px 10px 40px 10px;
+    position: relative;
+    z-index: 1;
 }
 
 .login-content {
