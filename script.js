@@ -602,7 +602,7 @@ async function getData() {
 }
 
 const updateCalculator = (e) => {
-    guestPaymentBox.value = guestPaymentBox.value.toString() + e.target.innerText.toString();
+    guestPaymentBox.value = parseFloat(guestPaymentBox.value.toString() + e.target.innerText.toString());
 }
 
 allCalcDigitBtns.forEach(btn => btn.addEventListener("click", updateCalculator));
